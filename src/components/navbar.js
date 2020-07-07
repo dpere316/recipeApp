@@ -13,6 +13,15 @@ class navbar extends Component {
     }
 
 
+    async componentDidMount() {
+        let res = await axios.get(`https://api.edamam.com/search?q=chicken&app_id=${APP_ID}&app_key=${APP_KEY}&from=0&to=3&calories=591-722&health=alcohol-free`);
+        console.log(res)
+        this.setState({
+            foods: res.data,
+        });
+        localStorage.setItem('res', JSON.stringify(res.data))
+    }
+
     displayFoods = () => {
         return this.state.foods.map((eachfood) => {
 
@@ -23,6 +32,7 @@ class navbar extends Component {
     render() {
         console.log(JSON.parse(localStorage.getItem('res')))
         let obj = JSON.parse(localStorage.getItem('res'));
+        // this is not going to be in master
         return ( <
             div > {
                 obj.hits.map(r => < li > {
