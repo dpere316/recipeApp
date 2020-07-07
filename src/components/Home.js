@@ -1,9 +1,14 @@
 import React, { Component } from "react";
+import Navbar from "./navbar";
+import SingleFood from "./SingleFood";
+import Breakfast from "./Breakfast";
+import Lunch from "./Lunch";
+import Dinner from "./Dinner";
+import Personalize from "./Personalize";
+import { Switch, Route } from "react-router-dom";
 import axios from "axios";
-const APP_ID = "1eddd451";
-const APP_KEY = "9acb3aa12defaeed4a85d8e39cddd73d";
 
-class navbar extends Component {
+class Home extends Component {
   state = {
     foods: [],
   };
@@ -18,12 +23,10 @@ class navbar extends Component {
     });
     // localStorage.setItem("res", JSON.stringify(res.data));
   }
-  render() {
-    // console.log(JSON.parse(localStorage.getItem("res")));
-    // let obj = JSON.parse(localStorage.getItem("res"));
 
+  render() {
     return <div></div>;
   }
 }
 
-export default navbar;
+export default Home;
