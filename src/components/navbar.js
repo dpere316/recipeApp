@@ -5,7 +5,15 @@ const APP_KEY = "9acb3aa12defaeed4a85d8e39cddd73d";
 
 class navbar extends Component {
   state = {
+<<<<<<< HEAD
     foods: [],
+=======
+<<<<<<< HEAD
+    foods: [],
+=======
+    foods: {},
+>>>>>>> daniel
+>>>>>>> master
   };
 
   async componentDidMount() {
@@ -18,6 +26,16 @@ class navbar extends Component {
     });
     // localStorage.setItem("res", JSON.stringify(res.data));
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  render() {
+    // console.log(JSON.parse(localStorage.getItem("res")));
+    // let obj = JSON.parse(localStorage.getItem("res"));
+
+    return <div></div>;
+=======
+>>>>>>> master
 
   displayFoods = () => {
     return this.state.foods.map((eachfood) => {});
@@ -26,8 +44,16 @@ class navbar extends Component {
   render() {
     // console.log(JSON.parse(localStorage.getItem("res")));
     // let obj = JSON.parse(localStorage.getItem("res"));
+<<<<<<< HEAD
     // this is valerie's branch
     return <div></div>;
+=======
+    // This is Daniel Branch
+    return <div>
+        
+    </div>;
+>>>>>>> daniel
+>>>>>>> master
   }
 }
 
