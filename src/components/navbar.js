@@ -10,7 +10,7 @@ class navbar extends Component {
 
   async componentDidMount() {
     let res = await axios.get(
-      `https://api.edamam.com/search?q=chicken&app_id=${APP_ID}&app_key=${APP_KEY}&from=0&to=3&calories=591-722&health=alcohol-free`
+      `https://api.edamam.com/search?q=pizza&app_id=${APP_ID}&app_key=${APP_KEY}&from=0&to=3&calories=591-722&health=alcohol-free`
     );
     console.log(res);
     this.setState({
