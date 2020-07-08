@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 const APP_ID = "1eddd451";
 const APP_KEY = "9acb3aa12defaeed4a85d8e39cddd73d";
 
@@ -37,7 +38,15 @@ class navbar extends Component {
   displayAllFoods = () => {
     if (this.state.foods.length) {
       return this.state.foods.map((eachFood) => {
-        return <li>{eachFood.recipe.label}</li>;
+        return (
+          <div>
+            <li>
+              {eachFood.recipe.label}
+              <br />
+              <img src={eachFood.recipe.image} />
+            </li>
+          </div>
+        );
       });
     }
   };
@@ -48,7 +57,9 @@ class navbar extends Component {
 
     return (
       <div>
-        {" "}
+        <Link to="/">
+          <h1>Munchies</h1>
+        </Link>
         <form onSubmit={this.searchForFoods}>
           <input
             onChange={this.handleChange}

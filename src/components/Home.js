@@ -5,7 +5,7 @@ import Breakfast from "./Breakfast";
 import Lunch from "./Lunch";
 import Dinner from "./Dinner";
 import Personalize from "./Personalize";
-import { Switch, Route } from "react-router-dom";
+import { Link, Switch, Route } from "react-router-dom";
 import axios from "axios";
 
 class Home extends Component {
@@ -25,7 +25,11 @@ class Home extends Component {
   //   }
 
   render() {
-    return <div></div>;
+    return (
+      <div>
+        <Navbar />
+      </div>
+    );
   }
 }
 
