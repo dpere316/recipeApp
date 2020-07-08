@@ -1,12 +1,9 @@
 import React, { Component } from "react";
-import Navbar from "./navbar";
-import SingleFood from "./SingleFood";
-import Breakfast from "./Breakfast";
-import Lunch from "./Lunch";
-import Dinner from "./Dinner";
-import Personalize from "./Personalize";
-import { Switch, Route } from "react-router-dom";
 import axios from "axios";
+import RandomFoods from "./RandomFood";
+
+const APP_ID = "1eddd451";
+const APP_KEY = "9acb3aa12defaeed4a85d8e39cddd73d";
 
 class Home extends Component {
   state = {
@@ -15,7 +12,7 @@ class Home extends Component {
 
   async componentDidMount() {
     let res = await axios.get(
-      `https://api.edamam.com/search?q=chicken&app_id=${APP_ID}&app_key=${APP_KEY}&from=0&to=3&calories=591-722&health=alcohol-free`
+      `https://api.edamam.com/search?q=chicken&to=100&app_id=${APP_ID}&app_key=${APP_KEY}`
     );
     console.log(res);
     this.setState({
@@ -25,7 +22,11 @@ class Home extends Component {
   }
 
   render() {
-    return <div></div>;
+    return (
+      <div>
+        <RandomFoods />
+      </div>
+    );
   }
 }
 
