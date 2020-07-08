@@ -6,7 +6,6 @@ import Lunch from "./components/Lunch"
 function App() {
   return (
     <div className="App">
-      <Navbar />
       <Lunch/>
     </div>
   );
