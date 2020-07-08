@@ -23,8 +23,7 @@ class Lunch extends Component {
     return this.state.foods.map((eachFood) => {
       return (
           
-          <li>{eachFood.recipe.label}
-          <img src={eachFood.recipe.image}/></li>
+          <li>{eachFood.recipe.label}</li>
       )
     });
   };
