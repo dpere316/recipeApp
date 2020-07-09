@@ -28,7 +28,12 @@ class Home extends Component {
   }
 
   render() {
-    return <div></div>;
+    return (
+      <div>
+        <Navbar />
+        <Lunch />
+      </div>
+    );
   }
 }
 

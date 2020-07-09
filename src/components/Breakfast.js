@@ -1,26 +1,46 @@
 import React, { Component } from "react";
+import axios from "axios"
+const APP_ID = "1eddd451";
+const APP_KEY = "9acb3aa12defaeed4a85d8e39cddd73d";
 
 class Breakfast extends Component {
-  state = {
+   state = {
     foods: [],
+    foodType:['eggs','chicken','salmon','waffles','pancakes','grits','shrimp','steak','pizza','tea','coffee']
   };
 
   async componentDidMount() {
     let res = await axios.get(
-      `https://api.edamam.com/search?q=chicken&app_id=${APP_ID}&app_key=${APP_KEY}&from=0&to=3&calories=591-722&health=alcohol-free`
+      `https://api.edamam.com/search?q=${this.state.foodType[this.randomIndex()]}+breakfast&to=100&app_id=${APP_ID}&app_key=${APP_KEY}`
     );
-    console.log(res);
     this.setState({
-      foods: res.data,
+      foods: res.data.hits,
     });
-    // localStorage.setItem("res", JSON.stringify(res.data));
+    console.log(this.state.foods);
   }
-  displayFoods = () => {
-    return this.state.foods.map((eachfood) => {});
+
+  displayAllFoods = () => {
+    return this.state.foods.map((eachFood) => {
+      return (
+        <li>
+        {eachFood.recipe.label}
+        <img src={eachFood.recipe.image}/>
+      </li> 
+      );
+    });
   };
+
+  randomIndex = () => {
+      let index = Math.floor(Math.random()*this.state.foodType.length)
+      return index;
+  }
+
   render() {
-    return <div></div>;
+    return <div>
+      {this.displayAllFoods()}
+      </div>
   }
 }
 
 export default Breakfast;
+ 
