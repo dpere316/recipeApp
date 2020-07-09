@@ -6,11 +6,7 @@ import Home from "./components/Home";
 import Lunch from "./components/Lunch";
 import Dinner from "./components/Dinner";
 import Breakfast from "./components/Breakfast";
-<<<<<<< HEAD
 import SingleFood from "./components/SingleFood";
-=======
-import SingleFood from "./components/SingleFood"
->>>>>>> master
 
 class App extends Component {
   render() {

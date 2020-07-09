@@ -4,8 +4,6 @@ const APP_ID = "1eddd451";
 const APP_KEY = "9acb3aa12defaeed4a85d8e39cddd73d";
 
 class Breakfast extends Component {
-<<<<<<< HEAD
-
   state = {
     foods: [],
     foodType: [
@@ -21,13 +19,6 @@ class Breakfast extends Component {
       "tea",
       "coffee",
     ],
-
-=======
->>>>>>> master
-   state = {
-    foods: [],
-    foodType:['eggs','chicken','salmon','waffles','pancakes','grits','shrimp','steak','pizza','tea','coffee']
-
   };
 
   async componentDidMount() {
@@ -60,8 +51,7 @@ class Breakfast extends Component {
 
   render() {
     return <div>{this.displayAllFoods()}</div>;
- 
+  }
 }
 
 export default Breakfast;
- 

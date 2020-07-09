@@ -1,15 +1,11 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import 'bootstrap/dist/css/bootstrap.css'
+import "bootstrap/dist/css/bootstrap.css";
 const APP_ID = "1eddd451";
 const APP_KEY = "9acb3aa12defaeed4a85d8e39cddd73d";
 
 class Lunch extends Component {
-<<<<<<< HEAD
-
-=======
->>>>>>> master
   state = {
     foods: [],
     foodType: [
@@ -57,7 +53,7 @@ class Lunch extends Component {
         <div className="columns"> {this.displayAllFoods()}</div>
       </div>
     );
-  
+  }
 }
 
 export default Lunch;
