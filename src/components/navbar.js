@@ -25,7 +25,7 @@ class navbar extends Component {
     console.log("search for food");
     console.log(this.state.search);
     let res = await axios.get(
-      `https://api.edamam.com/search?q=${this.state.search}&app_id=${APP_ID}&app_key=${APP_KEY}`
+      `https://api.edamam.com/search?q=${this.state.search}&to=100&app_id=${APP_ID}&app_key=${APP_KEY}`
     );
     this.setState({ foods: res.data.hits });
     console.log(this.state.foods);
