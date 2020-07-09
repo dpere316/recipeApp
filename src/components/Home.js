@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import axios from "axios";
 import RandomFoods from "./RandomFood";
+import Breakfast from "./Breakfast"
 import Lunch from "./Lunch";
 import Navbar from "./navbar";
-const APP_ID = "1eddd451";
-const APP_KEY = "9acb3aa12defaeed4a85d8e39cddd73d";
+import Dinner from "./Dinner";
+const APP_ID = "b479ca7f";
+const APP_KEY = "1091d11a059bf224db39af98bca9540f	";
 
 class Home extends Component {
   state = {
@@ -13,13 +15,13 @@ class Home extends Component {
 
   async componentDidMount() {
     let res = await axios.get(
-      `https://api.edamam.com/search?q=chicken&to=100&app_id=${APP_ID}&app_key=${APP_KEY}`
+      `https://api.edamam.com/search?q=chicken&to=10&app_id=${APP_ID}&app_key=${APP_KEY}`
     );
-    console.log(res);
+    // console.log(res);
     this.setState({
       foods: res.data,
     });
-    console.log(this.state.foods);
+    // console.log(this.state.foods);
     // localStorage.setItem("res", JSON.stringify(res.data));
   }
 
@@ -27,7 +29,9 @@ class Home extends Component {
     return (
       <div>
         <Navbar />
-        <Lunch />
+        <Breakfast/>
+        <Lunch/>
+        <Dinner/>
       </div>
     );
   }
