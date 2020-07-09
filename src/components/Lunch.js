@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
+=======
+import "bulma/css/bulma.css";
+>>>>>>> daniel
 const APP_ID = "1eddd451";
 const APP_KEY = "9acb3aa12defaeed4a85d8e39cddd73d";
 
@@ -26,7 +30,11 @@ class Lunch extends Component {
   async componentDidMount() {
     let res = await axios.get(
       `https://api.edamam.com/search?q=${
+<<<<<<< HEAD
         this.state.foodType[this.randomIndex()]
+=======
+      this.state.foodType[this.randomIndex()]
+>>>>>>> daniel
       }+lunch&to=100&app_id=${APP_ID}&app_key=${APP_KEY}`
     );
     this.setState({
@@ -38,10 +46,22 @@ class Lunch extends Component {
   displayAllFoods = () => {
     return this.state.foods.map((eachFood) => {
       return (
+<<<<<<< HEAD
         <li>
           {eachFood.recipe.label}
           <img src={eachFood.recipe.image} />
         </li>
+=======
+        <div>
+          <div className="column">
+            <li>
+              {eachFood.recipe.label}
+              <br />
+              <img src={eachFood.recipe.image} />
+            </li>
+          </div>
+        </div>
+>>>>>>> daniel
       );
     });
   };
@@ -52,7 +72,11 @@ class Lunch extends Component {
   };
 
   render() {
-    return <div>{this.displayAllFoods()}</div>;
+    return <div>
+      <div className="columns"> {this.displayAllFoods()}</div>
+      <div className="columns"> {this.displayAllFoods()}</div>
+    </div>
+    ;
   }
 }
 
