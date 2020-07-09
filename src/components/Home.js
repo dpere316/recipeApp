@@ -6,6 +6,7 @@ class Home extends Component {
     return (
       <div>
         <Navbar />
+        <Lunch />
       </div>
     );
   }
