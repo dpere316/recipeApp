@@ -4,6 +4,9 @@ import axios from "axios";
 const APP_ID = "1eddd451";
 const APP_KEY = "9acb3aa12defaeed4a85d8e39cddd73d";
 
+const APP_ID2 = "ffd7e1b9";
+const APP_KEY2 = "e439b5df8590bafcf11efad43ca3a69b";
+
 class Home extends Component {
   state = {
     foods: [],
@@ -40,7 +43,7 @@ class Home extends Component {
     let res = await axios.get(
       `https://api.edamam.com/search?q=${
         this.state.randomTypeFood[this.randomIndex()]
-      }&to=100&app_id=${APP_ID}&app_key=${APP_KEY}`
+      }&to=100&app_id=${APP_ID2}&app_key=${APP_KEY2}`
     );
     // console.log("random food type category", res);
 
