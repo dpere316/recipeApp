@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
 import RandomFoods from "./RandomFood";
-
+import Lunch from "./Lunch";
+import Navbar from "./navbar";
 const APP_ID = "1eddd451";
 const APP_KEY = "9acb3aa12defaeed4a85d8e39cddd73d";
 
@@ -18,7 +19,7 @@ class Home extends Component {
     this.setState({
       foods: res.data,
     });
-    console.log(foods);
+    console.log(this.state.foods);
     // localStorage.setItem("res", JSON.stringify(res.data));
   }
 

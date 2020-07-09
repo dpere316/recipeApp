@@ -54,10 +54,6 @@ class navbar extends Component {
   render() {
     // console.log(JSON.parse(localStorage.getItem("res")));
     // let obj = JSON.parse(localStorage.getItem("res"));
-<<<<<<< HEAD
-    // This is Daniel Branch
-    return <div></div>;
-=======
 
     return (
       <div>
@@ -75,7 +71,6 @@ class navbar extends Component {
         {this.displayAllFoods()}
       </div>
     );
->>>>>>> 315bf1a700d326b8f8fdee5c3a887d3099af9ac8
   }
 }
 
