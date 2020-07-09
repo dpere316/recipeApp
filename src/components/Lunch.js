@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import "./App.css";
 import "bulma/css/bulma.css";
 const APP_ID = "1eddd451";
 const APP_KEY = "9acb3aa12defaeed4a85d8e39cddd73d";
@@ -40,13 +41,7 @@ class Lunch extends Component {
     return this.state.foods.map((eachFood) => {
       return (
         <div>
-          <div className="column">
-            <li>
-              {eachFood.recipe.label}
-              <br />
-              <img src={eachFood.recipe.image} />
-            </li>
-          </div>
+          
         </div>
       );
     });
@@ -59,7 +54,6 @@ class Lunch extends Component {
 
   render() {
     return <div>
-      <div className="columns"> {this.displayAllFoods()}</div>
       <div className="columns"> {this.displayAllFoods()}</div>
     </div>
     ;
