@@ -7,6 +7,12 @@ import Dinner from "./Dinner";
 import Personalize from "./Personalize";
 import { Switch, Route } from "react-router-dom";
 import axios from "axios";
+<<<<<<< HEAD
+=======
+import RandomFoods from "./RandomFood";
+import Lunch from "./Lunch";
+import Navbar from "./navbar";
+>>>>>>> master
 const APP_ID = "1eddd451";
 const APP_KEY = "9acb3aa12defaeed4a85d8e39cddd73d";
 
@@ -23,7 +29,11 @@ class Home extends Component {
     this.setState({
       foods: res.data,
     });
+<<<<<<< HEAD
     // console.log(foods);
+=======
+    console.log(this.state.foods);
+>>>>>>> master
     // localStorage.setItem("res", JSON.stringify(res.data));
   }
 
@@ -32,7 +42,10 @@ class Home extends Component {
       <div>
         <Navbar />
         <Lunch />
+<<<<<<< HEAD
         <RandomFoods />
+=======
+>>>>>>> master
       </div>
     );
   }
