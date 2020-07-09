@@ -35,28 +35,39 @@ class Home extends Component {
         this.state.randomFoods[this.randomIndex()]
       }&to=100&app_id=${APP_ID}&app_key=${APP_KEY}`
     );
-    // console.log(res);
+    console.log(res);
+
+    const food = this.randomizeRecipes(res.data.hits);
+    console.log("random food", food);
+
     this.setState({
-      foods: res.data,
+      foods: [...this.state.foods, food.recipe],
     });
   }
 
   showRandomFood = () => {
-    if (this.state.foods.length) {
+    if (!!this.state.foods.length) {
       return this.state.foods.map((eachFood) => {
         return (
           <li>
-            {eachFood.recipe.label}
-            <img src={eachFood.recipe.image} />
+            {eachFood.label}
+            <img src={eachFood.image} />
           </li>
         );
       });
+    } else {
+      return "no foods in the array";
     }
   };
 
   randomIndex = () => {
     let index = Math.floor(Math.random() * this.state.randomFoods.length);
     return index;
+  };
+
+  randomizeRecipes = (foods) => {
+    let index = Math.floor(Math.random() * foods.length);
+    return foods[index];
   };
 
   render() {
