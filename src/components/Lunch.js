@@ -35,14 +35,24 @@ class Lunch extends Component {
     console.log(this.state.foods);
   }
 
-  displayAllBeers = () => {
+  displayAllFoods = () => {
     return this.state.foods.map((eachFood) => {
-      return <li>{eachFood.recipe.label}</li>;
+      return (
+        <li>
+          {eachFood.recipe.label}
+          <img src={eachFood.recipe.image} />
+        </li>
+      );
     });
   };
 
+  randomIndex = () => {
+    let index = Math.floor(Math.random() * this.state.foodType.length);
+    return index;
+  };
+
   render() {
-    return <div>{this.displayAllBeers()}</div>;
+    return <div>{this.displayAllFoods()}</div>;
   }
 }
 
