@@ -7,13 +7,20 @@ const APP_KEY = "9acb3aa12defaeed4a85d8e39cddd73d";
 class Home extends Component {
   state = {
     foods: [],
-    randomFoods: [
+    randomTypeFood: [
       "egg",
       "omelet",
       "salad",
       "sandwhich",
       "soup",
       "starter",
+      "pizza",
+      "chicken",
+      "beef",
+      "steak",
+      "lamb",
+      "seafood",
+      "pork",
       "american",
       "asian",
       "chinese",
@@ -32,13 +39,13 @@ class Home extends Component {
   async componentDidMount() {
     let res = await axios.get(
       `https://api.edamam.com/search?q=${
-        this.state.randomFoods[this.randomIndex()]
+        this.state.randomTypeFood[this.randomIndex()]
       }&to=100&app_id=${APP_ID}&app_key=${APP_KEY}`
     );
-    console.log(res);
+    // console.log("random food type category", res);
 
-    const food = this.randomizeRecipes(res.data.hits);
-    console.log("random food", food);
+    const food = this.randomizedFood(res.data.hits);
+    // console.log("random food within type category", food);
 
     this.setState({
       foods: [...this.state.foods, food.recipe],
@@ -49,23 +56,24 @@ class Home extends Component {
     if (!!this.state.foods.length) {
       return this.state.foods.map((eachFood) => {
         return (
-          <li>
+          <li key="randomfood">
+            <img src={eachFood.image} alt="random-food" />
+            <br />
             {eachFood.label}
-            <img src={eachFood.image} />
           </li>
         );
       });
     } else {
-      return "no foods in the array";
+      return "";
     }
   };
 
   randomIndex = () => {
-    let index = Math.floor(Math.random() * this.state.randomFoods.length);
+    let index = Math.floor(Math.random() * this.state.randomTypeFood.length);
     return index;
   };
 
-  randomizeRecipes = (foods) => {
+  randomizedFood = (foods) => {
     let index = Math.floor(Math.random() * foods.length);
     return foods[index];
   };
