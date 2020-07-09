@@ -7,10 +7,7 @@ const APP_ID = "1eddd451";
 const APP_KEY = "9acb3aa12defaeed4a85d8e39cddd73d";
 
 class Lunch extends Component {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> master
+
   state = {
     foods: [],
     foodType: [
@@ -43,15 +40,7 @@ class Lunch extends Component {
 
   displayAllFoods = () => {
     return this.state.foods.map((eachFood) => {
-<<<<<<< HEAD
       return <div></div>;
-=======
-      return (
-        <div>
-          
-        </div>
-      );
->>>>>>> master
     });
   };
 
@@ -60,23 +49,13 @@ class Lunch extends Component {
     return index;
   };
 
-<<<<<<< HEAD
   render() {
     return (
       <div>
         <div className="columns"> {this.displayAllFoods()}</div>
       </div>
     );
-=======
-=======
->>>>>>> valerie
-  render() {
-    return <div>
-      <div className="columns"> {this.displayAllFoods()}</div>
-    </div>
-    ;
->>>>>>> master
-  }
+  
 }
 
 export default Lunch;

@@ -23,7 +23,7 @@ class Home extends Component {
     this.setState({
       foods: res.data,
     });
-    console.log(foods);
+    // console.log(foods);
     // localStorage.setItem("res", JSON.stringify(res.data));
   }
 
