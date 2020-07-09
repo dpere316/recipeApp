@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
+<<<<<<< HEAD
 import Navbar from "./components/navbar";
 import { Link, Switch, Route } from "react-router-dom";
 import Home from "./components/Home";
@@ -23,6 +24,16 @@ class App extends Component {
       </div>
     );
   }
+=======
+import Home from "./components/Home";
+
+function App() {
+  return (
+    <div>
+      <Home />
+    </div>
+  );
+>>>>>>> valerie
 }
 
 export default App;
