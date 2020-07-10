@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 
-class Personalize extends Component {
+class HealthDietFood extends Component {
   render() {
     return <div></div>;
   }
 }
 
-export default Personalize;
+export default HealthDietFood;
