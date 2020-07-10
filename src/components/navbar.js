@@ -3,6 +3,8 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 const APP_ID = "b479ca7f";
 const APP_KEY = "1091d11a059bf224db39af98bca9540f	";
+const APP_ID2 = "ffd7e1b9";
+const APP_KEY2 = "e439b5df8590bafcf11efad43ca3a69b";
 
 class navbar extends Component {
   state = {
@@ -12,7 +14,7 @@ class navbar extends Component {
 
   async componentDidMount() {
     let res = await axios.get(
-      `https://api.edamam.com/search?q=chicken&app_id=${APP_ID}&app_key=${APP_KEY}&from=0&to=3&calories=591-722&health=alcohol-free`
+      `https://api.edamam.com/search?q=chicken&app_id=${APP_ID2}&app_key=${APP_KEY2}&from=0&to=3&calories=591-722&health=alcohol-free`
     );
     // console.log(res);
     this.setState({
@@ -29,6 +31,9 @@ class navbar extends Component {
     );
     this.setState({ foods: res.data.hits });
     console.log(this.state.foods);
+    this.props.getFoods(res.data.hits);
+    console.log(this.props);
+    this.props.history.push("/searchfood");
   };
   handleChange = (event) => {
     this.setState({
@@ -40,11 +45,13 @@ class navbar extends Component {
       return this.state.foods.map((eachFood) => {
         return (
           <div>
-            <li>
-              {eachFood.recipe.label}
-              <br />
-              <img src={eachFood.recipe.image} />
-            </li>
+            <Link to={`/foods/${eachFood.recipe.label}`}>
+              <li>
+                {eachFood.recipe.label}
+                <br />
+                <img src={eachFood.recipe.image} />
+              </li>
+            </Link>
           </div>
         );
       });
@@ -60,6 +67,7 @@ class navbar extends Component {
         <Link to="/">
           <h1>Munchies</h1>
         </Link>
+
         <form onSubmit={this.searchForFoods}>
           <input
             onChange={this.handleChange}
