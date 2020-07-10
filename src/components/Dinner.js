@@ -6,15 +6,15 @@ import "slick-carousel/slick/slick-theme.css";
 import "../App.css";
 const APP_ID = "b479ca7f";
 const APP_KEY = "1091d11a059bf224db39af98bca9540f	";
-const settings = {
-  dots: true,
-  infinte: false,
-  speed: 10,
-  arrows: true,
-  slidesToScroll: 5,
-  slidesToShow: 5,
-  className: "slides",
-};
+const settings ={
+  dots:true,
+  infinte:true,
+  speed:10,
+  arrows:true,
+  slidesToScroll:5,
+  slidesToShow:5,
+  className:'slides'
+}
 
 class Dinner extends Component {
   state = {
