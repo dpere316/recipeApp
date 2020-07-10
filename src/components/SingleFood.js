@@ -40,17 +40,17 @@ class SingleFood extends Component {
         <br />
         <img src={this.state.foods[0]?.recipe.image} />
         <br />
-        <div>Calories: {this.state.foods[0]?.recipe.calories}</div>
-        {this.displayIngredients()}
         <div>
-          <spn>
-            Click the link to go to the instructions of how to cook this recipe!
-          </spn>
+          <span>Ingredients:</span>
+          {this.displayIngredients()}
+        </div>
+        <div>Calories: {parseInt(this.state.foods[0]?.recipe.calories)}</div>
+        <div>
           <br />
           <a target="_blank" href={this.state.foods[0]?.recipe.url}>
-            Here
+            Click for directions here!
           </a>
-          <iframe src={this.state.foods[0]?.recipe.url} />
+          {/* <iframe src={this.state.foods[0]?.recipe.url} /> */}
         </div>
 
         {/* {this.state.foods[0]?this.state.foods[0].recipe.label:''} */}

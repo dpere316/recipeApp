@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 const APP_ID = "b479ca7f";
 const APP_KEY = "1091d11a059bf224db39af98bca9540f	";
 
@@ -58,11 +59,15 @@ class Home extends Component {
     if (!!this.state.foods.length) {
       return this.state.foods.map((eachFood) => {
         return (
-          <li key="randomfood">
-            <img src={eachFood.image} alt="random-food" />
-            <br />
-            {eachFood.label}
-          </li>
+          <div>
+            <Link to={`/foods/${eachFood.label}`}>
+              <li key="randomfood">
+                <img src={eachFood.image} alt="random-food" />
+                <br />
+                {eachFood.label}
+              </li>
+            </Link>
+          </div>
         );
       });
     } else {
