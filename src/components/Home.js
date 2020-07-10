@@ -9,6 +9,7 @@ import { Switch, Route } from "react-router-dom";
 import axios from "axios";
 import RandomFood from "./RandomFood";
 import RandomCocktail from "./RandomCocktail";
+import { Link } from "react-router-dom";
 
 // const APP_ID = "1eddd451";
 // const APP_KEY = "9acb3aa12defaeed4a85d8e39cddd73d";
@@ -37,6 +38,18 @@ class Home extends Component {
     return (
       <div>
         <Navbar />
+        <div className="ethnicFoods">
+          <Link to="/ethnicFood/Mexican">Mexican</Link>
+          <Link to="/ethnicFood/Japanese">Japanese</Link>
+          <Link to="/ethnicFood/Italian">Italian</Link>
+          <Link to="/ethnicFood/American">American</Link>
+          <Link to="/ethnicFood/Indian">Indian</Link>
+          <Link to="/ethnicFood/Chinese">Chinese</Link>
+          <Link to="/ethnicFood/French">French</Link>
+          <Link to="/ethnicFood/South-American">American</Link>
+          <Link to="/ethnicFood/Caribbean">Caribbean</Link>
+          <Link to="/ethnicFood/Mediterranean">Mediterranean</Link>
+        </div>
         <Lunch />
         <RandomFood />
         <RandomCocktail />
