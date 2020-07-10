@@ -24,6 +24,8 @@ class App extends Component {
             path="/ethnicfood/:ethnicity"
             render={(props) => <EthnicFood {...props} />}
           />
+
+          <Route exact path ="/searchfood" render={()=> <Navbar/>}/>
         </Switch>
       </div>
     );

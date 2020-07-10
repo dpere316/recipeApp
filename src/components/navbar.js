@@ -54,7 +54,6 @@ class navbar extends Component {
   render() {
     // console.log(JSON.parse(localStorage.getItem("res")));
     // let obj = JSON.parse(localStorage.getItem("res"));
-
     return (
       <div>
         <Link to="/">
@@ -66,9 +65,12 @@ class navbar extends Component {
             name="search"
             placeholder="Search"
           ></input>
+          <Link to="/searchFood">
           <button type="submit">Search</button>
+          </Link>
+          {this.displayAllFoods( )}
         </form>
-        {this.displayAllFoods()}
+        
       </div>
     );
   }

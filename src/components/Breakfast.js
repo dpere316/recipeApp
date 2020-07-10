@@ -38,7 +38,7 @@ class Breakfast extends Component {
     let res = await axios.get(
       `https://api.edamam.com/search?q=${
         this.state.foodType[this.randomIndex()]
-      }+breakfast&to=10&app_id=${APP_ID}&app_key=${APP_KEY}`
+      }+breakfast&to=15&app_id=${APP_ID}&app_key=${APP_KEY}`
     );
     this.setState({
       foods: res.data.hits,
