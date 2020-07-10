@@ -37,7 +37,7 @@ class SingleFood extends Component {
     return (
       <div>
         <Navbar />
-        {console.log(this.state.foods[0]?.recipe.ingredientLines)}
+        {console.log(this.state.foods[0]?.recipe.ingredientLines.length)}
         <h1>{this.state.foods[0]?.recipe.label}</h1>
         <br />
         <img src={this.state.foods[0]?.recipe.image} />
