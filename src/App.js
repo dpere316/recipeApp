@@ -7,13 +7,26 @@ import Dinner from "./components/Dinner";
 import Breakfast from "./components/Breakfast";
 import SingleFood from "./components/SingleFood";
 import EthnicFood from "./components/EthnicFood";
+import Allfoods from "./components/AllFoods";
 
 class App extends Component {
+  state = {
+    foods: [],
+  };
+  getFoods = (foods) => {
+    this.setState({
+      foods,
+    });
+  };
   render() {
     return (
       <div>
         <Switch>
-          <Route exact path="/" render={() => <Home />} />
+          <Route
+            exact
+            path="/"
+            render={(props) => <Home {...props} getFoods={this.getFoods} />}
+          />
           <Route
             exact
             path="/foods/:id"
@@ -23,6 +36,11 @@ class App extends Component {
             exact
             path="/ethnicfood/:ethnicity"
             render={(props) => <EthnicFood {...props} />}
+          />
+          <Route
+            exact
+            path="/searchfood"
+            render={(props) => <Allfoods {...props} foods={this.state.foods} />}
           />
         </Switch>
       </div>

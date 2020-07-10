@@ -3,10 +3,10 @@ import axios from "axios";
 import RandomFood from "./RandomFood";
 import Breakfast from "./Breakfast";
 import Lunch from "./Lunch";
-import RandomCocktail from "./RandomCocktail"
+import RandomCocktail from "./RandomCocktail";
 import Navbar from "./navbar";
 import Dinner from "./Dinner";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const APP_ID = "b479ca7f";
 const APP_KEY = "1091d11a059bf224db39af98bca9540f	";
@@ -31,7 +31,7 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <Navbar />
+        <Navbar {...this.props} />
         <div className="ethnicFoods">
           <Link to="/ethnicFood/Mexican">Mexican</Link>
           <Link to="/ethnicFood/Japanese">Japanese</Link>
