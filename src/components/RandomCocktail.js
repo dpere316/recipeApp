@@ -1,8 +1,13 @@
 import React, { Component } from "react";
 import axios from "axios";
+<<<<<<< HEAD
 
 const APP_ID = "1eddd451";
 const APP_KEY = "9acb3aa12defaeed4a85d8e39cddd73d";
+=======
+const APP_ID = "b479ca7f";
+const APP_KEY = "1091d11a059bf224db39af98bca9540f	";
+>>>>>>> 11c598170116984f0396337ba8e4585f3213358b
 
 const APP_ID2 = "ffd7e1b9";
 const APP_KEY2 = "e439b5df8590bafcf11efad43ca3a69b";

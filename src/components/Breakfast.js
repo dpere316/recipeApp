@@ -1,15 +1,26 @@
 import React, { Component } from "react";
 import axios from "axios";
-const APP_ID = "1eddd451";
-const APP_KEY = "9acb3aa12defaeed4a85d8e39cddd73d";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+const APP_ID = "b479ca7f";
+const APP_KEY = "1091d11a059bf224db39af98bca9540f	";
 
+const settings = {
+  dots: false,
+  infinte: true,
+  speed: 10,
+  arrows: true,
+  slidesToScroll: 1,
+  slidesToShow: 5,
+  className: "slides",
+};
 class Breakfast extends Component {
   state = {
     foods: [],
     foodType: [
       "eggs",
-      "chicken",
-      "salmon",
+      "yogurt",
       "waffles",
       "pancakes",
       "grits",
@@ -18,6 +29,7 @@ class Breakfast extends Component {
       "pizza",
       "tea",
       "coffee",
+      "juice",
     ],
   };
 
@@ -25,21 +37,27 @@ class Breakfast extends Component {
     let res = await axios.get(
       `https://api.edamam.com/search?q=${
         this.state.foodType[this.randomIndex()]
-      }+breakfast&to=100&app_id=${APP_ID}&app_key=${APP_KEY}`
+      }+breakfast&to=10&app_id=${APP_ID}&app_key=${APP_KEY}`
     );
     this.setState({
       foods: res.data.hits,
     });
-    console.log(this.state.foods);
+    // console.log(this.state.foods);
   }
 
   displayAllFoods = () => {
     return this.state.foods.map((eachFood) => {
       return (
-        <li>
-          {eachFood.recipe.label}
-          <img src={eachFood.recipe.image} />
-        </li>
+        <div className="container">
+          <div className="child">
+            <img
+              style={{ width: "100px" }}
+              src={eachFood.recipe.image}
+              alt={eachFood.recipe.label}
+            />
+            <p>{eachFood.recipe.label}</p>
+          </div>
+        </div>
       );
     });
   };
@@ -50,7 +68,12 @@ class Breakfast extends Component {
   };
 
   render() {
-    return <div>{this.displayAllFoods()}</div>;
+    return (
+      <div>
+        <h1>Breakfast</h1>
+        <Slider {...settings}>{this.displayAllFoods()}</Slider>
+      </div>
+    );
   }
 }
 
