@@ -23,7 +23,7 @@ class RandomCocktail extends Component {
     let res = await axios.get(
       `https://api.edamam.com/search?q=${
         this.state.randomTypeCocktail[this.randomIndex()]
-      }&to=100&app_id=${APP_ID2}&app_key=${APP_KEY2}`
+      }&to=100&app_id=${APP_ID}&app_key=${APP_KEY}`
     );
     // console.log("random cocktail type category", res);
 
