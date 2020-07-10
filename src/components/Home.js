@@ -3,10 +3,10 @@ import axios from "axios";
 import RandomFood from "./RandomFood";
 import Breakfast from "./Breakfast";
 import Lunch from "./Lunch";
-import RandomCocktail from "./RandomCocktail"
+import RandomCocktail from "./RandomCocktail";
 import Navbar from "./navbar";
 import Dinner from "./Dinner";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const APP_ID = "b479ca7f";
 const APP_KEY = "1091d11a059bf224db39af98bca9540f	";
@@ -32,6 +32,8 @@ class Home extends Component {
     return (
       <div>
         <Navbar />
+        <RandomFood />
+        <RandomCocktail />
         <div className="ethnicFoods">
           <Link to="/ethnicFood/Mexican">Mexican</Link>
           <Link to="/ethnicFood/Japanese">Japanese</Link>
@@ -44,8 +46,18 @@ class Home extends Component {
           <Link to="/ethnicFood/Caribbean">Caribbean</Link>
           <Link to="/ethnicFood/Mediterranean">Mediterranean</Link>
         </div>
-        <RandomFood />
-        <RandomCocktail />
+        <div>
+          <Link to="/healthdiet/low-fat">Low-Fat</Link>
+          <Link to="/healthdiet/low-carb">Low-Carb</Link>
+          <Link to="/healthdiet/high-protein">High-Protein</Link>
+          <Link to="/healthdiet/balanced">Balanced</Link>
+          <Link to="/healthdiet/vegan">Vegan</Link>
+          <Link to="/healthdiet/vegetarian">Vegetarian</Link>
+          <Link to="/healthdiet/sugar-conscious">Low Sugar</Link>
+          <Link to="/healthdiet/peanut-free">No Peanuts</Link>
+          <Link to="/healthdiet/tree-nut-free">No Tree Nuts</Link>
+          <Link to="/healthdiet/alcohol-free">No Alcohol</Link>
+        </div>
         <Breakfast />
         <Lunch />
         <Dinner />
