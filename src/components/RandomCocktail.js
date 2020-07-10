@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 const APP_ID = "b479ca7f";
 const APP_KEY = "1091d11a059bf224db39af98bca9540f	";
-
 const APP_ID2 = "ffd7e1b9";
 const APP_KEY2 = "e439b5df8590bafcf11efad43ca3a69b";
 
@@ -39,11 +39,15 @@ class RandomCocktail extends Component {
     if (!!this.state.cocktails.length) {
       return this.state.cocktails.map((eachDrink) => {
         return (
-          <li key="randomdrink">
-            <img src={eachDrink.image} alt="random-drink" />
-            <br />
-            {eachDrink.label}
-          </li>
+          <div>
+            <Link to={`/foods/${eachDrink.label}`}>
+              <li key="randomdrink">
+                <img src={eachDrink.image} alt="random-drink" />
+                <br />
+                {eachDrink.label}
+              </li>
+            </Link>
+          </div>
         );
       });
     } else {

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Slider from "react-slick";
+import { Link } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../App.css";
@@ -56,7 +57,9 @@ class Dinner extends Component {
             src={eachFood.recipe.image}
             alt={eachFood.recipe.label}
           />
-          <p>{eachFood.recipe.label}</p>
+          <Link to={`/foods/${eachFood.recipe.label}`}>
+            <p>{eachFood.recipe.label}</p>
+          </Link>
         </div>
       );
     });
