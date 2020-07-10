@@ -8,6 +8,7 @@ import Breakfast from "./components/Breakfast";
 import SingleFood from "./components/SingleFood";
 import EthnicFood from "./components/EthnicFood";
 import Allfoods from "./components/AllFoods";
+import HealthDietFood from "./components/HealthDietFood";
 
 class App extends Component {
   state = {
@@ -34,13 +35,17 @@ class App extends Component {
           />
           <Route
             exact
-            path="/ethnicfood/:ethnicity"
+            path="/ethnicfood/:id"
             render={(props) => <EthnicFood {...props} />}
           />
           <Route
             exact
             path="/searchfood"
             render={(props) => <Allfoods {...props} foods={this.state.foods} />}
+          />
+          <Route
+            path="/healthdiet/:id"
+            render={(props) => <HealthDietFood {...props} />}
           />
         </Switch>
       </div>

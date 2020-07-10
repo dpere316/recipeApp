@@ -32,6 +32,9 @@ class Home extends Component {
     return (
       <div>
         <Navbar {...this.props} />
+
+        <RandomFood />
+        <RandomCocktail />
         <div className="ethnicFoods">
           <Link to="/ethnicFood/Mexican">Mexican</Link>
           <Link to="/ethnicFood/Japanese">Japanese</Link>
@@ -44,8 +47,18 @@ class Home extends Component {
           <Link to="/ethnicFood/Caribbean">Caribbean</Link>
           <Link to="/ethnicFood/Mediterranean">Mediterranean</Link>
         </div>
-        <RandomFood />
-        <RandomCocktail />
+        <div>
+          <Link to="/healthdiet/low-fat">Low-Fat</Link>
+          <Link to="/healthdiet/low-carb">Low-Carb</Link>
+          <Link to="/healthdiet/high-protein">High-Protein</Link>
+          <Link to="/healthdiet/balanced">Balanced</Link>
+          <Link to="/healthdiet/vegan">Vegan</Link>
+          <Link to="/healthdiet/vegetarian">Vegetarian</Link>
+          <Link to="/healthdiet/sugar-conscious">Low Sugar</Link>
+          <Link to="/healthdiet/peanut-free">No Peanuts</Link>
+          <Link to="/healthdiet/tree-nut-free">No Tree Nuts</Link>
+          <Link to="/healthdiet/alcohol-free">No Alcohol</Link>
+        </div>
         <Breakfast />
         <Lunch />
         <Dinner />
