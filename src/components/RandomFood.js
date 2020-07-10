@@ -8,6 +8,7 @@ const APP_ID2 = "ffd7e1b9";
 const APP_KEY2 = "e439b5df8590bafcf11efad43ca3a69b";
 
 class Home extends Component {
+  
   state = {
     foods: [],
     randomTypeFood: [

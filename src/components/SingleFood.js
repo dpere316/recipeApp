@@ -17,6 +17,7 @@ class SingleFood extends Component {
     foods: {},
     // ingredientLines: [],
   };
+
   async componentDidMount() {
     let res = await axios.get(
       `https://api.edamam.com/search?q=${this.props.match.params.id}&app_id=${APP_ID2}&app_key=${APP_KEY2}`
@@ -28,11 +29,13 @@ class SingleFood extends Component {
     });
     // console.log(ingredients);
   }
+  
   displayIngredients = () => {
     return this.state.foods[0]?.recipe.ingredientLines.map((ingredient) => (
       <li>{ingredient}</li>
     ));
   };
+
   render() {
     return (
       <div>
