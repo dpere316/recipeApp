@@ -7,6 +7,7 @@ import Lunch from "./components/Lunch";
 import Dinner from "./components/Dinner";
 import Breakfast from "./components/Breakfast";
 import SingleFood from "./components/SingleFood";
+import EthicFood from "./components/EthnicFood";
 
 class App extends Component {
   render() {
@@ -19,6 +20,11 @@ class App extends Component {
             exact
             path="/foods/:id"
             render={(props) => <SingleFood {...props} />}
+          />
+          <Route
+            exact
+            path="/ethnicfood/:id"
+            render={(props) => <EthicFood {...props} />}
           />
         </Switch>
       </div>

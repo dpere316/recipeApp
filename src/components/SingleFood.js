@@ -16,6 +16,7 @@ class SingleFood extends Component {
     let res = await axios.get(
       `https://api.edamam.com/search?q=${this.props.match.params.id}&app_id=${APP_ID2}&app_key=${APP_KEY2}`
     );
+
     this.setState({
       foods: res.data.hits,
     });

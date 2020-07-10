@@ -33,7 +33,7 @@ class Lunch extends Component {
     this.setState({
       foods: res.data.hits,
     });
-    console.log(this.state.foods);
+    // console.log(this.state.foods);
   }
 
   displayAllFoods = () => {

@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const APP_ID2 = "ffd7e1b9";
 const APP_KEY2 = "e439b5df8590bafcf11efad43ca3a69b";
 
 class EthnicFood extends Component {
   state = {
-    ethnicFoods: [
+    ethnicCategories: [
       "Mexican",
       "Japanese",
       "Italian",
@@ -17,38 +18,45 @@ class EthnicFood extends Component {
       "South American",
       "Caribbean",
       "Mediterranean",
-    ];
+    ],
+    ethnicFoods: [],
   };
 
   async componentDidMount() {
     let res = await axios.get(
-      `https://api.edamam.com/search?q=${this.state.ethnicFoods}&to=100&app_id=${APP_ID2}&app_key=${APP_KEY2}`
+      `https://api.edamam.com/search?q=${this.state.ethnicCategories}&app_id=${APP_ID2}&app_key=${APP_KEY2}`
     );
-    // console.log("random food type category", res);
-
-    const food = this.randomizedFood(res.data.hits);
-    // console.log("random food within type category", food);
-
     this.setState({
-      foods: [...this.state.foods, food.recipe],
+      ethnicCategories: res.data.hits,
     });
   }
 
   render() {
-    return <div>
-      <li>"Mexican"</li>
-      <li>"Japanese"</li>
-      <li>"Italian"</li>
-      <li>"American"</li>
-      <li>"Indian"</li>
-      <li>"Chinese"</li>
-      <li>"French"</li>
-      <li>"South American"</li>
-      <li>"Caribbean"</li>
-      <li>"Mediterranean"</li>
-    </div>;
+    return (
+      <div>
+        <Link to={`/Mexican/${this.state.ethnicCategories[0]}`}>"Mexican"</Link>
+        <Link to={`/Japanese/${this.state.ethnicCategories[1]}`}>
+          "Japanese"
+        </Link>
+        <Link to={`/Italian/${this.state.ethnicCategories[2]}`}>"Italian"</Link>
+        <Link to={`/American/${this.state.ethnicCategories[3]}`}>
+          "American"
+        </Link>
+        <Link to={`/Indian/${this.state.ethnicCategories[4]}`}> "Indian"</Link>
+        <Link to={`/Chinese/${this.state.ethnicCategories[5]}`}>"Chinese"</Link>
+        <Link to={`/French/${this.state.ethnicCategories[6]}`}> "French"</Link>
+        <Link to={`/South-American/${this.state.ethnicCategories[7]}`}>
+          "South American"
+        </Link>
+        <Link to={`/Caribbean/${this.state.ethnicCategories[8]}`}>
+          "Caribbean"
+        </Link>
+        <Link to={`/Mediterranean/${this.state.ethnicCategories[9]}`}>
+          "Mediterranean"
+        </Link>
+      </div>
+    );
   }
 }
-
 
 export default EthnicFood;
