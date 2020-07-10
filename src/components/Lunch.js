@@ -53,6 +53,7 @@ class Lunch extends Component {
     return this.state.foods.map((eachFood) => {
       return (
         <div className="container">
+          <Link to={`/foods/${eachFood.recipe.label}`}></Link>
           <img
             style={{ width: "100px" }}
             src={eachFood.recipe.image}
