@@ -33,6 +33,12 @@
   background-color: #61dafb;
 }
 
+.container{
+  display:flex;
+  align-content: space-evenly;
+  justify-content: center;
+  text-align: center;
+}
 
 
 @keyframes App-logo-spin {

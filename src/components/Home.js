@@ -1,21 +1,15 @@
 import React, { Component } from "react";
-import Navbar from "./navbar";
-import SingleFood from "./SingleFood";
-import Breakfast from "./Breakfast";
-import Lunch from "./Lunch";
-import Dinner from "./Dinner";
-import EthnicFood from "./EthnicFood";
-import { Switch, Route } from "react-router-dom";
 import axios from "axios";
 import RandomFood from "./RandomFood";
-import RandomCocktail from "./RandomCocktail";
-import { Link } from "react-router-dom";
+import Breakfast from "./Breakfast";
+import Lunch from "./Lunch";
+import RandomCocktail from "./RandomCocktail"
+import Navbar from "./navbar";
+import Dinner from "./Dinner";
+import {Link} from "react-router-dom";
 
-// const APP_ID = "1eddd451";
-// const APP_KEY = "9acb3aa12defaeed4a85d8e39cddd73d";
-
-const APP_ID2 = "ffd7e1b9";
-const APP_KEY2 = "e439b5df8590bafcf11efad43ca3a69b";
+const APP_ID = "b479ca7f";
+const APP_KEY = "1091d11a059bf224db39af98bca9540f	";
 
 class Home extends Component {
   state = {
@@ -24,7 +18,7 @@ class Home extends Component {
 
   async componentDidMount() {
     let res = await axios.get(
-      `https://api.edamam.com/search?q=chicken&app_id=${APP_ID2}&app_key=${APP_KEY2}&from=0&to=3&calories=591-722&health=alcohol-free`
+      `https://api.edamam.com/search?q=chicken&to=10&app_id=${APP_ID}&app_key=${APP_KEY}`
     );
     // console.log(res);
     this.setState({
@@ -50,9 +44,11 @@ class Home extends Component {
           <Link to="/ethnicFood/Caribbean">Caribbean</Link>
           <Link to="/ethnicFood/Mediterranean">Mediterranean</Link>
         </div>
-        <Lunch />
         <RandomFood />
         <RandomCocktail />
+        <Breakfast />
+        <Lunch />
+        <Dinner />
       </div>
     );
   }
