@@ -9,6 +9,7 @@ import SingleFood from "./components/SingleFood";
 import EthnicFood from "./components/EthnicFood";
 import Allfoods from "./components/AllFoods";
 import HealthDietFood from "./components/HealthDietFood";
+import './App.scss';
 
 class App extends Component {
   state = {
