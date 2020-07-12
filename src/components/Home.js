@@ -32,7 +32,8 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <Navbar />
+        <Navbar {...this.props} />
+
         <RandomFood />
         <RandomCocktail />
         <div className="ethnicFoods">

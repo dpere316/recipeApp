@@ -5,6 +5,7 @@ const APP_ID = "b479ca7f";
 const APP_KEY = "1091d11a059bf224db39af98bca9540f	";
 
 class navbar extends Component {
+  
   state = {
     foods: [],
     search: "",
@@ -20,6 +21,7 @@ class navbar extends Component {
     });
     // localStorage.setItem("res", JSON.stringify(res.data));
   }
+
   searchForFoods = async (event) => {
     event.preventDefault();
     console.log("search for food");
@@ -30,11 +32,13 @@ class navbar extends Component {
     this.setState({ foods: res.data.hits });
     console.log(this.state.foods);
   };
+
   handleChange = (event) => {
     this.setState({
       [event.target.name]: event.target.value,
     });
   };
+
   displayAllFoods = () => {
     if (this.state.foods.length) {
       return this.state.foods.map((eachFood) => {
@@ -54,7 +58,6 @@ class navbar extends Component {
   render() {
     // console.log(JSON.parse(localStorage.getItem("res")));
     // let obj = JSON.parse(localStorage.getItem("res"));
-
     return (
       <div>
         <Link to="/">
@@ -66,7 +69,9 @@ class navbar extends Component {
             name="search"
             placeholder="Search"
           ></input>
-          <button type="submit">Search</button>
+          <Link to="/searchFood">
+            <button type="submit">Search</button>
+          </Link>
         </form>
         {this.displayAllFoods()}
       </div>

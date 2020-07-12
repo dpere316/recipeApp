@@ -7,15 +7,32 @@ import Dinner from "./components/Dinner";
 import Breakfast from "./components/Breakfast";
 import SingleFood from "./components/SingleFood";
 import EthnicFood from "./components/EthnicFood";
+import Allfoods from "./components/AllFoods";
 import HealthDietFood from "./components/HealthDietFood";
+<<<<<<< HEAD
 import "./App.scss";
+=======
+import './App.scss';
+>>>>>>> master
 
 class App extends Component {
+  state = {
+    foods: [],
+  };
+  getFoods = (foods) => {
+    this.setState({
+      foods,
+    });
+  };
   render() {
     return (
       <div>
         <Switch>
-          <Route exact path="/" render={() => <Home />} />
+          <Route
+            exact
+            path="/"
+            render={(props) => <Home {...props} getFoods={this.getFoods} />}
+          />
           <Route
             exact
             path="/foods/:id"
@@ -28,6 +45,10 @@ class App extends Component {
           />
           <Route
             exact
+            path="/searchfood"
+            render={(props) => <Allfoods {...props} foods={this.state.foods} />}
+          />
+          <Route
             path="/healthdiet/:id"
             render={(props) => <HealthDietFood {...props} />}
           />

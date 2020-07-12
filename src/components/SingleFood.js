@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import Navbar from "./navbar";
 // const APP_ID = "1eddd451";
 // const APP_KEY = "9acb3aa12defaeed4a85d8e39cddd73d";
 const APP_ID2 = "027c69d3";
@@ -19,7 +20,7 @@ class SingleFood extends Component {
 
   async componentDidMount() {
     let res = await axios.get(
-      `https://api.edamam.com/search?q=${this.props.match.params.id}&app_id=${APP_ID2}&app_key=${APP_KEY2}`
+      `https://api.edamam.com/search?q=${this.props.match.params.id}&app_id=${APP_ID}&app_key=${APP_KEY}`
     );
 
     this.setState({
@@ -38,7 +39,8 @@ class SingleFood extends Component {
   render() {
     return (
       <div>
-        {console.log(this.state.foods[0]?.recipe.ingredientLines)}
+        <Navbar />
+        {console.log(this.state.foods[0]?.recipe.ingredientLines.length)}
         <h1>{this.state.foods[0]?.recipe.label}</h1>
         <br />
         <img src={this.state.foods[0]?.recipe.image} />

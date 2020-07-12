@@ -3,9 +3,7 @@ import axios from "axios";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "../App.css";
 import { Link } from "react-router-dom";
-
 const APP_ID = "b479ca7f";
 const APP_KEY = "1091d11a059bf224db39af98bca9540f	";
 
@@ -55,6 +53,7 @@ class Lunch extends Component {
     return this.state.foods.map((eachFood) => {
       return (
         <div className="container">
+          <Link to={`/foods/${eachFood.recipe.label}`}></Link>
           <img
             style={{ width: "100px" }}
             src={eachFood.recipe.image}
