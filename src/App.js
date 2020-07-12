@@ -8,6 +8,7 @@ import Breakfast from "./components/Breakfast";
 import SingleFood from "./components/SingleFood";
 import EthnicFood from "./components/EthnicFood";
 import HealthDietFood from "./components/HealthDietFood";
+import "./App.scss";
 
 class App extends Component {
   render() {
