@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import Lunch from "./Lunch"
 const APP_ID = "1949bcdc";
 const APP_KEY = "b99569c224fcfecca6f202946bed7bfe";
 
@@ -25,12 +24,14 @@ class EthnicFood extends Component {
     return this.state.ethnicFoods.map((eachRec) => {
       return (
         <div>
-          <Link to={`/foods/${eachRec.recipe.label}`}>
-            <li>
-              <img src={eachRec.recipe.image} alt="ethnicfood" />
-              {eachRec.recipe.label}
-            </li>
-          </Link>
+          <div>
+            <Link to={`/foods/${eachRec.recipe.label}`}>
+              <li>
+                <img src={eachRec.recipe.image} alt="ethnicfood" />
+                {eachRec.recipe.label}
+              </li>
+            </Link>
+          </div>
         </div>
       );
     });

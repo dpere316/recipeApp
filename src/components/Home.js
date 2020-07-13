@@ -5,10 +5,35 @@ import Breakfast from "./Breakfast";
 import Lunch from "./Lunch";
 import Navbar from "./navbar";
 import Dinner from "./Dinner";
+import DietCategories from "./DietCategories";
 import { Link } from "react-router-dom";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import mexican from "../images/mexican.jpg";
+import japanese from "../images/japanese.jpg";
+import italian from "../images/italian.jpg";
+import american from "../images/american.jpg";
+import indian from "../images/indian.jpg";
+import chinese from "../images/chinese.jpg";
+import french from "../images/french.jpg";
+import southamerican from "../images/southamerican.jpg";
+import caribbean from "../images/caribbean.jpg";
+import mediterranean from "../images/mediterranean.jpg";
+
 
 const APP_ID = "1949bcdc";
 const APP_KEY = "b99569c224fcfecca6f202946bed7bfe";
+
+const settings = {
+  dots: true,
+  infinte: true,
+  speed: 10,
+  arrows: true,
+  slidesToScroll: 10,
+  slidesToShow: 5,
+  className: "slides",
+};
 
 class Home extends Component {
   state = {
@@ -30,32 +55,86 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <Navbar {...this.props} />
-        <RandomFood/>
-        <div className="ethnicFoods">
-          <Link to="/ethnicFood/Mexican">Mexican</Link>
-          <Link to="/ethnicFood/Japanese">Japanese</Link>
-          <Link to="/ethnicFood/Italian">Italian</Link>
-          <Link to="/ethnicFood/American">American</Link>
-          <Link to="/ethnicFood/Indian">Indian</Link>
-          <Link to="/ethnicFood/Chinese">Chinese</Link>
-          <Link to="/ethnicFood/French">French</Link>
-          <Link to="/ethnicFood/South-American">American</Link>
-          <Link to="/ethnicFood/Caribbean">Caribbean</Link>
-          <Link to="/ethnicFood/Mediterranean">Mediterranean</Link>
+      <div>
+      <Navbar {...this.props} />
+      <RandomFood/>
+      </div>
+        <h1>What are you feeling</h1>
+        <div className="categories">
+          <div className="makeicon">
+            <Link to="/ethnicFood/Mexican">
+              Mexican
+              <img className="circleimages" src={mexican} alt="mexicanfood" />
+            </Link>
+          </div>
+          <div className="makeicon">
+            <Link to="/ethnicFood/Japanese">
+              Japanese
+              <img className="circleimages" src={japanese} alt="japanesefood" />
+            </Link>
+          </div>
+          <div className="makeicon">
+            <Link to="/ethnicFood/Italian">
+              Italian
+              <img className="circleimages" src={italian} alt="italianfood" />
+            </Link>
+          </div>
+          <div className="makeicon">
+            <Link to="/ethnicFood/American">
+              American
+              <img className="circleimages" src={american} alt="americanfood" />
+            </Link>
+          </div>
+          <div className="makeicon">
+            <Link to="/ethnicFood/Indian">
+              Indian
+              <img className="circleimages" src={indian} alt="indianfood" />
+            </Link>
+          </div>
+          <div className="makeicon">
+            <Link to="/ethnicFood/Chinese">
+              Chinese
+              <img className="circleimages" src={chinese} alt="chinesefood" />
+            </Link>
+          </div>
+          <div className="makeicon">
+            <Link to="/ethnicFood/French">
+              French
+              <img className="circleimages" src={french} alt="frenchfood" />
+            </Link>
+          </div>
+          <div className="makeicon">
+            <Link to="/ethnicFood/South-American">
+              South American
+              <img
+                className="circleimages"
+                src={southamerican}
+                alt="southamericanfood"
+              />
+            </Link>
+          </div>
+          <div className="makeicon">
+            <Link to="/ethnicFood/Caribbean">
+              Caribbean
+              <img
+                className="circleimages"
+                src={caribbean}
+                alt="caribbeanfood"
+              />
+            </Link>
+          </div>
+          <div className="makeicon">
+            <Link to="/ethnicFood/Mediterranean">
+              Mediterranean
+              <img
+                className="circleimages"
+                src={mediterranean}
+                alt="mediterraneanfood"
+              />
+            </Link>
+          </div>
         </div>
-        <div>
-          <Link to="/healthdiet/low-fat">Low-Fat</Link>
-          <Link to="/healthdiet/low-carb">Low-Carb</Link>
-          <Link to="/healthdiet/high-protein">High-Protein</Link>
-          <Link to="/healthdiet/balanced">Balanced</Link>
-          <Link to="/healthdiet/vegan">Vegan</Link>
-          <Link to="/healthdiet/vegetarian">Vegetarian</Link>
-          <Link to="/healthdiet/sugar-conscious">Low Sugar</Link>
-          <Link to="/healthdiet/peanut-free">No Peanuts</Link>
-          <Link to="/healthdiet/tree-nut-free">No Tree Nuts</Link>
-          <Link to="/healthdiet/alcohol-free">No Alcohol</Link>
-        </div>
+        <DietCategories/>
         <Breakfast/>
         <Lunch/>
         <Dinner/>

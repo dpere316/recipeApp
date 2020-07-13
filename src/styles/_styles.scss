@@ -38,3 +38,23 @@ body{
     }
     
 }
+
+.categories{
+    @include flexRow();
+}
+
+  .makeicon {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+    text-align: center;
+  }
+  
+  .circleimages {
+    margin: 0 auto;
+    margin-left: -25%;
+    height: 100%;
+  }
+  
+  

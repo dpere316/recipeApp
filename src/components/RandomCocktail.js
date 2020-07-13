@@ -68,7 +68,7 @@ class RandomCocktail extends Component {
   };
 
   render() {
-    return <div>{this.showRandomCocktail()}</div>;
+    return <div className="randomdrink">{this.showRandomCocktail()}</div>;
   }
 }
 
