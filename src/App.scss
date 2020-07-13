@@ -1,13 +1,49 @@
-<<<<<<< HEAD
-$primaryColor: rgb(110, 142, 143);
+@import "./styles/styles.scss";
 
-.randomfoods {
+$primaryColor: teal;
+$primary_font_family: muli;
+
+.randomheader {
+  margin-top: 50px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  font-size: 100px;
-
+  color: $primaryColor;
+  font-family: $primary_font_family;
 }
-=======
-@import './styles/styles.scss';
->>>>>>> master
+
+.topcontainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+  text-decoration: none;
+  text-align: center;
+  padding: 100px 350px;
+  .plus {
+    font-size: xx-large;
+    font-weight: 900;
+  }
+}
+
+.ethnicFoods {
+  display: flex;
+  justify-content: space-between;
+  padding: 200px 100px;
+}
+
+.makeicon {
+  width: 150px;
+  height: 150px;
+  // position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.circleimages {
+  display: inline;
+  margin: 0 auto;
+  margin-left: -25%;
+  height: 100%;
+  // opacity: 0.65;
+}

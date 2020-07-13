@@ -9,11 +9,7 @@ import SingleFood from "./components/SingleFood";
 import EthnicFood from "./components/EthnicFood";
 import Allfoods from "./components/AllFoods";
 import HealthDietFood from "./components/HealthDietFood";
-<<<<<<< HEAD
 import "./App.scss";
-=======
-import './App.scss';
->>>>>>> master
 
 class App extends Component {
   state = {
