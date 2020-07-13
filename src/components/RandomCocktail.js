@@ -22,7 +22,7 @@ class RandomCocktail extends Component {
 
   async componentDidMount() {
     let res = await axios.get(
-      `https://api.edamam.com/search?q=${
+      `https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=${
         this.state.randomTypeCocktail[this.randomIndex()]
       }&to=100&app_id=${APP_ID}&app_key=${APP_KEY}`
     );

@@ -7,6 +7,7 @@ import Navbar from "./navbar";
 import Dinner from "./Dinner";
 import DietCategories from "./DietCategories";
 import Cousine from "./cousineCategories";
+import NavbarPhone from "./navbarPhone";
 
 // const APP_ID = "1949bcdc";
 // const APP_KEY = "b99569c224fcfecca6f202946bed7bfe";
@@ -29,7 +30,7 @@ class Home extends Component {
 
   async componentDidMount() {
     let res = await axios.get(
-      `https://api.edamam.com/search?q=chicken&to=10&app_id=${APP_ID}&app_key=${APP_KEY}`
+      `https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=chicken&to=10&app_id=${APP_ID}&app_key=${APP_KEY}`
     );
     // console.log(res);
     this.setState({
@@ -41,8 +42,10 @@ class Home extends Component {
 
   render() {
     return (
-      <div>
-        <Navbar {...this.props} />
+      <div className="content">
+        {/* <NavbarPhone /> */}
+        {/* <Navbar {...this.props} /> */}
+
         <RandomFood />
         <Cousine />
         <DietCategories />

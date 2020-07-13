@@ -6,7 +6,8 @@ import EthnicFood from "./components/EthnicFood";
 import Allfoods from "./components/AllFoods";
 import HealthDietFood from "./components/HealthDietFood";
 import "./App.scss";
-
+import NavbarPhone from "./components/navbarPhone";
+import Navbar from "./components/navbar";
 class App extends Component {
   state = {
     foods: [],
@@ -19,6 +20,8 @@ class App extends Component {
   render() {
     return (
       <div>
+        {/* <NavbarPhone /> */}
+        <Navbar getFoods={this.getFoods} {...this.props} />
         <Switch>
           <Route
             exact

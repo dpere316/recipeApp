@@ -39,7 +39,7 @@ class Lunch extends Component {
 
   async componentDidMount() {
     let res = await axios.get(
-      `https://api.edamam.com/search?q=${
+      `https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=${
         this.state.foodType[this.randomIndex()]
         // this.state.foodType.join("%20")
       }+lunch&to=15&app_id=${APP_ID}&app_key=${APP_KEY}`

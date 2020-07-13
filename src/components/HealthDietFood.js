@@ -15,10 +15,10 @@ class HealthDietFood extends Component {
   async componentDidMount() {
     console.log(this);
     let res = await axios.get(
-      `https://api.edamam.com/search?q=Diet=${this.props.match.params.id}&to=100&app_id=${APP_ID}&app_key=${APP_KEY}`
+      `https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=Diet=${this.props.match.params.id}&to=100&app_id=${APP_ID}&app_key=${APP_KEY}`
     );
     let res2 = await axios.get(
-      `https://api.edamam.com/search?q=Health=${this.props.match.params.id}&to=100&app_id=${APP_ID}&app_key=${APP_KEY}`
+      `https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=Health=${this.props.match.params.id}&to=100&app_id=${APP_ID}&app_key=${APP_KEY}`
     );
     // console.log(res);
     this.setState({
@@ -45,9 +45,12 @@ class HealthDietFood extends Component {
   };
 
   render() {
-    return <div>
-    <DietCategories/>
-    {this.displayFoods()}</div>;
+    return (
+      <div>
+        <DietCategories />
+        {this.displayFoods()}
+      </div>
+    );
   }
 }
 

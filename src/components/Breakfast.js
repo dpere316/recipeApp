@@ -38,7 +38,7 @@ class Breakfast extends Component {
 
   async componentDidMount() {
     let res = await axios.get(
-      `https://api.edamam.com/search?q=${
+      `https://cors-anywhere.herokuapp.comhttps://api.edamam.com/search?q=${
         this.state.foodType[this.randomIndex()]
       }+breakfast&to=15&app_id=${APP_ID2}&app_key=${APP_KEY2}`
     );
@@ -53,10 +53,7 @@ class Breakfast extends Component {
       return (
         <div className="container">
           <div className="child">
-            <img
-              src={eachFood.recipe.image}
-              alt={eachFood.recipe.label}
-            />
+            <img src={eachFood.recipe.image} alt={eachFood.recipe.label} />
             <Link to={`/foods/${eachFood.recipe.label}`}>
               <p>{eachFood.recipe.label}</p>
             </Link>
