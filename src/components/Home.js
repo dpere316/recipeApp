@@ -5,8 +5,7 @@ import Breakfast from "./Breakfast";
 import Lunch from "./Lunch";
 import Navbar from "./navbar";
 import Dinner from "./Dinner";
-import DietCategories from "./DietCategories";
-import Cousine from "./cousineCategories";
+
 
 
 
@@ -43,10 +42,8 @@ class Home extends Component {
   render() {
     return (
       <div>
-      <Navbar {...this.props} />
+        <Navbar {...this.props} />
         <RandomFood/>
-        <Cousine/>
-        <DietCategories/>
         <Breakfast/>
         <Lunch/>
         <Dinner/>

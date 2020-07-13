@@ -52,7 +52,6 @@ class Breakfast extends Component {
         <div className="container">
           <div className="child">
             <img
-              style={{ width: "100px" }}
               src={eachFood.recipe.image}
               alt={eachFood.recipe.label}
             />

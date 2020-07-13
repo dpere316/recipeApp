@@ -1,109 +1,143 @@
 import React, { Component } from 'react';
+import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-
-
 const settings = {
-    dots: true,
-    infinte: true,
-    speed: 10,
-    arrows: true,
-    slidesToScroll: 10,
-    slidesToShow: 5,
-    className: "slides",
-  };
+  dots: false,
+  infinte: true,
+  speed: 10,
+  arrows: true,
+  slidesToScroll: 2,
+  slidesToShow: 5,
+  className: "slides",
+};
+
 
 class DietCategories extends Component {
 
 
     render() {
         return (
-       <div>
-
-       </div>
+          <div className="randomFood">
+          <div>
+            <h1>Health & Diet Restrictions?</h1>
+          </div>
+          <div>
+            <Slider {...settings}>
+              <div className="container">
+                <div className="child">
+                  <Link to="/healthdiet/Low-fat">Low-Fat</Link>
+                  <img
+                    className="circleimages"
+                    src={require("../images/lowfat.jpg")}
+                    alt="mexicanfood"
+                  />
+                </div>
+              </div>
+              <div className="container">
+                <div className="child">
+                  <Link to="/healthdiet/Low-carb">Low-Carb</Link>
+                  <img
+                    className="circleimages"
+                    src={require("../images/lowcarb.jpg")}
+                    alt="Japanesefood"
+                  />
+                </div>
+              </div>
+              <div className="container">
+                <div className="child">
+                  <Link to="/healthdiet/High-protein">High-protein</Link>
+                  <img
+                    className="circleimages"
+                    src={require("../images/highprotein.jpg")}
+                    alt="Italianfood"
+                  />
+                </div>
+              </div>
+              <div className="container">
+                <div className="child">
+                  <Link to="/healthdiet/Balanced">Balanced</Link>
+                  <img
+                    className="circleimages"
+                    src={require("../images/balanced.jpg")}
+                    alt="Americanfood"
+                  />
+                </div>
+              </div>
+              <div className="container">
+                <div className="child">
+                  <Link to="/healthdiet/Vegan">Vegan</Link>
+                  <img
+                    className="circleimages"
+                    src={require("../images/vegan.jpg")}
+                    alt="Indianfood"
+                  />
+                </div>
+              </div>
+              <div className="container">
+                <div className="child">
+                  <Link to="/healthdiet/Vegetarian">Vegetarian</Link>
+                  <img
+                    className="circleimages"
+                    src={require("../images/vegetarian.jpg")}
+                    alt="Chinesefood"
+                  />
+                </div>
+              </div>
+              <div className="container">
+                <div className="child">
+                  <Link to="/healthdiet/Low-sugar">Low-sugar</Link>
+                  <img
+                    className="circleimages"
+                    src={require("../images/lowsugar.jpg")}
+                    alt="Frenchfood"
+                  />
+                </div>
+              </div>
+              <div className="container">
+                <div className="child">
+                  <Link to="/healthdiet/Peanut-free">Peanut-free</Link>
+                  <img
+                    className="circleimages"
+                    src={require("../images/peanutfree.png")}
+                    alt="South-Americanfood"
+                  />
+                </div>
+              </div>
+              <div className="container">
+                <div className="child">
+                  <Link to="/healthdiet/Alcohol-free">Alcohol-free</Link>
+                  <img
+                    className="circleimages"
+                    src={require("../images/alcoholfree.png")}
+                    alt="Caribbeanfood"
+                  />
+                </div>
+              </div>
+              <div className="container">
+                <div className="child">
+                  <Link to="/healthdiet/Tree-nut-free">Tree-nut-free</Link>
+                  <img
+                    className="circleimages"
+                    src={require("../images/treenutfree.jpg")}
+                    alt="Mediterraneanfood"
+                  />
+                </div>
+              </div>
+            </Slider>
+          </div>
+        </div>
         );
     }
 }
 
 export default DietCategories;
 
-{/* <div>
-<h1>Health & Diet Preferences</h1>
-<Slider {...settings}>
-<div className="categories">
-  <div className="makeicon">
-    <Link to="/healthdiet/Low-fat">
-      Low-Fat
-      <img className="circleimages" src={lowfat} alt="lowfat" />
-    </Link>
-  </div>
-  <div className="makeicon">
-    <Link to="/healthdiet/Low-carb">
-      Low-Carb
-      <img className="circleimages" src={lowcarb} alt="lowcarb" />
-    </Link>
-  </div>
-  <div className="makeicon">
-    <Link to="/healthdiet/High-protein">
-      High-Protein
-      <img
-        className="circleimages"
-        src={highprotein}
-        alt="highprotein"
-      />
-    </Link>
-  </div>
-  <div className="makeicon">
-    <Link to="/healthdiet/Balanced">
-      Balanced
-      <img className="circleimages" src={balanced} alt="balanced" />
-    </Link>
-  </div>
-  <div className="makeicon">
-    <Link to="/healthdiet/Vegan">
-      Vegan
-      <img className="circleimages" src={vegan} alt="vegan" />
-    </Link>
-  </div>
-  <div className="makeicon">
-    <Link to="/healthdiet/Vegetarian">
-      Vegetarian
-      <img className="circleimages" src={vegetarian} alt="vegetarian" />
-    </Link>
-  </div>
-  <div className="makeicon">
-    <Link to="/healthdiet/Low-sugar">
-      Low Sugar
-      <img className="circleimages" src={lowsugar} alt="lowsugar" />
-    </Link>
-  </div>
-  <div className="makeicon">
-    <Link to="/healthdiet/Peanut-free">
-      Peanut Free
-      <img className="circleimages" src={peanutfree} alt="peanutfree" />
-    </Link>
-  </div>
-  <div className="makeicon">
-    <Link to="/healthdiet/Tree-nut-free">
-      Tree Nut Free
-      <img
-        className="circleimages"
-        src={treenutfree}
-        alt="treenutfree"
-      />
-    </Link>
-  </div>
-  <div className="makeicon">
-    <Link to="/healthdiet/Alcohol-free">
-      Alcohol Free
-      <img
-        className="circleimages"
-        src={alcoholfree}
-        alt="alcoholfree"
-      />
-    </Link>
-  </div>
-</div>
-</Slider> */}
+
+ 
+ 
+  
+  
+  
