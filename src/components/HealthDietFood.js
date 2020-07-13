@@ -2,9 +2,10 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-const APP_ID = "1949bcdc";
-const APP_KEY = "b99569c224fcfecca6f202946bed7bfe";
-
+// const APP_ID = "1949bcdc";
+// const APP_KEY = "b99569c224fcfecca6f202946bed7bfe";
+const APP_ID = "027c69d3";
+const APP_KEY = "06c10b8536afafcb35d471d1e71b262e";
 class HealthDietFood extends Component {
   state = {
     healthDietFoods: [],
