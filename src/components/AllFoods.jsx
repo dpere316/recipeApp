@@ -6,7 +6,6 @@ const AllFoods = (props) => {
   if (!props.foods.length) {
     props.history.push("/");
   }
-
   return (
     <div>
       <Navbar />
@@ -19,5 +18,4 @@ const AllFoods = (props) => {
     </div>
   );
 };
-
 export default AllFoods;

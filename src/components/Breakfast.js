@@ -4,10 +4,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-router-dom";
-import Navbar from "./navbar";
-//
-const APP_ID2 = "027c69d3";
-const APP_KEY2 = "06c10b8536afafcb35d471d1e71b262e";
+const APP_ID = "1949bcdc";
+const APP_KEY = "b99569c224fcfecca6f202946bed7bfe";
 
 const settings = {
   dots: true,
@@ -40,7 +38,7 @@ class Breakfast extends Component {
     let res = await axios.get(
       `https://api.edamam.com/search?q=${
         this.state.foodType[this.randomIndex()]
-      }+breakfast&to=15&app_id=${APP_ID2}&app_key=${APP_KEY2}`
+      }+breakfast&to=15&app_id=${APP_ID}&app_key=${APP_KEY}`
     );
     this.setState({
       foods: res.data.hits,
@@ -74,9 +72,13 @@ class Breakfast extends Component {
 
   render() {
     return (
-      <div>
-        <h1>Breakfast</h1>
-        <Slider {...settings}>{this.displayAllFoods()}</Slider>
+      <div className="randomFood">
+        <div>
+          <h1>Breakfast</h1>
+        </div>
+        <div>
+          <Slider {...settings}>{this.displayAllFoods()}</Slider>
+        </div>
       </div>
     );
   }

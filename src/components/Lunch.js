@@ -4,10 +4,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-router-dom";
-// const APP_ID = "b479ca7f";
-// const APP_KEY = "1091d11a059bf224db39af98bca9540f	";
-const APP_ID2 = "027c69d3";
-const APP_KEY2 = "06c10b8536afafcb35d471d1e71b262e";
+const APP_ID = "1949bcdc";
+const APP_KEY = "b99569c224fcfecca6f202946bed7bfe";
 
 const settings = {
   dots: true,
@@ -41,9 +39,9 @@ class Lunch extends Component {
   async componentDidMount() {
     let res = await axios.get(
       `https://api.edamam.com/search?q=${
-        // this.state.foodType[this.randomIndex()]
-        this.state.foodType.join("%20")
-      }+lunch&to=15&app_id=${APP_ID2}&app_key=${APP_KEY2}`
+        this.state.foodType[this.randomIndex()]
+        // this.state.foodType.join("%20")
+      }+lunch&to=15&app_id=${APP_ID}&app_key=${APP_KEY}`
     );
     this.setState({
       foods: res.data.hits,
@@ -55,6 +53,7 @@ class Lunch extends Component {
     return this.state.foods.map((eachFood) => {
       return (
         <div className="container">
+        <div className="child">
           <Link to={`/foods/${eachFood.recipe.label}`}></Link>
           <img
             style={{ width: "100px" }}
@@ -64,6 +63,7 @@ class Lunch extends Component {
           <Link to={`/foods/${eachFood.recipe.label}`}>
             <p>{eachFood.recipe.label}</p>
           </Link>
+          </div>
         </div>
       );
     });
@@ -76,9 +76,13 @@ class Lunch extends Component {
 
   render() {
     return (
-      <div>
-        <h1>Lunch</h1>
-        <Slider {...settings}> {this.displayAllFoods()} </Slider>
+      <div className="randomFood">
+        <div>
+          <h1>Lunch</h1>
+        </div>
+        <div>
+          <Slider {...settings}> {this.displayAllFoods()} </Slider>
+        </div>
       </div>
     );
   }

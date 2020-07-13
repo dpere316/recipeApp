@@ -1,10 +1,6 @@
 import React, { Component } from "react";
-import Navbar from "./components/navbar";
 import { Switch, Route } from "react-router-dom";
 import Home from "./components/Home";
-import Lunch from "./components/Lunch";
-import Dinner from "./components/Dinner";
-import Breakfast from "./components/Breakfast";
 import SingleFood from "./components/SingleFood";
 import EthnicFood from "./components/EthnicFood";
 import Allfoods from "./components/AllFoods";
