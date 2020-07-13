@@ -1,10 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 const AllFoods = (props) => {
   console.log(props);
   if (!props.foods.length) {
     props.history.push("/");
   }
+
   return (
     <div>
       {props.foods.map((item) => (
