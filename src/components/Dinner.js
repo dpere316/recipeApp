@@ -55,11 +55,7 @@ class Dinner extends Component {
       return (
         <div className="container">
           <div className="child">
-            <img
-              style={{ width: "100px" }}
-              src={eachFood.recipe.image}
-              alt={eachFood.recipe.label}
-            />
+            <img src={eachFood.recipe.image} alt={eachFood.recipe.label} />
             <Link to={`/foods/${eachFood.recipe.label}`}>
               <p>{eachFood.recipe.label}</p>
             </Link>

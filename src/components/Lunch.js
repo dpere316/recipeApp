@@ -56,11 +56,7 @@ class Lunch extends Component {
         <div className="container">
           <div className="child">
             <Link to={`/foods/${eachFood.recipe.label}`}></Link>
-            <img
-              style={{ width: "100px" }}
-              src={eachFood.recipe.image}
-              alt={eachFood.recipe.label}
-            />
+            <img src={eachFood.recipe.image} alt={eachFood.recipe.label} />
             <Link to={`/foods/${eachFood.recipe.label}`}>
               <p>{eachFood.recipe.label}</p>
             </Link>

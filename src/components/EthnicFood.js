@@ -1,10 +1,14 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import Cousine from "./cousineCategories";
 // const APP_ID = "1949bcdc";
 // const APP_KEY = "b99569c224fcfecca6f202946bed7bfe";
 const APP_ID2 = "027c69d3";
 const APP_KEY2 = "06c10b8536afafcb35d471d1e71b262e";
+
+// const APP_ID = "1949bcdc";
+// const APP_KEY = "b99569c224fcfecca6f202946bed7bfe";
 
 class EthnicFood extends Component {
   state = {
@@ -40,7 +44,12 @@ class EthnicFood extends Component {
   };
 
   render() {
-    return <div>{this.displayRecipes()}</div>;
+    return (
+      <div>
+        <Cousine />
+        {this.displayRecipes()}
+      </div>
+    );
   }
 }
 
