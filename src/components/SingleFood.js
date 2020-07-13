@@ -20,7 +20,7 @@ class SingleFood extends Component {
 
   async componentDidMount() {
     let res = await axios.get(
-      `https://api.edamam.com/search?q=${this.props.match.params.id}&app_id=${APP_ID}&app_key=${APP_KEY}`
+      `https://api.edamam.com/search?q=${this.props.match.params.id}&app_id=${APP_ID2}&app_key=${APP_KEY2}`
     );
 
     this.setState({
@@ -29,10 +29,10 @@ class SingleFood extends Component {
     });
     // console.log(ingredients);
   }
-  
+
   displayIngredients = () => {
     return this.state.foods[0]?.recipe.ingredientLines.map((ingredient) => (
-      <li>{ingredient}</li>
+      <li className="list-ingredients">{ingredient}</li>
     ));
   };
 
@@ -40,24 +40,31 @@ class SingleFood extends Component {
     return (
       <div>
         <Navbar />
-        {console.log(this.state.foods[0]?.recipe.ingredientLines.length)}
-        <h1>{this.state.foods[0]?.recipe.label}</h1>
-        <br />
-        <img src={this.state.foods[0]?.recipe.image} />
-        <br />
-        <div>
+        <div className="single">
+          <h1>{this.state.foods[0]?.recipe.label}</h1>
+          <br />
+
+          <br />
+          <img src={this.state.foods[0]?.recipe.image} />
+          <br />
+        </div>
+        <div className="calories">
+          <p>Calories: {parseInt(this.state.foods[0]?.recipe.calories)}</p>
+          Ingredient count: {this.state.foods[0]?.recipe.ingredientLines.length}
+        </div>
+        <div className="ingredients">
           <span>Ingredients:</span>
           {this.displayIngredients()}
-        </div>
-        <div>Calories: {parseInt(this.state.foods[0]?.recipe.calories)}</div>
-        <div>
-          <br />
+
+          {/* <div className="single">
+          Calories: {parseInt(this.state.foods[0]?.recipe.calories)}
+        </div> */}
+
           <a target="_blank" href={this.state.foods[0]?.recipe.url}>
             Click for directions here!
           </a>
-          {/* <iframe src={this.state.foods[0]?.recipe.url} /> */}
         </div>
-
+        {/* <iframe src={this.state.foods[0]?.recipe.url} /> */}
         {/* {this.state.foods[0]?this.state.foods[0].recipe.label:''} */}
       </div>
     );

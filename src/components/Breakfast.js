@@ -5,8 +5,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-router-dom";
 import Navbar from "./navbar";
-const APP_ID = "b479ca7f";
-const APP_KEY = "1091d11a059bf224db39af98bca9540f	";
+//
+const APP_ID2 = "027c69d3";
+const APP_KEY2 = "06c10b8536afafcb35d471d1e71b262e";
 
 const settings = {
   dots: true,
@@ -39,7 +40,7 @@ class Breakfast extends Component {
     let res = await axios.get(
       `https://api.edamam.com/search?q=${
         this.state.foodType[this.randomIndex()]
-      }+breakfast&to=15&app_id=${APP_ID}&app_key=${APP_KEY}`
+      }+breakfast&to=15&app_id=${APP_ID2}&app_key=${APP_KEY2}`
     );
     this.setState({
       foods: res.data.hits,
