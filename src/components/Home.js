@@ -28,8 +28,10 @@ import peanutfree from "../images/peanutfree.png";
 import treenutfree from "../images/treenutfree.jpg";
 import alcoholfree from "../images/alcoholfree.png";
 
-const APP_ID = "b479ca7f";
-const APP_KEY = "1091d11a059bf224db39af98bca9540f	";
+// const APP_ID = "b479ca7f";
+// const APP_KEY = "1091d11a059bf224db39af98bca9540f	";
+const APP_ID2 = "027c69d3";
+const APP_KEY2 = "06c10b8536afafcb35d471d1e71b262e";
 
 class Home extends Component {
   state = {
@@ -38,7 +40,7 @@ class Home extends Component {
 
   async componentDidMount() {
     let res = await axios.get(
-      `https://api.edamam.com/search?q=chicken&to=10&app_id=${APP_ID}&app_key=${APP_KEY}`
+      `https://api.edamam.com/search?q=chicken&to=10&app_id=${APP_ID2}&app_key=${APP_KEY2}`
     );
     // console.log(res);
     this.setState({
