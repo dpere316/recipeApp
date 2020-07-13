@@ -1,0 +1,40 @@
+@import './styles/variables';
+
+body{
+    background-color: $thirdColor;
+
+    @include flexColumn();
+    list-style: none;
+
+    h1{
+        color: $primaryColor;
+    }
+    a{
+        text-decoration: none;
+        color: $primaryColor;
+    }
+}
+
+.navbar{
+    @include flexRow();
+}
+
+.randomFood{
+    background-color: $fourthColor;
+    .row{
+        @include flexRow();
+    }
+    .column{
+        @include flexColumn();
+}
+
+}
+
+.slides{
+    width: 100vh;
+    .child{
+        @include flexColumn();
+        text-align: center;
+    }
+    
+}

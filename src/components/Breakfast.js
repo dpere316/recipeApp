@@ -4,9 +4,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-router-dom";
-import Navbar from "./navbar";
-const APP_ID = "b479ca7f";
-const APP_KEY = "1091d11a059bf224db39af98bca9540f	";
+const APP_ID = "1949bcdc";
+const APP_KEY = "b99569c224fcfecca6f202946bed7bfe";
 
 const settings = {
   dots: true,
@@ -73,9 +72,13 @@ class Breakfast extends Component {
 
   render() {
     return (
-      <div>
-        <h1>Breakfast</h1>
-        <Slider {...settings}>{this.displayAllFoods()}</Slider>
+      <div className="randomFood">
+        <div>
+          <h1>Breakfast</h1>
+        </div>
+        <div>
+          <Slider {...settings}>{this.displayAllFoods()}</Slider>
+        </div>
       </div>
     );
   }

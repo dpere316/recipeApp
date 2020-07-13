@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-const APP_ID = "b479ca7f";
-const APP_KEY = "1091d11a059bf224db39af98bca9540f	";
+const APP_ID = "1949bcdc";
+const APP_KEY = "b99569c224fcfecca6f202946bed7bfe";
 
 class navbar extends Component {
   
@@ -59,7 +59,7 @@ class navbar extends Component {
     // console.log(JSON.parse(localStorage.getItem("res")));
     // let obj = JSON.parse(localStorage.getItem("res"));
     return (
-      <div>
+      <div className="navbar">
         <Link to="/">
           <h1>Munchies</h1>
         </Link>

@@ -3,13 +3,12 @@ import axios from "axios";
 import RandomFood from "./RandomFood";
 import Breakfast from "./Breakfast";
 import Lunch from "./Lunch";
-import RandomCocktail from "./RandomCocktail";
 import Navbar from "./navbar";
 import Dinner from "./Dinner";
 import { Link } from "react-router-dom";
 
-const APP_ID = "b479ca7f";
-const APP_KEY = "1091d11a059bf224db39af98bca9540f	";
+const APP_ID = "1949bcdc";
+const APP_KEY = "b99569c224fcfecca6f202946bed7bfe";
 
 class Home extends Component {
   state = {
@@ -32,9 +31,7 @@ class Home extends Component {
     return (
       <div>
         <Navbar {...this.props} />
-
-        <RandomFood />
-        <RandomCocktail />
+        <RandomFood/>
         <div className="ethnicFoods">
           <Link to="/ethnicFood/Mexican">Mexican</Link>
           <Link to="/ethnicFood/Japanese">Japanese</Link>
@@ -59,9 +56,9 @@ class Home extends Component {
           <Link to="/healthdiet/tree-nut-free">No Tree Nuts</Link>
           <Link to="/healthdiet/alcohol-free">No Alcohol</Link>
         </div>
-        <Breakfast />
-        <Lunch />
-        <Dinner />
+        <Breakfast/>
+        <Lunch/>
+        <Dinner/>
       </div>
     );
   }
