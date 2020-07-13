@@ -5,8 +5,6 @@ import Breakfast from "./Breakfast";
 import Lunch from "./Lunch";
 import Navbar from "./navbar";
 import Dinner from "./Dinner";
-import DietCategories from "./DietCategories";
-import Cousine from "./cousineCategories";
 
 const APP_ID = "ffd7e1b9";
 const APP_KEY = "e439b5df8590bafcf11efad43ca3a69b	";
@@ -42,13 +40,7 @@ class Home extends Component {
     return (
       <div>
         <Navbar {...this.props} />
-        <div className="homeTitle">
-          Munchies
-          <img src={require("../images/munchiestitle.jpg")} />
-        </div>
         <RandomFood />
-        <Cousine />
-        <DietCategories />
         <Breakfast />
         <Lunch />
         <Dinner />

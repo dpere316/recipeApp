@@ -41,15 +41,21 @@ body {
         text-align: center;
     }
 
+    img {
+        width: 100px;
+        height: 100px;
+    }
+
 }
 
 .categories {
     @include flexRow();
 }
 
-
 .circleimages {
+    padding: 10px;
     border-radius: 50%;
+    align-content: center;
 }
 
 .homeTitle {
