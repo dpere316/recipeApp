@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+
 // const APP_ID = "b479ca7f";
 // const APP_KEY = "1091d11a059bf224db39af98bca9540f	";
 const APP_ID2 = "027c69d3";
@@ -87,7 +88,7 @@ class Home extends Component {
   };
 
   render() {
-    return <div>{this.showRandomFood()}</div>;
+    return <div className="randomfood">{this.showRandomFood()}</div>;
   }
 }
 

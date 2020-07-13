@@ -28,13 +28,15 @@ class HealthDietFood extends Component {
   displayFoods = () => {
     return this.state.healthDietFoods.map((eachRec) => {
       return (
-        <div>
-          <Link to={`/foods/${eachRec.recipe.label}`}>
-            <li>
-              <img src={eachRec.recipe.image} alt="healthdiet" />
-              {eachRec.recipe.label}
-            </li>
-          </Link>
+        <div className="column">
+          <div className="row">
+            <Link to={`/foods/${eachRec.recipe.label}`}>
+              <li>
+                <img src={eachRec.recipe.image} alt="healthdiet" />
+                {eachRec.recipe.label}
+              </li>
+            </Link>
+          </div>
         </div>
       );
     });
