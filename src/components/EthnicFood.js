@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-const APP_ID = "1949bcdc";
-const APP_KEY = "b99569c224fcfecca6f202946bed7bfe";
+const APP_ID = "ffd7e1b9";
+const APP_KEY = "e439b5df8590bafcf11efad43ca3a69b	";
 
 class EthnicFood extends Component {
   state = {

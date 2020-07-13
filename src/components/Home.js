@@ -8,10 +8,8 @@ import Dinner from "./Dinner";
 import DietCategories from "./DietCategories";
 import Cousine from "./cousineCategories";
 
-
-
-const APP_ID = "1949bcdc";
-const APP_KEY = "b99569c224fcfecca6f202946bed7bfe";
+const APP_ID = "ffd7e1b9";
+const APP_KEY = "e439b5df8590bafcf11efad43ca3a69b	";
 
 const settings = {
   dots: true,
@@ -43,13 +41,17 @@ class Home extends Component {
   render() {
     return (
       <div>
-      <Navbar {...this.props} />
-        <RandomFood/>
-        <Cousine/>
-        <DietCategories/>
-        <Breakfast/>
-        <Lunch/>
-        <Dinner/>
+        <Navbar {...this.props} />
+        <div className="homeTitle">
+          Munchies
+          <img src={require("../images/munchiestitle.jpg")} />
+        </div>
+        <RandomFood />
+        <Cousine />
+        <DietCategories />
+        <Breakfast />
+        <Lunch />
+        <Dinner />
       </div>
     );
   }

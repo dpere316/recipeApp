@@ -1,52 +1,59 @@
 @import './styles/variables';
 
-body{
+body {
     background-color: $thirdColor;
 
-    @include flexColumn();
-    list-style: none;
+    // @include flexColumn();
+    // list-style: none;
 
-    h1{
+    h1 {
         color: $primaryColor;
     }
-    a{
+
+    a {
         text-decoration: none;
         color: $primaryColor;
     }
 }
 
-.navbar{
+.navbar {
     @include flexRow();
 }
 
-.randomFood{
+.randomFood {
     background-color: $fourthColor;
-    .row{
+
+    .row {
         @include flexRow();
     }
-    .column{
+
+    .column {
         @include flexColumn();
-}
+    }
 
 }
 
-.slides{
+.slides {
     width: 100vh;
-    .child{
+
+    .child {
         @include flexColumn();
         text-align: center;
     }
-    
+
 }
 
-.categories{
+.categories {
     @include flexRow();
 }
 
 
-.circleimages{
-    border-radius:50%;
+.circleimages {
+    border-radius: 50%;
 }
- 
-  
-  
+
+.homeTitle {
+    width: 100%;
+    z-index: 0;
+    font-family: 'Love Ya Like A Sister';
+}

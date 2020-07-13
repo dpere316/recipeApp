@@ -1,10 +1,10 @@
-$primaryColor: #71c9ce ;
-$secondaryColor: #cbf1f5;
-$thirdColor: #a6e3e9;
-$fourthColor: #e3fdfd;
+$primaryColor: #0a0a0a;
+$secondaryColor: #888c8f;
+$thirdColor: #fafafa;
+$fourthColor: #ffffff;
 $primary_font_family: muli;
 
-@mixin flexColumn{
+@mixin flexColumn {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,7 +16,6 @@ $primary_font_family: muli;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color:$fourthColor;
+    background-color: $fourthColor;
     padding: 20px;
 }
-
