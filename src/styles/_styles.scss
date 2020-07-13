@@ -21,7 +21,10 @@ body {
 }
 
 .randomFood {
-    background-color: $fourthColor;
+
+    // background: -webkit-linear-gradient(to bottom, #DBD5A4, #649173);  
+    background: linear-gradient(to bottom, #649173, #DBD5A4);
+
 
     .row {
         @include flexRow();
@@ -58,8 +61,39 @@ body {
     align-content: center;
 }
 
-.homeTitle {
-    width: 100%;
+.hometitle {
+    background-image: url(../images/munchiestitle.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     z-index: 0;
-    font-family: 'Love Ya Like A Sister';
+    color: white;
+    font-size: 20px;
+    font-family: 'Noto Sans JP';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+
+    h2 {
+        font-size: 50px;
+        font-family: 'Noto Sans JP';
+    }
+}
+
+.homeEthnic {
+    background-image: url(../images/ethnichome.jpg);
+    background-size: cover;
+    background-position: center;
+    // background-attachment: fixed;
+    z-index: 0;
+    color: black;
+    font-size: 20px;
+    font-family: 'Noto Sans JP';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
 }
