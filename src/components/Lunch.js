@@ -6,8 +6,6 @@ import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-router-dom";
 const APP_ID = "1949bcdc";
 const APP_KEY = "b99569c224fcfecca6f202946bed7bfe";
-const APP_ID2 = "ffd7e1b9";
-const APP_KEY2 = "e439b5df8590bafcf11efad43ca3a69b";
 
 const settings = {
   dots: true,
