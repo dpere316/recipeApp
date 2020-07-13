@@ -48,3 +48,15 @@ $primary_font_family: muli;
   height: 100%;
   // opacity: 0.65;
 }
+
+.column {
+  float: left;
+  width: 20%;
+  padding: 5px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
