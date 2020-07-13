@@ -3,7 +3,7 @@
 $primaryColor: teal;
 $primary_font_family: muli;
 
-.randomheader {
+.headers {
   margin-top: 50px;
   display: flex;
   justify-content: center;
@@ -18,17 +18,18 @@ $primary_font_family: muli;
   list-style: none;
   text-decoration: none;
   text-align: center;
-  padding: 100px 350px;
+  padding: 50px 350px 200px;
   .plus {
     font-size: xx-large;
     font-weight: 900;
   }
 }
 
-.ethnicFoods {
+.ethnicFoods,
+.healthDiet {
   display: flex;
   justify-content: space-between;
-  padding: 200px 100px;
+  padding: 50px 100px 200px;
 }
 
 .makeicon {

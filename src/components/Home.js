@@ -17,6 +17,16 @@ import french from "../images/french.jpg";
 import southamerican from "../images/southamerican.jpg";
 import caribbean from "../images/caribbean.jpg";
 import mediterranean from "../images/mediterranean.jpg";
+import lowfat from "../images/lowfat.jpg";
+import lowcarb from "../images/lowcarb.jpg";
+import highprotein from "../images/highprotein.jpg";
+import balanced from "../images/balanced.jpg";
+import vegan from "../images/vegan.jpg";
+import vegetarian from "../images/vegetarian.jpg";
+import lowsugar from "../images/lowsugar.jpg";
+import peanutfree from "../images/peanutfree.png";
+import treenutfree from "../images/treenutfree.jpg";
+import alcoholfree from "../images/alcoholfree.png";
 
 const APP_ID = "b479ca7f";
 const APP_KEY = "1091d11a059bf224db39af98bca9540f	";
@@ -42,12 +52,13 @@ class Home extends Component {
     return (
       <div>
         <Navbar {...this.props} />
-        <h1 className="randomheader">Random Food & Drink of the Day</h1>
+        <h1 className="headers">Random Pick of the Day</h1>
         <div className="topcontainer">
           <RandomFood />
           <span className="plus">+</span>
           <RandomCocktail />
         </div>
+        <h1 className="headers">What Are You Feeling?</h1>
 
         <div className="ethnicFoods">
           <div className="makeicon">
@@ -123,18 +134,81 @@ class Home extends Component {
             </Link>
           </div>
         </div>
+        <h1 className="headers">Health & Diet Preferences</h1>
 
-        <div>
-          <Link to="/healthdiet/low-fat">Low-Fat</Link>
-          <Link to="/healthdiet/low-carb">Low-Carb</Link>
-          <Link to="/healthdiet/high-protein">High-Protein</Link>
-          <Link to="/healthdiet/balanced">Balanced</Link>
-          <Link to="/healthdiet/vegan">Vegan</Link>
-          <Link to="/healthdiet/vegetarian">Vegetarian</Link>
-          <Link to="/healthdiet/sugar-conscious">Low Sugar</Link>
-          <Link to="/healthdiet/peanut-free">No Peanuts</Link>
-          <Link to="/healthdiet/tree-nut-free">No Tree Nuts</Link>
-          <Link to="/healthdiet/alcohol-free">No Alcohol</Link>
+        <div className="healthDiet">
+          <div className="makeicon">
+            <Link to="/healthdiet/Low-fat">
+              Low-Fat
+              <img className="circleimages" src={lowfat} alt="lowfat" />
+            </Link>
+          </div>
+          <div className="makeicon">
+            <Link to="/healthdiet/Low-carb">
+              Low-Carb
+              <img className="circleimages" src={lowcarb} alt="lowcarb" />
+            </Link>
+          </div>
+          <div className="makeicon">
+            <Link to="/healthdiet/High-protein">
+              High-Protein
+              <img
+                className="circleimages"
+                src={highprotein}
+                alt="highprotein"
+              />
+            </Link>
+          </div>
+          <div className="makeicon">
+            <Link to="/healthdiet/Balanced">
+              Balanced
+              <img className="circleimages" src={balanced} alt="balanced" />
+            </Link>
+          </div>
+          <div className="makeicon">
+            <Link to="/healthdiet/Vegan">
+              Vegan
+              <img className="circleimages" src={vegan} alt="vegan" />
+            </Link>
+          </div>
+          <div className="makeicon">
+            <Link to="/healthdiet/Vegetarian">
+              Vegetarian
+              <img className="circleimages" src={vegetarian} alt="vegetarian" />
+            </Link>
+          </div>
+          <div className="makeicon">
+            <Link to="/healthdiet/Low-sugar">
+              Low Sugar
+              <img className="circleimages" src={lowsugar} alt="lowsugar" />
+            </Link>
+          </div>
+          <div className="makeicon">
+            <Link to="/healthdiet/Peanut-free">
+              Peanut Free
+              <img className="circleimages" src={peanutfree} alt="peanutfree" />
+            </Link>
+          </div>
+          <div className="makeicon">
+            <Link to="/healthdiet/Tree-nut-free">
+              Tree Nut Free
+              <img
+                className="circleimages"
+                src={treenutfree}
+                alt="treenutfree"
+              />
+            </Link>
+          </div>
+          <div className="makeicon">
+            <Link to="/healthdiet/Alcohol-free">
+              Alcohol Free
+              <img
+                className="circleimages"
+                src={alcoholfree}
+                alt="alcoholfree"
+              />
+            </Link>
+          </div>
         </div>
         <Breakfast />
         <Lunch />
