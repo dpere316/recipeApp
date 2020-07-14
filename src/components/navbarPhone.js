@@ -4,6 +4,14 @@ import { slide as Menu } from "react-burger-menu";
 import Search from "./search";
 
 class navbarPhone extends Component {
+  state = {
+    showForm: false,
+  };
+  toggleSearchBar = () => {
+    this.setState({
+      showForm: !this.state.showForm,
+    });
+  };
   displayAllFoods = () => {
     if (this.props.foods.length) {
       return this.props.foods.map((eachFood) => {
@@ -31,14 +39,18 @@ class navbarPhone extends Component {
           </Link>
 
           <Menu right>
-            <Search getFoods={this.props.getFoods} />
+            {this.state.showForm ? (
+              <Search getFoods={this.props.getFoods} />
+            ) : (
+              ""
+            )}
             <Link className="menu-item" to="/">
               Home
             </Link>
 
-            <Link className="menu-item" to="/burgers">
-              Burgers
-            </Link>
+            <a className="menu-item" onClick={this.toggleSearchBar}>
+              Search
+            </a>
 
             <Link className="menu-item" to="/pizzas">
               Pizzas

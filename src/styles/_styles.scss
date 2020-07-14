@@ -124,5 +124,14 @@ Note: Beware of modifying this element as it can break the animations - you shou
   background: rgba(0, 0, 0, 0.3);
 }
 .content {
-  padding: 50px;
+  padding-top: 70px;
+}
+.column-search {
+  float: left;
+  width: 20%;
+  padding: 5px;
+}
+.row-search {
+  clear: both;
+  display: table;
 }
