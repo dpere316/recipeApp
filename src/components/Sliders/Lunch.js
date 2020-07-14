@@ -16,21 +16,23 @@ const settings = {
   slidesToShow: 5,
   className: "slides",
 };
-class Breakfast extends Component {
+
+class Lunch extends Component {
   state = {
     foods: [],
     foodType: [
-      "eggs",
-      "yogurt",
-      "waffles",
-      "pancakes",
-      "grits",
-      "shrimp",
+      "chicken",
+      "salmon",
+      "ramen",
+      "pasta",
+      "burger",
+      "pork",
+      "salad",
+      "pies",
+      "soup",
+      "rice",
       "steak",
       "pizza",
-      "tea",
-      "coffee",
-      "juice",
     ],
   };
 
@@ -38,7 +40,8 @@ class Breakfast extends Component {
     let res = await axios.get(
       `https://api.edamam.com/search?q=${
         this.state.foodType[this.randomIndex()]
-      }+breakfast&to=15&app_id=${APP_ID}&app_key=${APP_KEY}`
+        // this.state.foodType.join("%20")
+      }+lunch&to=15&app_id=${APP_ID}&app_key=${APP_KEY}`
     );
     this.setState({
       foods: res.data.hits,
@@ -50,14 +53,15 @@ class Breakfast extends Component {
     return this.state.foods.map((eachFood) => {
       return (
         <div className="container">
-          <div className="child">
-            <img
-              src={eachFood.recipe.image}
-              alt={eachFood.recipe.label}
-            />
-            <Link to={`/foods/${eachFood.recipe.label}`}>
-              <p>{eachFood.recipe.label}</p>
-            </Link>
+        <div className="child">
+          <Link to={`/foods/${eachFood.recipe.label}`}></Link>
+          <img
+            src={eachFood.recipe.image}
+            alt={eachFood.recipe.label}
+          />
+          <Link to={`/foods/${eachFood.recipe.label}`}>
+            <p>{eachFood.recipe.label}</p>
+          </Link>
           </div>
         </div>
       );
@@ -71,16 +75,16 @@ class Breakfast extends Component {
 
   render() {
     return (
-      <div className="randomFood">
+      <div className="section-sliders">
         <div>
-          <h1>Breakfast</h1>
+          <h1>Lunch</h1>
         </div>
         <div>
-          <Slider {...settings}>{this.displayAllFoods()}</Slider>
+          <Slider {...settings}> {this.displayAllFoods()} </Slider>
         </div>
       </div>
     );
   }
 }
 
-export default Breakfast;
+export default Lunch;

@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import DietCategories from "./DietCategories";
+import DietCategories from "../Sliders/DietCategories";
 
 const APP_ID = "1949bcdc";
 const APP_KEY = "b99569c224fcfecca6f202946bed7bfe";
 
-class HealthDietFood extends Component {
+class HealthFilter extends Component {
   state = {
     healthDietFoods: [],
   };
@@ -50,4 +50,4 @@ class HealthDietFood extends Component {
   }
 }
 
-export default HealthDietFood;
+export default HealthFilter;

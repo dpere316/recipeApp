@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Slider from "react-slick";
-import { Link } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Link } from "react-router-dom";
+import Container from 'react-bootstrap/Container'
 const APP_ID = "1949bcdc";
 const APP_KEY = "b99569c224fcfecca6f202946bed7bfe";
 
@@ -16,23 +17,21 @@ const settings = {
   slidesToShow: 5,
   className: "slides",
 };
-
-class Dinner extends Component {
+class Breakfast extends Component {
   state = {
     foods: [],
     foodType: [
       "eggs",
-      "chicken",
-      "salmon",
-      "ramen",
-      "ribeye",
-      "pork",
-      "salad",
-      "pies",
-      "soup",
-      "rice",
+      "yogurt",
+      "waffles",
+      "pancakes",
+      "grits",
+      "shrimp",
       "steak",
       "pizza",
+      "tea",
+      "coffee",
+      "juice",
     ],
   };
 
@@ -40,7 +39,7 @@ class Dinner extends Component {
     let res = await axios.get(
       `https://api.edamam.com/search?q=${
         this.state.foodType[this.randomIndex()]
-      }+dinner&to=15&app_id=${APP_ID}&app_key=${APP_KEY}`
+      }+breakfast&to=15&app_id=${APP_ID}&app_key=${APP_KEY}`
     );
     this.setState({
       foods: res.data.hits,
@@ -52,14 +51,14 @@ class Dinner extends Component {
     return this.state.foods.map((eachFood) => {
       return (
         <div className="container">
-        <div className="child">
-          <img
-            src={eachFood.recipe.image}
-            alt={eachFood.recipe.label}
-          />
-          <Link to={`/foods/${eachFood.recipe.label}`}>
-            <p>{eachFood.recipe.label}</p>
-          </Link>
+          <div className="child">
+            <img
+              src={eachFood.recipe.image}
+              alt={eachFood.recipe.label}
+            />
+            <Link to={`/foods/${eachFood.recipe.label}`}>
+              <p>{eachFood.recipe.label}</p>
+            </Link>
           </div>
         </div>
       );
@@ -73,15 +72,18 @@ class Dinner extends Component {
 
   render() {
     return (
-      <div className="randomFood">
+     
+      <div className="section-sliders">
         <div>
-          <h1>Dinner</h1>
+          <h1>Breakfast</h1>
         </div>
         <div>
           <Slider {...settings}>{this.displayAllFoods()}</Slider>
         </div>
       </div>
+     
     );
   }
 }
-export default Dinner;
+
+export default Breakfast;

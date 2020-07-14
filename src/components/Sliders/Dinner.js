@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Slider from "react-slick";
+import { Link } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Link } from "react-router-dom";
 const APP_ID = "1949bcdc";
 const APP_KEY = "b99569c224fcfecca6f202946bed7bfe";
 
@@ -17,7 +17,7 @@ const settings = {
   className: "slides",
 };
 
-class Lunch extends Component {
+class Dinner extends Component {
   state = {
     foods: [],
     foodType: [
@@ -40,8 +40,7 @@ class Lunch extends Component {
     let res = await axios.get(
       `https://api.edamam.com/search?q=${
         this.state.foodType[this.randomIndex()]
-        // this.state.foodType.join("%20")
-      }+lunch&to=15&app_id=${APP_ID}&app_key=${APP_KEY}`
+      }+dinner&to=15&app_id=${APP_ID}&app_key=${APP_KEY}`
     );
     this.setState({
       foods: res.data.hits,
@@ -54,7 +53,6 @@ class Lunch extends Component {
       return (
         <div className="container">
         <div className="child">
-          <Link to={`/foods/${eachFood.recipe.label}`}></Link>
           <img
             src={eachFood.recipe.image}
             alt={eachFood.recipe.label}
@@ -75,16 +73,15 @@ class Lunch extends Component {
 
   render() {
     return (
-      <div className="randomFood">
+      <div className="section-sliders">
         <div>
-          <h1>Lunch</h1>
+          <h1>Dinner</h1>
         </div>
         <div>
-          <Slider {...settings}> {this.displayAllFoods()} </Slider>
+          <Slider {...settings}>{this.displayAllFoods()}</Slider>
         </div>
       </div>
     );
   }
 }
-
-export default Lunch;
+export default Dinner;
