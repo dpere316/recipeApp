@@ -47,7 +47,7 @@ class navbar extends Component {
               <li>
                 {eachFood.recipe.label}
                 <br />
-                <img src={eachFood.recipe.image} />
+                <img src={eachFood.recipe.image} alt={eachFood.recipe.label} />
               </li>
             </Link>
           </div>

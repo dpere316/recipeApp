@@ -7,6 +7,7 @@ const APP_ID = "1949bcdc";
 const APP_KEY = "b99569c224fcfecca6f202946bed7bfe";
 
 class EthnicFilter extends Component {
+  
   state = {
     ethnicFoods: [],
   };

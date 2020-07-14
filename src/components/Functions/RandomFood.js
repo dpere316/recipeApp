@@ -5,12 +5,11 @@ import RandomCocktail from "./RandomCocktail";
 const APP_ID = "1949bcdc";
 const APP_KEY = "b99569c224fcfecca6f202946bed7bfe";
 
-const APP_ID2 = "ffd7e1b9";
-const APP_KEY2 = "e439b5df8590bafcf11efad43ca3a69b";
 
 class Home extends Component {
   state = {
     foods: [],
+
     randomTypeFood: [
       "egg",
       "omelet",
@@ -30,7 +29,7 @@ class Home extends Component {
       "chinese",
       "french",
       "indian",
-      "italian",
+      "italian", 
       "japanese",
       "kosher",
       "mediterranean",
@@ -38,6 +37,7 @@ class Home extends Component {
       "middle eastern",
       "caribbean",
     ],
+
   };
 
   async componentDidMount() {
@@ -62,7 +62,7 @@ class Home extends Component {
         return (
           <div>
             <Link to={`/foods/${eachFood.label}`}>
-              <li key="landing">
+              <li key={eachFood}>
                 <img src={eachFood.image} alt="random-food" />
                 <br />
                 <div className="column">{eachFood.label}</div>
@@ -94,7 +94,7 @@ class Home extends Component {
         </div>
         <div className="row">
           {this.showRandomFood()}
-          <RandomCocktail />
+          <RandomCocktail getCocktails={this.props.getCocktails}/>
         </div>
       </div>
     );

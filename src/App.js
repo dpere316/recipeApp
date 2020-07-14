@@ -1,21 +1,28 @@
 import React, { Component } from "react";
 import { Switch, Route } from "react-router-dom";
 import Home from "./components/Home";
-import SingleFood from "./components/Functions/FoodDetails";
+import FoodDetails from "./components/Functions/FoodDetails";
 import EthnicFood from "./components/Functions/EthnicFilter";
 import Allfoods from "./components/Search/AllFoods";
 import HealthDietFood from "./components/Functions/HealthFilter";
+import CocktailDetails from "./components/Functions/CocktailDetails";
 import "./App.scss";
 
 class App extends Component {
   state = {
     foods: [],
+    cocktails: []
   };
   getFoods = (foods) => {
     this.setState({
       foods,
     });
   };
+  getCocktails = (cocktails) => {
+    this.setState({
+      cocktails
+    })
+  }
   render() {
     return (
       <div>
@@ -23,12 +30,17 @@ class App extends Component {
           <Route
             exact
             path="/"
-            render={(props) => <Home {...props} getFoods={this.getFoods} />}
+            render={(props) => <Home {...props} getCocktails={this.getCocktails} getFoods={this.getFoods} />}
           />
           <Route
             exact
             path="/foods/:id"
-            render={(props) => <SingleFood {...props} />}
+            render={(props) => <FoodDetails {...props} />}
+          />
+          <Route
+            exact
+            path="/cocktails/:id"
+            render={(props) => <CocktailDetails cocktails={this.state.cocktails} {...props} />}
           />
           <Route
             exact
