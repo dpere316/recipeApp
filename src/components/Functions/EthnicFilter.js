@@ -3,11 +3,15 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import Cousine from "../Sliders/CousineCategories";
 
-const APP_ID = "1949bcdc";
-const APP_KEY = "b99569c224fcfecca6f202946bed7bfe";
+// const APP_ID = "1949bcdc";
+// const APP_KEY = "b99569c224fcfecca6f202946bed7bfe";
+const APP_ID2 = "027c69d3";
+const APP_KEY2 = "06c10b8536afafcb35d471d1e71b262e";
+
+// const APP_ID = "1949bcdc";
+// const APP_KEY = "b99569c224fcfecca6f202946bed7bfe";
 
 class EthnicFilter extends Component {
-  
   state = {
     ethnicFoods: [],
   };
@@ -15,7 +19,7 @@ class EthnicFilter extends Component {
   async componentDidMount() {
     console.log(this);
     let res = await axios.get(
-      `https://api.edamam.com/search?q=${this.props.match.params.ethnicity}&to=100&app_id=${APP_ID}&app_key=${APP_KEY}`
+      `https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=${this.props.match.params.ethnicity}&to=100&app_id=${APP_ID2}&app_key=${APP_KEY2}`
     );
     console.log(res);
     this.setState({
@@ -41,9 +45,12 @@ class EthnicFilter extends Component {
   };
 
   render() {
-    return <div>
-    <Cousine/>
-    {this.displayRecipes()}</div>;
+    return (
+      <div>
+        <Cousine />
+        {this.displayRecipes()}
+      </div>
+    );
   }
 }
 

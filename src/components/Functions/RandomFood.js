@@ -2,9 +2,13 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import RandomCocktail from "./RandomCocktail";
-const APP_ID = "1949bcdc";
-const APP_KEY = "b99569c224fcfecca6f202946bed7bfe";
+// const APP_ID = "1949bcdc";
+// const APP_KEY = "b99569c224fcfecca6f202946bed7bfe";
 
+// const APP_ID2 = "ffd7e1b9";
+// const APP_KEY2 = "e439b5df8590bafcf11efad43ca3a69b";
+const APP_ID = "027c69d3";
+const APP_KEY = "06c10b8536afafcb35d471d1e71b262e";
 
 class Home extends Component {
   state = {
@@ -42,7 +46,7 @@ class Home extends Component {
 
   async componentDidMount() {
     let res = await axios.get(
-      `https://api.edamam.com/search?q=${
+      `https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=${
         this.state.randomTypeFood[this.randomIndex()]
       }&to=100&app_id=${APP_ID}&app_key=${APP_KEY}`
     );

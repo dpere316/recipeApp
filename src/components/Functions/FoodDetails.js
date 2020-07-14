@@ -5,7 +5,6 @@ import Navbar from "../Search/navbar";
 const APP_ID = "b479ca7f";
 const APP_KEY = "1091d11a059bf224db39af98bca9540f	";
 
-
 class FoodDetails extends Component {
   state = {
     foods: {},
@@ -14,8 +13,9 @@ class FoodDetails extends Component {
 
   async componentDidMount() {
     let res = await axios.get(
-      `https://api.edamam.com/search?q=${this.props.match.params.id}&app_id=${APP_ID}&app_key=${APP_KEY}`
+      `https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=${this.props.match.params.id}&app_id=${APP_ID}&app_key=${APP_KEY}`
     );
+    console.log(res);
 
     this.setState({
       foods: res.data.hits,
@@ -33,15 +33,19 @@ class FoodDetails extends Component {
   render() {
     return (
       <div>
-        <Navbar />
-        {console.log(this.state.foods[0]?.recipe.ingredientLines.length)}
-        <h1>{this.state.foods[0]?.recipe.label}</h1>
+        <div className="single">
+          <h1>{this.state.foods[0]?.recipe.label}</h1>
+          <br />
 
-        <img
-          src={this.state.foods[0]?.recipe.image}
-          alt={this.state.foods[0]?.recipe.label}
-        />
-        <div>
+          <br />
+          <img src={this.state.foods[0]?.recipe.image} />
+          <br />
+        </div>
+        <div className="calories">
+          <p>Calories: {parseInt(this.state.foods[0]?.recipe.calories)}</p>
+          Ingredient count: {this.state.foods[0]?.recipe.ingredientLines.length}
+        </div>
+        <div className="ingredients">
           <span>Ingredients:</span>
           {this.displayIngredients()}
         </div>
