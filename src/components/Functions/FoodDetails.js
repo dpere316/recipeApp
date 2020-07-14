@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import Navbar from "./navbar";
+import Navbar from "../Search/navbar";
 // const APP_ID = "1eddd451";
 // const APP_KEY = "9acb3aa12defaeed4a85d8e39cddd73d";
 const APP_ID2 = "027c69d3";
@@ -12,7 +12,7 @@ const APP_KEY = "1091d11a059bf224db39af98bca9540f	";
 const APP_IDVal = "ffd7e1b9";
 const APP_KEYVal = "e439b5df8590bafcf11efad43ca3a69b";
 
-class SingleFood extends Component {
+class FoodDetails extends Component {
   state = {
     foods: {},
     // ingredientLines: [],
@@ -64,4 +64,4 @@ class SingleFood extends Component {
   }
 }
 
-export default SingleFood;
+export default FoodDetails;

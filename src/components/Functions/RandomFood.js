@@ -62,7 +62,7 @@ class Home extends Component {
         return (
           <div>
             <Link to={`/foods/${eachFood.label}`}>
-              <li key="randomfood">
+              <li key="landing">
                 <img src={eachFood.image} alt="random-food" />
                 <br />
                 <div className="column">{eachFood.label}</div>
@@ -88,7 +88,7 @@ class Home extends Component {
 
   render() {
     return (
-      <div className="randomFood">
+      <div className="landing">
         <div>
           <h1 className="column">Suggestion for the day</h1>
         </div>

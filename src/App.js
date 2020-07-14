@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { Switch, Route } from "react-router-dom";
 import Home from "./components/Home";
-import SingleFood from "./components/SingleFood";
-import EthnicFood from "./components/EthnicFood";
-import Allfoods from "./components/AllFoods";
-import HealthDietFood from "./components/HealthDietFood";
+import SingleFood from "./components/Functions/FoodDetails";
+import EthnicFood from "./components/Functions/EthnicFilter";
+import Allfoods from "./components/Search/AllFoods";
+import HealthDietFood from "./components/Functions/HealthFilter";
 import "./App.scss";
 
 class App extends Component {

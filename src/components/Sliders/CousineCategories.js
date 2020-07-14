@@ -14,7 +14,7 @@ const settings = {
   className: "slides",
 };
 
-class cousineCategories extends Component {
+class CousineCategories extends Component {
   render() {
     return (
       <div className="randomFood">
@@ -130,7 +130,7 @@ class cousineCategories extends Component {
   }
 }
 
-export default cousineCategories;
+export default CousineCategories;
 
 
 

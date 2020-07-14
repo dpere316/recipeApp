@@ -4,6 +4,7 @@ $thirdColor: #a6e3e9;
 $fourthColor: #e3fdfd;
 $primary_font_family: muli;
 
+
 @mixin flexColumn{
     display: flex;
     flex-direction: column;
@@ -15,7 +16,7 @@ $primary_font_family: muli;
 @mixin flexRow {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     background-color:$fourthColor;
     padding: 20px;
 }

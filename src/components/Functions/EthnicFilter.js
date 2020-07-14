@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import Cousine from "./cousineCategories";
+import Cousine from "../Sliders/CousineCategories";
 
 const APP_ID = "1949bcdc";
 const APP_KEY = "b99569c224fcfecca6f202946bed7bfe";
 
-class EthnicFood extends Component {
+class EthnicFilter extends Component {
   state = {
     ethnicFoods: [],
   };
@@ -46,4 +46,4 @@ class EthnicFood extends Component {
   }
 }
 
-export default EthnicFood;
+export default EthnicFilter;

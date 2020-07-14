@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import axios from "axios";
-import RandomFood from "./RandomFood";
-import Breakfast from "./Breakfast";
-import Lunch from "./Lunch";
-import Navbar from "./navbar";
-import Dinner from "./Dinner";
+import RandomFood from "./Functions/RandomFood";
+import Navbar from "./Search/navbar";
+import Breakfast from "./Sliders/Breakfast"
+const APP_KEY3 = "2f1ace66bdd745f0a8b145740201407"
 
 
 
@@ -37,6 +36,8 @@ class Home extends Component {
     });
     // console.log(this.state.foods);
     // localStorage.setItem("res", JSON.stringify(res.data));
+      
+
   }
 
   render() {
@@ -44,9 +45,6 @@ class Home extends Component {
       <div>
         <Navbar {...this.props} />
         <RandomFood/>
-        <Breakfast/>
-        <Lunch/>
-        <Dinner/>
       </div>
     );
   }
