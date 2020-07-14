@@ -22,10 +22,6 @@ body {
 
 .randomFood {
 
-    // background: -webkit-linear-gradient(to bottom, #DBD5A4, #649173);  
-    background: linear-gradient(to bottom, #649173, #DBD5A4);
-
-
     .row {
         @include flexRow();
     }
@@ -70,11 +66,8 @@ body {
     color: white;
     font-size: 20px;
     font-family: 'Noto Sans JP';
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 500px;
+    height: 600px;
+    @include flexColumn();
 
     h2 {
         font-size: 50px;
@@ -82,18 +75,36 @@ body {
     }
 }
 
-.homeEthnic {
-    background-image: url(../images/ethnichome.jpg);
-    background-size: cover;
-    background-position: center;
-    // background-attachment: fixed;
-    z-index: 0;
-    color: black;
-    font-size: 20px;
-    font-family: 'Noto Sans JP';
+.ethnicHome {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.ethnicImgHome {
+    z-index: 0;
+    outline: 1px solid white;
+    outline-offset: -20px;
+    height: 700px;
+    margin: 50px;
+}
+
+.travelWords {
+    background-color: white;
+    font-size: 20px;
+    font-family: 'Noto Sans JP';
+    display: inline-block;
+    z-index: 2;
+    height: 200px;
+    text-align: center;
+    padding: 50px 75px 0px;
+    margin-top: -50px;
+}
+
+
+footer {
     height: 500px;
+    @include flexColumn();
+    // background-color: rgba(132, 155, 109);
 }

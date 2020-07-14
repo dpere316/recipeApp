@@ -45,11 +45,18 @@ class Home extends Component {
           <h3>All the recipes for whatever you're craving!</h3>
         </div>
         <RandomFood />
-        <div className="homeEthnic">
-          <h2>Travel Around The World</h2>
-          <h3>Choose your cuisine</h3>
+        <div className="ethnicHome">
+          <img
+            className="ethnicImgHome"
+            src={require("../images/ethnichome.jpg")}
+            alt="ethnicimage"
+          />
+          <div className="travelWords">
+            <h2>Travel Around The World</h2>
+            <h3>Link: Choose your cuisine</h3>
+          </div>
         </div>
-        <div></div>
+        <footer>This is the footer</footer>
       </div>
     );
   }
