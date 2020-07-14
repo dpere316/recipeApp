@@ -14,7 +14,7 @@ class FoodDetails extends Component {
 
   async componentDidMount() {
     let res = await axios.get(
-      `https://api.edamam.com/search?q=${this.props.match.params.id}&app_id=${APP_ID2}&app_key=${APP_KEY2}`
+      `https://api.edamam.com/search?q=${this.props.match.params.id}&app_id=${APP_ID}&app_key=${APP_KEY}`
     );
 
     this.setState({
@@ -34,28 +34,6 @@ class FoodDetails extends Component {
     return (
       <div>
         <Navbar />
-<<<<<<< HEAD
-        <div className="single">
-          <h1>{this.state.foods[0]?.recipe.label}</h1>
-          <br />
-
-          <br />
-          <img src={this.state.foods[0]?.recipe.image} />
-          <br />
-        </div>
-        <div className="calories">
-          <p>Calories: {parseInt(this.state.foods[0]?.recipe.calories)}</p>
-          Ingredient count: {this.state.foods[0]?.recipe.ingredientLines.length}
-        </div>
-        <div className="ingredients">
-          <span>Ingredients:</span>
-          {this.displayIngredients()}
-
-          {/* <div className="single">
-          Calories: {parseInt(this.state.foods[0]?.recipe.calories)}
-        </div> */}
-
-=======
         {console.log(this.state.foods[0]?.recipe.ingredientLines.length)}
         <h1>{this.state.foods[0]?.recipe.label}</h1>
 
@@ -69,7 +47,6 @@ class FoodDetails extends Component {
         </div>
         <div>Calories: {parseInt(this.state.foods[0]?.recipe.calories)}</div>
         <div>
->>>>>>> daniel
           <a target="_blank" href={this.state.foods[0]?.recipe.url}>
             Click for directions here!
           </a>

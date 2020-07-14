@@ -5,13 +5,6 @@ import RandomCocktail from "./RandomCocktail";
 const APP_ID = "1949bcdc";
 const APP_KEY = "b99569c224fcfecca6f202946bed7bfe";
 
-<<<<<<< HEAD
-// const APP_ID2 = "ffd7e1b9";
-// const APP_KEY2 = "e439b5df8590bafcf11efad43ca3a69b";
-const APP_ID2 = "027c69d3";
-const APP_KEY2 = "06c10b8536afafcb35d471d1e71b262e";
-=======
->>>>>>> daniel
 
 class Home extends Component {
   state = {
