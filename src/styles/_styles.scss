@@ -6,7 +6,7 @@ body {
   @include media("<=phone") {
     width: 100%;
   }
-  //   @include flexColumn();
+  // @include flexColumn();
   list-style: none;
 
   h1 {
@@ -28,7 +28,7 @@ body {
   position: fixed;
   background-color: white;
   width: 200vw;
-  padding: 5px 15px;
+  padding: 1px 15px;
   z-index: 1;
   top: 0;
 }

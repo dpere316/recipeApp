@@ -14,14 +14,19 @@ class App extends Component {
   };
   getFoods = (foods) => {
     this.setState({
-      foods,
+      foods: foods,
     });
   };
   render() {
+    console.log(this);
     return (
       <div>
-        {/* <NavbarPhone /> */}
-        <Navbar getFoods={this.getFoods} {...this.props} />
+        <NavbarPhone
+          getFoods={this.getFoods}
+          foods={this.state.foods}
+          {...this.props}
+        />
+        {/* <Navbar /> */}
         <Switch>
           <Route
             exact

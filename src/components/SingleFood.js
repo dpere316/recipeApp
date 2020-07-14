@@ -22,6 +22,7 @@ class SingleFood extends Component {
     let res = await axios.get(
       `https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=${this.props.match.params.id}&app_id=${APP_ID2}&app_key=${APP_KEY2}`
     );
+    console.log(res);
 
     this.setState({
       foods: res.data.hits,
@@ -39,7 +40,6 @@ class SingleFood extends Component {
   render() {
     return (
       <div>
-        <Navbar />
         <div className="single">
           <h1>{this.state.foods[0]?.recipe.label}</h1>
           <br />

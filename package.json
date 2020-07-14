@@ -9,6 +9,7 @@
     "axios": "^0.19.2",
     "include-media": "^1.4.9",
     "install": "^0.13.0",
+    "mdbreact": "^4.27.0",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-burger-menu": "^2.7.0",
