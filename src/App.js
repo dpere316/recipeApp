@@ -7,30 +7,44 @@ import Allfoods from "./components/Search/AllFoods";
 import HealthDietFood from "./components/Functions/HealthFilter";
 import CocktailDetails from "./components/Functions/CocktailDetails";
 import "./App.scss";
+import NavbarPhone from "./components/navbarPhone";
 
 class App extends Component {
   state = {
     foods: [],
-    cocktails: []
+    cocktails: [],
   };
   getFoods = (foods) => {
     this.setState({
-      foods,
+      foods: foods,
     });
   };
   getCocktails = (cocktails) => {
     this.setState({
-      cocktails
-    })
-  }
+      cocktails,
+    });
+  };
   render() {
+    console.log(this);
     return (
       <div>
+        <NavbarPhone
+          getFoods={this.getFoods}
+          foods={this.state.foods}
+          {...this.props}
+        />
+        {/* <Navbar /> */}
         <Switch>
           <Route
             exact
             path="/"
-            render={(props) => <Home {...props} getCocktails={this.getCocktails} getFoods={this.getFoods} />}
+            render={(props) => (
+              <Home
+                {...props}
+                getCocktails={this.getCocktails}
+                getFoods={this.getFoods}
+              />
+            )}
           />
           <Route
             exact
@@ -40,7 +54,9 @@ class App extends Component {
           <Route
             exact
             path="/cocktails/:id"
-            render={(props) => <CocktailDetails cocktails={this.state.cocktails} {...props} />}
+            render={(props) => (
+              <CocktailDetails cocktails={this.state.cocktails} {...props} />
+            )}
           />
           <Route
             exact

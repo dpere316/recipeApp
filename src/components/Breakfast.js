@@ -6,8 +6,9 @@ import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-router-dom";
 // const APP_ID = "1949bcdc";
 // const APP_KEY = "b99569c224fcfecca6f202946bed7bfe";
-const APP_ID = "027c69d3";
-const APP_KEY = "06c10b8536afafcb35d471d1e71b262e";
+const APP_ID2 = "027c69d3";
+const APP_KEY2 = "06c10b8536afafcb35d471d1e71b262e";
+
 const settings = {
   dots: true,
   infinte: true,
@@ -17,23 +18,21 @@ const settings = {
   slidesToShow: 5,
   className: "slides",
 };
-
-class Lunch extends Component {
+class Breakfast extends Component {
   state = {
     foods: [],
     foodType: [
-      "chicken",
-      "salmon",
-      "ramen",
-      "pasta",
-      "burger",
-      "pork",
-      "salad",
-      "pies",
-      "soup",
-      "rice",
+      "eggs",
+      "yogurt",
+      "waffles",
+      "pancakes",
+      "grits",
+      "shrimp",
       "steak",
       "pizza",
+      "tea",
+      "coffee",
+      "juice",
     ],
   };
 
@@ -41,8 +40,7 @@ class Lunch extends Component {
     let res = await axios.get(
       `https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=${
         this.state.foodType[this.randomIndex()]
-        // this.state.foodType.join("%20")
-      }+lunch&to=15&app_id=${APP_ID}&app_key=${APP_KEY}`
+      }+breakfast&to=15&app_id=${APP_ID2}&app_key=${APP_KEY2}`
     );
     this.setState({
       foods: res.data.hits,
@@ -55,7 +53,6 @@ class Lunch extends Component {
       return (
         <div className="container">
           <div className="child">
-            <Link to={`/foods/${eachFood.recipe.label}`}></Link>
             <img src={eachFood.recipe.image} alt={eachFood.recipe.label} />
             <Link to={`/foods/${eachFood.recipe.label}`}>
               <p>{eachFood.recipe.label}</p>
@@ -73,16 +70,16 @@ class Lunch extends Component {
 
   render() {
     return (
-      <div className="section-sliders">
+      <div className="randomFood">
         <div>
-          <h1>Lunch</h1>
+          <h1>Breakfast</h1>
         </div>
         <div>
-          <Slider {...settings}> {this.displayAllFoods()} </Slider>
+          <Slider {...settings}>{this.displayAllFoods()}</Slider>
         </div>
       </div>
     );
   }
 }
 
-export default Lunch;
+export default Breakfast;

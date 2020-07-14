@@ -1,21 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Navbar from "./navbar.js";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const AllFoods = (props) => {
-  console.log(props);
+  console.log(props, "??");
   if (!props.foods.length) {
-    props.history.push("/");
+    // props.history.push("/");
   }
   return (
-    <div>
-      <Navbar />
-      {props.foods.map((item) => (
-        <Link to={`/foods/${item.recipe.label}`}>
-          <h4>{item.recipe.label}</h4>
-          <img src={item.recipe.image} alt={item.recipe.label} />
-        </Link>
-      ))}
+    <div className="column-search">
+      <div className="row-search">
+        {props.foods.map((item) => (
+          <Link to={`/foods/${item.recipe.label}`}>
+            <h4>{item.recipe.label}</h4>
+            <img src={item.recipe.image} />
+          </Link>
+        ))}
+      </div>
     </div>
   );
 };

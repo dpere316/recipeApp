@@ -3,9 +3,10 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import DietCategories from "../Sliders/DietCategories";
 
-const APP_ID = "1949bcdc";
-const APP_KEY = "b99569c224fcfecca6f202946bed7bfe";
-
+// const APP_ID = "1949bcdc";
+// const APP_KEY = "b99569c224fcfecca6f202946bed7bfe";
+const APP_ID = "027c69d3";
+const APP_KEY = "06c10b8536afafcb35d471d1e71b262e";
 class HealthFilter extends Component {
   state = {
     healthDietFoods: [],
@@ -14,10 +15,10 @@ class HealthFilter extends Component {
   async componentDidMount() {
     console.log(this);
     let res = await axios.get(
-      `https://api.edamam.com/search?q=Diet=${this.props.match.params.id}&to=100&app_id=${APP_ID}&app_key=${APP_KEY}`
+      `https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=Diet=${this.props.match.params.id}&to=100&app_id=${APP_ID}&app_key=${APP_KEY}`
     );
     let res2 = await axios.get(
-      `https://api.edamam.com/search?q=Health=${this.props.match.params.id}&to=100&app_id=${APP_ID}&app_key=${APP_KEY}`
+      `https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=Health=${this.props.match.params.id}&to=100&app_id=${APP_ID}&app_key=${APP_KEY}`
     );
     // console.log(res);
     this.setState({
@@ -44,9 +45,12 @@ class HealthFilter extends Component {
   };
 
   render() {
-    return <div>
-    <DietCategories/>
-    {this.displayFoods()}</div>;
+    return (
+      <div>
+        <DietCategories />
+        {this.displayFoods()}
+      </div>
+    );
   }
 }
 
