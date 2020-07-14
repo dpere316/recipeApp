@@ -12,7 +12,7 @@ const AllFoods = (props) => {
       {props.foods.map((item) => (
         <Link to={`/foods/${item.recipe.label}`}>
           <h4>{item.recipe.label}</h4>
-          <img src={item.recipe.image} />
+          <img src={item.recipe.image} alt={item.recipe.label} />
         </Link>
       ))}
     </div>

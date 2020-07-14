@@ -1,6 +1,7 @@
 @import "./styles/variables";
 @import "include-media/dist/_include-media.scss";
 
+// body
 
 body {
   background-color: $thirdColor;
@@ -16,11 +17,14 @@ body {
     color: $primaryColor;
   }
 }
+// navbar
 
 .navbar {
   @include flexRow();
 
 }
+
+// landing page
 
 .landing {
   background-color: $fourthColor;
@@ -31,11 +35,26 @@ body {
     @include flexColumn();
   }
   img{
-    width: 50vh;
-    height: 50vh;
+    width: 20vh;
+    height: 20vh;
   }
 
 }
+// Basic Layout 
+
+.layout{
+  row {
+    @include flexRow();
+  }
+  .column {
+    @include flexColumn();
+  }
+  img{
+    width: 20vh;
+    height: 20vh;
+  }
+}
+// Slider CSS
 
 .slides {
   width: 100vh;
@@ -57,10 +76,6 @@ h1{
   @include flexColumn();
 }
 
-}
-
-.categories {
-  @include flexRow();
 }
 
 .circleimages {

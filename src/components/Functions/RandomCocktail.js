@@ -1,10 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-const APP_ID = "1949bcdc";
-const APP_KEY = "b99569c224fcfecca6f202946bed7bfe";
-const APP_ID2 = "ffd7e1b9";
-const APP_KEY2 = "e439b5df8590bafcf11efad43ca3a69b";
 
 class RandomCocktail extends Component {
   state = {
@@ -12,17 +8,19 @@ class RandomCocktail extends Component {
   };
 
   async componentDidMount() {
-    let res = await axios.get(
-      `https://www.thecocktaildb.com/api/json/v1/1/random.php`
-    );
-    // console.log(res.data);
-
-    this.setState({
-      cocktails: res.data.drinks,
-    });
+      let res = await axios.get(
+        `https://www.thecocktaildb.com/api/json/v1/1/random.php`
+      );
+      // console.log(res.data);
+  
+      this.setState({
+        cocktails: res.data.drinks,
+      });
+      this.props.getCocktails(res.data.drinks)
+      console.log(this.state.cocktails);
     
-    console.log(this.state.cocktails);
   }
+
 
   // async componentDidMount() {
   //   let res = await axios.get(
@@ -44,7 +42,7 @@ class RandomCocktail extends Component {
     return this.state.cocktails.map((eachDrink) => {
       return (
         <div>
-          <Link to={`/foods/${eachDrink.strDrink}`}>
+          <Link to={`/cocktails/${eachDrink.strDrink}`}>
             <li key="landing">
               <img src={eachDrink.strDrinkThumb} alt="random-drink" />
               <br />
@@ -69,7 +67,7 @@ class RandomCocktail extends Component {
   // };
 
   render() {
-    return <div className="landing">{this.showRandomCocktail()}</div>;
+    return <div className="layout">{this.showRandomCocktail()}</div>;
   }
 }
 
