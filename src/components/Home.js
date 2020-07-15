@@ -47,7 +47,7 @@ class Home extends Component {
         <RandomFood />
         <div className="ethnicHome">
           <img
-            className="ethnicImgHome"
+            className="ethnicHomeImg"
             src={require("../images/ethnichome.jpg")}
             alt="ethnicimage"
           />
@@ -56,6 +56,32 @@ class Home extends Component {
             <h3>Link: Choose your cuisine</h3>
           </div>
         </div>
+        <div className="healthDietHome">
+          <img
+            className="healthImg"
+            src={require("../images/healthdiet.jpg")}
+            alt="healthdietimage"
+          />
+          <div className="healthWords">
+            <h2>Any Health & Diet Concerns?</h2>
+          </div>
+        </div>
+        <div className="bldWords">
+          <h2>Breakfast, Lunch, or Dinner?</h2>
+        </div>
+        <div className="bldHome">
+          <img
+            className="bldImg2"
+            src={require("../images/dinner.jpg")}
+            alt="bldimage2"
+          />
+          <img
+            className="bldImg"
+            src={require("../images/breakfast.jpg")}
+            alt="bldimage"
+          />
+        </div>
+
         <footer>This is the footer</footer>
       </div>
     );
