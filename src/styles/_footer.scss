@@ -1,0 +1,10 @@
+@import './styles/variables';
+@import './styles/styles';
+@import './styles/home';
+
+footer {
+    height: 250px;
+    @include flexColumn();
+    background-color: rgb(20, 66, 20);
+    color: white;
+}
