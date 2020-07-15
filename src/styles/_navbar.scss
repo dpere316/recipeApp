@@ -106,7 +106,8 @@ Note: Beware of modifying this element as it can break the animations - you shou
   width: 20%;
   padding: 5px;
 }
-.row-search {
+.row-search:after {
+  content: "";
   clear: both;
   display: table;
 }

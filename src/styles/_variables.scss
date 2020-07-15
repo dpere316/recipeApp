@@ -1,11 +1,10 @@
-$primaryColor: #71c9ce ;
-$secondaryColor: #cbf1f5;
-$thirdColor: #a6e3e9;
-$fourthColor: #e3fdfd;
-$primary_font_family: muli;
+$primaryColor: #0a0a0a;
+$secondaryColor: #aed3f0;
+$thirdColor: #f1f1f1;
+$fourthColor: #ffffff;
+$primary_font_family: 'Noto Sans JP';
 
-
-@mixin flexColumn{
+@mixin flexColumn {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,7 +16,6 @@ $primary_font_family: muli;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    background-color:$fourthColor;
+    background-color: $fourthColor;
     padding: 20px;
 }
-

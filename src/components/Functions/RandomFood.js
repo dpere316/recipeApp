@@ -33,7 +33,7 @@ class Home extends Component {
       "chinese",
       "french",
       "indian",
-      "italian", 
+      "italian",
       "japanese",
       "kosher",
       "mediterranean",
@@ -41,7 +41,6 @@ class Home extends Component {
       "middle eastern",
       "caribbean",
     ],
-
   };
 
   async componentDidMount() {
@@ -98,7 +97,7 @@ class Home extends Component {
         </div>
         <div className="row">
           {this.showRandomFood()}
-          <RandomCocktail getCocktails={this.props.getCocktails}/>
+          <RandomCocktail getCocktails={this.props.getCocktails} />
         </div>
       </div>
     );

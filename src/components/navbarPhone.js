@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { slide as Menu } from "react-burger-menu";
-import Search from "./search";
+import Search from "./Search/search";
 
 class navbarPhone extends Component {
   state = {
@@ -12,6 +12,7 @@ class navbarPhone extends Component {
       showForm: !this.state.showForm,
     });
   };
+  
   displayAllFoods = () => {
     if (this.props.foods.length) {
       return this.props.foods.map((eachFood) => {
@@ -29,6 +30,7 @@ class navbarPhone extends Component {
       });
     }
   };
+
   render() {
     return (
       <div>

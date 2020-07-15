@@ -43,8 +43,51 @@ class Home extends Component {
   render() {
     return (
       <div>
+        <div className="hometitle">
+          <h2>Munchies</h2>
+          <h3>All the recipes for whatever you're craving!</h3>
+        </div>
         {/* <Navbar {...this.props} /> */}
         <RandomFood getCocktails={this.props.getCocktails} />
+
+        <div className="ethnicHome">
+          <img
+            className="ethnicHomeImg"
+            src={require("../images/ethnichome.jpg")}
+            alt="ethnicimage"
+          />
+          <div className="travelWords">
+            <h2>Travel Around The World</h2>
+            <h3>Link: Choose your cuisine</h3>
+          </div>
+        </div>
+        <div className="healthDietHome">
+          <img
+            className="healthImg"
+            src={require("../images/healthdiet.jpg")}
+            alt="healthdietimage"
+          />
+          <div className="healthWords">
+            <h2>Any Health & Diet Concerns?</h2>
+          </div>
+        </div>
+        <div className="bldWords">
+          <h2>Breakfast, Lunch, or Dinner?</h2>
+        </div>
+        <div className="bldHome">
+          <img
+            className="bldImg2"
+            src={require("../images/dinner.jpg")}
+            alt="bldimage2"
+          />
+          <img
+            className="bldImg"
+            src={require("../images/breakfast.jpg")}
+            alt="bldimage"
+          />
+        </div>
+
+        <footer>This is the footer</footer>
       </div>
     );
   }

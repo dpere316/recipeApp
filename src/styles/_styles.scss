@@ -3,15 +3,18 @@
 
 body {
   background-color: $thirdColor;
+
   @include media("<=phone") {
     width: 100%;
   }
+
   // @include flexColumn();
   list-style: none;
 
   h1 {
     color: $primaryColor;
   }
+
   a {
     text-decoration: none;
     color: $primaryColor;
@@ -20,10 +23,12 @@ body {
 
 .slides {
   width: 100vh;
+
   .child {
     @include flexColumn();
     text-align: center;
   }
+
   img {
     width: 100px;
     height: 100px;
@@ -32,9 +37,19 @@ body {
 
 .slides {
   width: 100vh;
+
   .child {
     @include flexColumn();
     text-align: center;
+  }
+
+  h1 {
+    color: $primaryColor;
+  }
+
+  a {
+    text-decoration: none;
+    color: $primaryColor;
   }
 }
 
@@ -42,17 +57,21 @@ body {
 
 .landing {
   background-color: $fourthColor;
+
   .row {
     @include flexRow();
   }
+
   .column {
     @include flexColumn();
   }
+
   img {
     width: 20vh;
     height: 20vh;
   }
 }
+
 .circleimages {
   padding: 10px;
   border-radius: 50%;
@@ -60,30 +79,3 @@ body {
 }
 
 // Slider CSS
-
-.slides {
-  width: 100vh;
-  @include flexRow();
-
-  .child {
-    @include flexColumn();
-    text-align: center;
-  }
-  img {
-    width: 100px;
-    height: 100px;
-  }
-}
-
-.section-sliders {
-  @include flexRow();
-  h1 {
-    @include flexColumn();
-  }
-}
-
-.circleimages {
-  padding: 10px;
-  border-radius: 50%;
-  align-content: center;
-}
