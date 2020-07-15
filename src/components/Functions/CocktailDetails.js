@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import Navbar from "../Search/navbar";
+
 
 class CocktailDetails extends Component {
   state = {
@@ -58,7 +58,7 @@ class CocktailDetails extends Component {
 
     return (
       <div>
-        <Navbar />
+        
         <div className="layout">
           {this.displayIngredients()}
         </div>
