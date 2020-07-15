@@ -43,13 +43,12 @@ class Home extends Component {
   render() {
     return (
       <div>
-        {/* <Navbar {...this.props} /> */}
-        <RandomFood getCocktails={this.props.getCocktails} />
-
         <div className="hometitle">
           <h2>Munchies</h2>
           <h3>All the recipes for whatever you're craving!</h3>
         </div>
+        {/* <Navbar {...this.props} /> */}
+        <RandomFood getCocktails={this.props.getCocktails} />
 
         <div className="ethnicHome">
           <img
