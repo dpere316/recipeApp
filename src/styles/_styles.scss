@@ -3,39 +3,23 @@
 
 body {
     background-color: $thirdColor;
-
-    @include media("<=phone") {
-        width: 100%;
-    }
-
-    // @include flexColumn();
     list-style: none;
-
     h1 {
         color: $primaryColor;
     }
-
     a {
         text-decoration: none;
         color: $primaryColor;
     }
 }
 
-.navbar {
-    @include media("<=phone") {
-        @include flexRow();
-        font-size: 12px;
-        display: none;
-    }
-}
 
 .navbar-phone {
     position: fixed;
-    background-color: white;
-    width: 200vw;
-    padding: 1px 15px;
     z-index: 1;
-    top: 0;
+    background-color: white;
+    width: 100%;
+    padding: 1px 15px;
 }
 
 .slides {
@@ -70,30 +54,6 @@ body {
     }
 }
 
-// navbar
-
-.navbar {
-    @include flexRow();
-}
-
-// landing page
-
-.landing {
-    background-color: $fourthColor;
-
-    .row {
-        @include flexRow();
-    }
-
-    .column {
-        @include flexColumn();
-    }
-
-    img {
-        width: 20vh;
-        height: 20vh;
-    }
-}
 
 .circleimages {
     padding: 10px;
@@ -106,8 +66,9 @@ body {
     position: fixed;
     width: 36px;
     height: 30px;
-    right: 36px;
-    top: 36px;
+    right: 5vh;
+    top: 2vh;
+    
 }
 
 

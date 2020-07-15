@@ -44,12 +44,13 @@ class Home extends Component {
     return (
       <div>
         {/* <Navbar {...this.props} /> */}
-        <RandomFood getCocktails={this.props.getCocktails} />
 
         <div className="hometitle">
           <h2>Munchies</h2>
           <h3>All the recipes for whatever you're craving!</h3>
         </div>
+
+        <RandomFood getCocktails={this.props.getCocktails} />
 
         <div className="ethnicHome">
           <img
@@ -62,6 +63,7 @@ class Home extends Component {
             <h3>Link: Choose your cuisine</h3>
           </div>
         </div>
+
         <div className="healthDietHome">
           <img
             className="healthImg"
@@ -72,10 +74,11 @@ class Home extends Component {
             <h2>Any Health & Diet Concerns?</h2>
           </div>
         </div>
-        <div className="bldWords">
-          <h2>Breakfast, Lunch, or Dinner?</h2>
-        </div>
+
         <div className="bldHome">
+        <div className="bldWords">
+            <h2>Breakfast, Lunch, or Dinner?</h2>
+        </div>
           <img
             className="bldImg2"
             src={require("../images/dinner.jpg")}

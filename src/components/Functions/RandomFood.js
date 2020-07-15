@@ -91,7 +91,8 @@ class Home extends Component {
 
   render() {
     return (
-      <div className="landing">
+      <div>
+      <div className="heading">
         <div>
           <h1 className="column">Suggestion for the day</h1>
         </div>
@@ -99,6 +100,7 @@ class Home extends Component {
           {this.showRandomFood()}
           <RandomCocktail getCocktails={this.props.getCocktails} />
         </div>
+      </div>
       </div>
     );
   }
