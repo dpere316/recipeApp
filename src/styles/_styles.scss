@@ -3,7 +3,7 @@
 
 body {
   background-color: $thirdColor;
-
+  font-family: $primary_font_family;
   @include media("<=phone") {
     width: 100%;
   }

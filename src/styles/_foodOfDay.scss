@@ -1,0 +1,21 @@
+@import "./styles/variables";
+@import "./breakpoints/breakpoints.scss";
+
+.heading {
+    background-color: $fourthColor;
+    width: 70%;
+    position: relative;
+    left: 15%;
+    .row {
+        @include flexRow();
+    }
+
+    .column {
+        @include flexColumn();
+    }
+
+    img {
+        width: 20vh;
+        height: 20vh;
+    }
+}
