@@ -8,6 +8,7 @@
   }
   h1 {
     @include flexRow();
+    background-color: $thirdColor;
     margin: 40px 0 10px 0;
     // background-color: $secondaryColor;
   }
