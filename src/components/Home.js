@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
 import RandomFood from "../components/Functions/RandomFood";
+import { Link } from "react-router-dom";
+
 // import Breakfast from "./Breakfast";
 // import Lunch from "./Lunch";
 // import Navbar from "./navbar";
@@ -11,8 +13,8 @@ import RandomFood from "../components/Functions/RandomFood";
 
 // const APP_ID = "1949bcdc";
 // const APP_KEY = "b99569c224fcfecca6f202946bed7bfe";
-const APP_ID = "027c69d3";
-const APP_KEY = "06c10b8536afafcb35d471d1e71b262e";
+const APP_ID = "ffd7e1b9";
+const APP_KEY = "e439b5df8590bafcf11efad43ca3a69b";
 const settings = {
   dots: true,
   infinte: true,
@@ -86,8 +88,16 @@ class Home extends Component {
             alt="bldimage"
           />
         </div>
-
-        <footer>This is the footer</footer>
+        <footer>
+          <h2>
+            <Link to="/about">
+              <i>About Us</i>
+            </Link>
+          </h2>
+          <h3>
+            <i>Copyright © MUNCHIES</i>
+          </h3>
+        </footer>
       </div>
     );
   }

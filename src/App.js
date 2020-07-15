@@ -8,6 +8,7 @@ import HealthDietFood from "./components/Functions/HealthFilter";
 import CocktailDetails from "./components/Functions/CocktailDetails";
 import "./App.scss";
 import NavbarPhone from "./components/navbarPhone";
+import AboutUs from "./components/AboutUs";
 
 class App extends Component {
   state = {
@@ -34,6 +35,7 @@ class App extends Component {
           {...this.props}
         />
         {/* <Navbar /> */}
+
         <Switch>
           <Route
             exact
@@ -72,6 +74,7 @@ class App extends Component {
             path="/healthdiet/:id"
             render={(props) => <HealthDietFood {...props} />}
           />
+          <Route exact path="/about" render={() => <AboutUs />} />
         </Switch>
       </div>
     );
