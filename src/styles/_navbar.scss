@@ -36,7 +36,7 @@
 // Basic Layout
 
 .layout {
-  row {
+  .row {
     @include flexRow();
   }
   .column {

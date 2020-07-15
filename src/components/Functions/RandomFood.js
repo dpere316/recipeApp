@@ -94,7 +94,7 @@ class Home extends Component {
       <div>
       <div className="heading">
         <div>
-          <h1 className="column">Suggestion for the day</h1>
+          <h1 className="column">Don't know what to eat or drink? Try these..</h1>
         </div>
         <div className="row">
           {this.showRandomFood()}
