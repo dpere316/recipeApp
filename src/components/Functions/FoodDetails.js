@@ -30,29 +30,43 @@ class FoodDetails extends Component {
 
   render() {
     return (
-      <div>
-        <div className="single">
-          <h1>{this.state.foods[0]?.recipe.label}</h1>
-          <br />
-
+      <div className="single-layout">
+        <div>
           <br />
           <img src={this.state.foods[0]?.recipe.image} />
           <br />
+          <h1 className="single-food-title">
+            {this.state.foods[0]?.recipe.label}
+          </h1>
         </div>
         <div className="calories">
-          <p>Calories: {parseInt(this.state.foods[0]?.recipe.calories)}</p>
-          Ingredient count: {this.state.foods[0]?.recipe.ingredientLines.length}
-        </div>
-        <div className="ingredients">
-          <span>Ingredients:</span>
-          {this.displayIngredients()}
-        </div>
-        <div>Calories: {parseInt(this.state.foods[0]?.recipe.calories)}</div>
-        <div>
-          <a target="_blank" href={this.state.foods[0]?.recipe.url}>
-            Click for directions here!
+          <span className="calories-seperation">
+            Calories: {parseInt(this.state.foods[0]?.recipe.calories)}
+          </span>{" "}
+          |
+          <span className="calories-separation">
+            Number of Ingredient:{" "}
+            {this.state.foods[0]?.recipe.ingredientLines.length}
+          </span>{" "}
+          |
+          <a
+            target="_blank"
+            href={this.state.foods[0]?.recipe.url}
+            classname="directions-link"
+          >
+            <span className="calories-separation">
+              Click for directions here!
+            </span>
           </a>
         </div>
+        <div className="ingredients">
+          <span className="ingredient-title">Ingredients:</span>
+          <span className="ingredient-details">
+            {" "}
+            {this.displayIngredients()}
+          </span>
+        </div>
+
         {/* <iframe src={this.state.foods[0]?.recipe.url} /> */}
         {/* {this.state.foods[0]?this.state.foods[0].recipe.label:''} */}
       </div>

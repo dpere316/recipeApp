@@ -12,18 +12,16 @@ class navbarPhone extends Component {
       showForm: !this.state.showForm,
     });
   };
-  
+
   displayAllFoods = () => {
     if (this.props.foods.length) {
       return this.props.foods.map((eachFood) => {
         return (
           <div>
             <Link to={`/foods/${eachFood.recipe.label}`}>
-              <li>
-                {eachFood.recipe.label}
-                <br />
-                <img src={eachFood.recipe.image} />
-              </li>
+              {eachFood.recipe.label}
+              <br />
+              <img src={eachFood.recipe.image} />
             </Link>
           </div>
         );

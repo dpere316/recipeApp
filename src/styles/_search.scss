@@ -1,0 +1,7 @@
+@import "./styles/variables";
+@import "./breakpoints/breakpoints.scss";
+.row-search {
+  @include flexRow();
+  flex-wrap: wrap;
+  padding: 5px;
+}

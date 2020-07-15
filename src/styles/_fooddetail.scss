@@ -1,0 +1,38 @@
+@import "./styles/variables";
+@import "./breakpoints/breakpoints.scss";
+.single-layout {
+  padding-top: 125px;
+  @include flexColumn();
+  img {
+    width: 40vw;
+  }
+  h1 {
+    @include flexRow();
+    margin: 40px 0 10px 0;
+    // background-color: $secondaryColor;
+  }
+}
+
+.calories {
+  padding: 30px 0;
+  font-size: 20px;
+}
+.ingredients {
+  font-size: 17px;
+  border: solid 1px black;
+  padding: 10px;
+  @include flexColumn();
+  //   background-color: $secondaryColor;
+  .ingredient-title {
+    font-size: 25px;
+    padding: 10px;
+  }
+  li {
+    padding-bottom: 15px;
+    font-size: 20px;
+    @include flexColumn();
+  }
+}
+.calories-separation {
+  padding: 0 10px;
+}

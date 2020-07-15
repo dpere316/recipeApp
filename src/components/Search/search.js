@@ -16,7 +16,7 @@ class search extends Component {
     console.log("search for food");
     console.log(this.state.search);
     let res = await axios.get(
-      `https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=${this.state.search}&to=100&app_id=${APP_ID2}&app_key=${APP_KEY2}`
+      `https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=${this.state.search}&to=24&app_id=${APP_ID2}&app_key=${APP_KEY2}`
     );
     this.setState({ foods: res.data.hits });
     console.log(this.state.foods);
