@@ -92,15 +92,15 @@ class Home extends Component {
   render() {
     return (
       <div>
-      <div className="heading">
-        <div>
-          <h1 className="column">Don't know what to eat or drink? Try these..</h1>
+        <div className="heading">
+          <div>
+            <h1 className="column">Random Pick of the Day:</h1>
+          </div>
+          <div className="row">
+            {this.showRandomFood()}
+            <RandomCocktail getCocktails={this.props.getCocktails} />
+          </div>
         </div>
-        <div className="row">
-          {this.showRandomFood()}
-          <RandomCocktail getCocktails={this.props.getCocktails} />
-        </div>
-      </div>
       </div>
     );
   }

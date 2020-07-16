@@ -42,7 +42,7 @@ class Dinner extends Component {
     let res = await axios.get(
       `https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=${
         this.state.foodType[this.randomIndex()]
-      }+dinner&to=15&app_id=${APP_ID2}&app_key=${APP_KEY2}`
+      }+dinner&to=50&app_id=${APP_ID2}&app_key=${APP_KEY2}`
     );
     this.setState({
       foods: res.data.hits,
@@ -73,7 +73,7 @@ class Dinner extends Component {
   render() {
     return (
       <div className="section-sliders">
-        <div>
+        <div className="dinner">
           <h1>Dinner</h1>
         </div>
         <div>

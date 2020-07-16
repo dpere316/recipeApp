@@ -1,0 +1,16 @@
+@import "./styles/variables";
+@import "./styles/styles";
+@import "./breakpoints/breakpoints.scss";
+
+.meals {
+    @include flexColumn();
+    margin: 5vh 10vh;
+}
+
+.breakfast,
+.lunch,
+.dinner {
+    @include flexColumn();
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+}
