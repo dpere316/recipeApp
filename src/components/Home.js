@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import RandomFood from "../components/Functions/RandomFood";
 import { Link } from "react-router-dom";
-
+import Search from "./Search/search";
 // import Breakfast from "./Breakfast";
 // import Lunch from "./Lunch";
 // import Navbar from "./navbar";
@@ -48,8 +48,9 @@ class Home extends Component {
         <div className="hometitle">
           <h2>Munchies</h2>
           <h3>All the recipes for whatever you're craving!</h3>
+          <Search />
         </div>
-        
+
         <RandomFood getCocktails={this.props.getCocktails} />
 
         <div className="ethnicHome">
@@ -80,9 +81,9 @@ class Home extends Component {
         </div>
 
         <div className="bldHome">
-        <div className="bldWords">
+          <div className="bldWords">
             <h2>Breakfast, Lunch, or Dinner?</h2>
-        </div>
+          </div>
           <img
             className="bldImg2"
             src={require("../images/dinner.jpg")}

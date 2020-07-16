@@ -5,3 +5,13 @@
   flex-wrap: wrap;
   padding: 5px;
 }
+.name-column {
+  @include flexColumn();
+  width: 300px;
+  margin: 10px;
+}
+.slide-center {
+  @include flexColumn();
+  justify-content: space-evenly;
+  padding: 35px;
+}
