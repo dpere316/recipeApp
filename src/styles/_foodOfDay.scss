@@ -3,15 +3,15 @@
 
 .heading {
     background-color: $fourthColor;
-    width: 50%;
-    margin-top: 10vh;
-    margin-bottom: 10vh;
-    padding-top: 5vh;
-    padding-bottom: 5vh;
+    width: 40%;
+    margin-top: 13vh;
+    margin-bottom: 13vh;
+    padding: 5vh 7vh;
     position: relative;
-    left: 25%;
-    border-radius: 50%;
-    box-shadow: 20px 20px black;
+    left: 26%;
+    // border-radius: 50%;
+    box-shadow: 10px 10px 20px 5px black;
+    border: double;
 
 
     .row {
@@ -22,7 +22,6 @@
 
     .column {
         @include flexColumn();
-        font-size: 170%;
         text-align: center;
         color: rgb(20, 66, 20);
     }
