@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import RandomFood from "../components/Functions/RandomFood";
 import { Link } from "react-router-dom";
-
+import Search from "./Search/search";
 // import Breakfast from "./Breakfast";
 // import Lunch from "./Lunch";
 // import Navbar from "./navbar";
@@ -49,6 +49,7 @@ class Home extends Component {
           <h2>Munchies</h2>
 
           <h3>All the recipes for whatever you're craving!</h3>
+          <Search />
         </div>
 
         <RandomFood getCocktails={this.props.getCocktails} />

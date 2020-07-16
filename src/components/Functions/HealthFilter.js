@@ -15,10 +15,10 @@ class HealthFilter extends Component {
   async componentDidMount() {
     console.log(this);
     let res = await axios.get(
-      `https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=Diet=${this.props.match.params.id}&to=100&app_id=${APP_ID}&app_key=${APP_KEY}`
+      `https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=Diet=${this.props.match.params.id}&to=24&app_id=${APP_ID}&app_key=${APP_KEY}`
     );
     let res2 = await axios.get(
-      `https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=Health=${this.props.match.params.id}&to=100&app_id=${APP_ID}&app_key=${APP_KEY}`
+      `https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=Health=${this.props.match.params.id}&to=24&app_id=${APP_ID}&app_key=${APP_KEY}`
     );
     // console.log(res);
     this.setState({
@@ -34,8 +34,11 @@ class HealthFilter extends Component {
           <div>
             <Link to={`/foods/${eachRec.recipe.label}`}>
               <li>
+                <div className="name-column">
+                  <h5>{eachRec.recipe.label}</h5>
+                </div>
+
                 <img src={eachRec.recipe.image} alt="healthdiet" />
-                {eachRec.recipe.label}
               </li>
             </Link>
           </div>
@@ -48,7 +51,7 @@ class HealthFilter extends Component {
     return (
       <div>
         <DietCategories />
-        {this.displayFoods()}
+        <div className="row-search">{this.displayFoods()}</div>
       </div>
     );
   }

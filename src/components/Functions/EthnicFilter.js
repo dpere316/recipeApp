@@ -34,8 +34,11 @@ class EthnicFilter extends Component {
           <div>
             <Link to={`/foods/${eachRec.recipe.label}`}>
               <li>
+                <div className="name-column">
+                  <h5>{eachRec.recipe.label}</h5>
+                </div>
+
                 <img src={eachRec.recipe.image} alt="ethnicfood" />
-                {eachRec.recipe.label}
               </li>
             </Link>
           </div>
@@ -48,7 +51,7 @@ class EthnicFilter extends Component {
     return (
       <div>
         <Cousine />
-        {this.displayRecipes()}
+        <div className="row-search">{this.displayRecipes()}</div>
       </div>
     );
   }

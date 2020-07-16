@@ -1,0 +1,109 @@
+@import "./styles/variables";
+@import "./styles/styles";
+@import "./breakpoints/breakpoints.scss";
+
+body{
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+.hometitle {
+
+  background-image: url(../images/munchiestitle.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  font-size: 20px;
+  font-family: $primary_font_family;
+  width: 100vmin;
+  height: 100vmin;
+  
+  @include flexColumn();
+
+  h3 {
+    text-align: center;
+    font-size: 100%;
+    font-family: $primary_font_family;
+  }
+
+}
+
+.ethnicHome {
+  @include flexColumn();
+  
+}
+
+.ethnicHomeImg {
+  width: 20vh;
+  height: 20vh;
+}
+
+.travelWords {
+  
+}
+
+.healthDietHome {
+  @include flexColumn();
+
+}
+
+.healthImg {
+  @include flexColumn();
+  width: 20vh;
+      height: 20vh;
+  
+}
+
+.healthWords {
+  
+}
+
+.bldHome {
+
+  @include flexColumn();
+  
+    .bldImg2{
+      width: 20vh;
+      height: 20vh;
+    }
+
+    .bldImg{
+        
+      width: 20vh;
+      height: 20vh;
+    }
+    
+}
+
+.bldWords {
+ 
+}
+
+.heading {
+  background-color: $fourthColor;
+  width: 70%;
+  position: relative;
+  left: 15%;
+  .row {
+      @include flexRow();
+  }
+
+  .column {
+      @include flexColumn();
+  }
+
+  img {
+      width: 20vh;
+      height: 20vh;
+  }
+}
+
+footer {
+ 
+  @include flexColumn();
+  background-color: rgb(20, 66, 20);
+  color: white;
+}
+
+

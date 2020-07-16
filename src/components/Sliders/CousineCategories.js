@@ -24,106 +24,126 @@ class CousineCategories extends Component {
         <div>
           <h1>What are you feeling today?</h1>
         </div>
-        <div>
+        <div className="slide-center">
           <Slider {...settings}>
             <div className="container">
               <div className="child">
-                <Link to="/ethnicFood/Mexican">Mexican</Link>
-                <img
-                  className="circleimages"
-                  src={require("../images/mexican.jpg")}
-                  alt="mexicanfood"
-                />
+                <Link to="/ethnicFood/Mexican">
+                  Mexican
+                  <img
+                    className="circleimages"
+                    src={require("../images/mexican.jpg")}
+                    alt="mexicanfood"
+                  />
+                </Link>
               </div>
             </div>
             <div className="container">
               <div className="child">
-                <Link to="/ethnicFood/Japanese">Japanese</Link>
-                <img
-                  className="circleimages"
-                  src={require("../images/japanese.jpg")}
-                  alt="Japanesefood"
-                />
+                <Link to="/ethnicFood/Japanese">
+                  Japanese
+                  <img
+                    className="circleimages"
+                    src={require("../images/japanese.jpg")}
+                    alt="Japanesefood"
+                  />
+                </Link>
               </div>
             </div>
             <div className="container">
               <div className="child">
-                <Link to="/ethnicFood/Italian">Italian</Link>
-                <img
-                  className="circleimages"
-                  src={require("../images/italian.jpg")}
-                  alt="Italianfood"
-                />
+                <Link to="/ethnicFood/Italian">
+                  Italian
+                  <img
+                    className="circleimages"
+                    src={require("../images/italian.jpg")}
+                    alt="Italianfood"
+                  />
+                </Link>
               </div>
             </div>
             <div className="container">
               <div className="child">
-                <Link to="/ethnicFood/American">American</Link>
-                <img
-                  className="circleimages"
-                  src={require("../images/american.jpg")}
-                  alt="Americanfood"
-                />
+                <Link to="/ethnicFood/American">
+                  American
+                  <img
+                    className="circleimages"
+                    src={require("../images/american.jpg")}
+                    alt="Americanfood"
+                  />
+                </Link>
               </div>
             </div>
             <div className="container">
               <div className="child">
-                <Link to="/ethnicFood/Indian">Indian</Link>
-                <img
-                  className="circleimages"
-                  src={require("../images/indian.jpg")}
-                  alt="Indianfood"
-                />
+                <Link to="/ethnicFood/Indian">
+                  Indian
+                  <img
+                    className="circleimages"
+                    src={require("../images/indian.jpg")}
+                    alt="Indianfood"
+                  />
+                </Link>
               </div>
             </div>
             <div className="container">
               <div className="child">
-                <Link to="/ethnicFood/Chinese">Chinese</Link>
-                <img
-                  className="circleimages"
-                  src={require("../images/chinese.jpg")}
-                  alt="Chinesefood"
-                />
+                <Link to="/ethnicFood/Chinese">
+                  Chinese
+                  <img
+                    className="circleimages"
+                    src={require("../images/chinese.jpg")}
+                    alt="Chinesefood"
+                  />
+                </Link>
               </div>
             </div>
             <div className="container">
               <div className="child">
-                <Link to="/ethnicFood/French">French</Link>
-                <img
-                  className="circleimages"
-                  src={require("../images/french.jpg")}
-                  alt="Frenchfood"
-                />
+                <Link to="/ethnicFood/French">
+                  French
+                  <img
+                    className="circleimages"
+                    src={require("../images/french.jpg")}
+                    alt="Frenchfood"
+                  />
+                </Link>
               </div>
             </div>
             <div className="container">
               <div className="child">
-                <Link to="/ethnicFood/South-American">South-American</Link>
-                <img
-                  className="circleimages"
-                  src={require("../images/southamerican.jpg")}
-                  alt="South-Americanfood"
-                />
+                <Link to="/ethnicFood/South-American">
+                  South-American
+                  <img
+                    className="circleimages"
+                    src={require("../images/southamerican.jpg")}
+                    alt="South-Americanfood"
+                  />
+                </Link>
               </div>
             </div>
             <div className="container">
               <div className="child">
-                <Link to="/ethnicFood/Caribbean">Caribbean</Link>
-                <img
-                  className="circleimages"
-                  src={require("../images/caribbean.jpg")}
-                  alt="Caribbeanfood"
-                />
+                <Link to="/ethnicFood/Caribbean">
+                  Caribbean
+                  <img
+                    className="circleimages"
+                    src={require("../images/caribbean.jpg")}
+                    alt="Caribbeanfood"
+                  />
+                </Link>
               </div>
             </div>
             <div className="container">
               <div className="child">
-                <Link to="/ethnicFood/Mediterranean">Mediterranean</Link>
-                <img
-                  className="circleimages"
-                  src={require("../images/mediterranean.jpg")}
-                  alt="Mediterraneanfood"
-                />
+                <Link to="/ethnicFood/Mediterranean">
+                  Mediterranean
+                  <img
+                    className="circleimages"
+                    src={require("../images/mediterranean.jpg")}
+                    alt="Mediterraneanfood"
+                  />
+                </Link>
               </div>
             </div>
           </Slider>

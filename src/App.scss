@@ -1,9 +1,22 @@
-@import "./styles/styles";
-@import "./styles/variables";
-@import "./styles/home";
-@import "./styles/footer";
-@import "./styles/navbar";
-@import "./styles/fooddetail";
-@import "./styles/search.scss";
-@import "./styles/foodOfDay";
-@import "./styles/meals"
+@import "./breakpoints/breakpoints.scss";
+
+//desktop
+@include media (">phone") {
+    @import "./styles/styles";
+    @import "./styles/variables";
+    @import "./styles/home";
+    @import "./styles/footer";
+    @import "./styles/navbar";
+    @import "./styles/fooddetail";
+    @import "./styles/search.scss";
+    @import "./styles/foodOfDay";
+    @import "./styles/meals"
+}
+
+//phone
+@include media ("<=phone") {
+    @import "./styles/variables";
+    @import "./phonestyle/phoneHome";
+    @import "./phonestyle/phoneNavbar";
+
+}
