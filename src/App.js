@@ -77,7 +77,13 @@ class App extends Component {
           <Route
             exact
             path="/searchfood"
-            render={(props) => <Allfoods {...props} foods={this.state.foods} />}
+            render={(props) => (
+              <Allfoods
+                {...props}
+                foods={this.state.foods}
+                getFoods={this.getFoods}
+              />
+            )}
           />
           <Route
             exact

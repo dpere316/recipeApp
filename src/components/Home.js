@@ -48,7 +48,11 @@ class Home extends Component {
         <div className="hometitle">
           <h2>Munchies</h2>
           <h3>All the recipes for whatever you're craving!</h3>
-          <Search />
+          <Search
+            getFoods={this.getFoods}
+            foods={this.state.foods}
+            {...this.props}
+          />
         </div>
 
         <RandomFood getCocktails={this.props.getCocktails} />
