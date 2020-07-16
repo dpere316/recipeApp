@@ -15,6 +15,7 @@ import Search from "./Search/search";
 // const APP_KEY = "b99569c224fcfecca6f202946bed7bfe";
 const APP_ID = "ffd7e1b9";
 const APP_KEY = "e439b5df8590bafcf11efad43ca3a69b";
+
 const settings = {
   dots: true,
   infinte: true,
@@ -102,7 +103,7 @@ class Home extends Component {
             alt="bldimage"
           />
         </div>
-        <footer>
+        <footer className="footer">
           <h2>
             <Link to="/about">
               <i>About Us</i>
