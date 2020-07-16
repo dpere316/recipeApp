@@ -1,22 +1,27 @@
 @import "./breakpoints/breakpoints.scss";
 
 //desktop
-@include media (">phone") {
-    @import "./styles/styles";
-    @import "./styles/variables";
-    @import "./styles/home";
-    @import "./styles/footer";
-    @import "./styles/navbar";
-    @import "./styles/fooddetail";
-    @import "./styles/search.scss";
-    @import "./styles/foodOfDay";
-    @import "./styles/meals"
+@include media(">phone") {
+  @import "./styles/styles";
+  @import "./styles/variables";
+  @import "./styles/home";
+  @import "./styles/footer";
+  @import "./styles/navbar";
+  @import "./styles/fooddetail";
+  @import "./styles/search.scss";
+  @import "./styles/foodOfDay";
+  @import "./styles/meals";
 }
 
 //phone
-@include media ("<=phone") {
-    @import "./styles/variables";
-    @import "./phonestyle/phoneHome";
-    @import "./phonestyle/phoneNavbar";
+@include media("<=phone") {
+  @import "./styles/variables";
+  @import "./phonestyle/phoneHome";
+  @import "./styles/navbar";
+  @import "./styles/search.scss";
 
+<<<<<<< HEAD
+  // @import "./phonestyle/phoneNavbar";
+=======
+>>>>>>> c10f40dd70d00d65756fe771d66a4de3d4ec9a3e
 }

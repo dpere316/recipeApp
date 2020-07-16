@@ -52,12 +52,12 @@ class navbarPhone extends Component {
               Search
             </a>
 
-            <Link className="menu-item" to="/pizzas">
-              Pizzas
+            <Link className="menu-item" to="/ethnicfood">
+              Ethnic Foods
             </Link>
 
-            <Link className="menu-item" to="/desserts">
-              Desserts
+            <Link className="menu-item" to="/healthdiet">
+              Diet Restrictions
             </Link>
           </Menu>
         </div>
