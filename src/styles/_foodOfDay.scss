@@ -3,19 +3,38 @@
 
 .heading {
     background-color: $fourthColor;
-    width: 70%;
+    width: 50%;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
     position: relative;
-    left: 15%;
+    left: 25%;
+    border-radius: 50%;
+    box-shadow: 20px 20px black;
+
+
     .row {
         @include flexRow();
+        padding-right: 7vh;
+        padding-left: 7vh;
     }
 
     .column {
         @include flexColumn();
+        font-size: 170%;
+        text-align: center;
+        color: rgb(20, 66, 20);
     }
 
     img {
-        width: 20vh;
-        height: 20vh;
+        width: 15vh;
+        height: 15vh;
+
     }
+}
+
+.plus {
+    font-size: xx-large;
+    font-weight: 900;
 }
