@@ -10,12 +10,14 @@ const AllFoods = (props) => {
     // props.history.push("/");
   }
   return (
-    <div className="column-search">
+    <div>
       <div className="row-search">
         {props.foods.map((item) => (
           <Link to={`/foods/${item.recipe.label}`}>
-            <h4>{item.recipe.label}</h4>
-            <img src={item.recipe.image} />
+            <li>
+              <h4>{item.recipe.label}</h4>
+              <img src={item.recipe.image} />
+            </li>
           </Link>
         ))}
       </div>
