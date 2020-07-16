@@ -9,6 +9,8 @@ import CocktailDetails from "./components/Functions/CocktailDetails";
 import "./App.scss";
 import NavbarPhone from "./components/navbarPhone";
 import AboutUs from "./components/AboutUs";
+import CousineCategories from "./components/Sliders/CousineCategories";
+import DietCategories from "./components/Sliders/DietCategories";
 
 class App extends Component {
   state = {
@@ -62,8 +64,15 @@ class App extends Component {
           />
           <Route
             exact
+            path="/ethnicfood"
+            render={(props) => <CousineCategories {...props} />}
+          />
+          <Route
+            exact
             path="/ethnicfood/:id"
-            render={(props) => <EthnicFood {...props} />}
+            render={(props) => (
+              <EthnicFood {...props} key={props.match.params.id} />
+            )}
           />
           <Route
             exact
@@ -71,8 +80,16 @@ class App extends Component {
             render={(props) => <Allfoods {...props} foods={this.state.foods} />}
           />
           <Route
+            exact
+            path="/healthdiet"
+            render={(props) => <DietCategories {...props} />}
+          />
+          <Route
+            exact
             path="/healthdiet/:id"
-            render={(props) => <HealthDietFood {...props} />}
+            render={(props) => (
+              <HealthDietFood {...props} key={props.match.params.id} />
+            )}
           />
           <Route exact path="/about" render={() => <AboutUs />} />
         </Switch>

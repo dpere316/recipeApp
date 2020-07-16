@@ -60,7 +60,9 @@ class Home extends Component {
           />
           <div className="travelWords">
             <h2>Travel Around The World</h2>
-            <h3>Link: Choose your cuisine</h3>
+            <Link to="/ethnicfood">
+              <h3>Link: Choose your cuisine</h3>
+            </Link>
           </div>
         </div>
         <div className="healthDietHome">
@@ -70,7 +72,9 @@ class Home extends Component {
             alt="healthdietimage"
           />
           <div className="healthWords">
-            <h2>Any Health & Diet Concerns?</h2>
+            <Link to="/healthdiet">
+              <h2>Any Health & Diet Concerns?</h2>
+            </Link>
           </div>
         </div>
         <div className="bldWords">

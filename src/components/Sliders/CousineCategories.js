@@ -15,6 +15,9 @@ const settings = {
 };
 
 class CousineCategories extends Component {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
   render() {
     return (
       <div className="randomFood">
@@ -131,6 +134,3 @@ class CousineCategories extends Component {
 }
 
 export default CousineCategories;
-
-
-
