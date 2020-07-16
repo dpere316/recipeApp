@@ -8,7 +8,7 @@ class AboutUs extends Component {
         <div className="usinfo">
           <div className="roy">
             <h1>Roy Gutierrez</h1>
-            <li>From: FL</li>
+            <li>From: Miami, FL</li>
 
             <li>Favorite Munchie: Ceviche</li>
             <div className="githubLinkedIn">
@@ -29,7 +29,7 @@ class AboutUs extends Component {
           </div>
           <div className="daniel">
             <h1>Daniel Perez</h1>
-            <li>From: FL</li>
+            <li>From: Miami, FL</li>
             <li>Favorite Munchie: Chicken Vesuvio</li>
             <div className="githubLinkedIn">
               <div>GitHub</div>
