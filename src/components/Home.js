@@ -47,6 +47,7 @@ class Home extends Component {
       <div>
         <div className="hometitle">
           <h2>Munchies</h2>
+
           <h3>All the recipes for whatever you're craving!</h3>
           <Search
             getFoods={this.getFoods}
@@ -60,13 +61,13 @@ class Home extends Component {
         <div className="ethnicHome">
           <img
             className="ethnicHomeImg"
-            src={require("../images/ethnichome.jpg")}
+            src={require("../images/travelimage2.jpg")}
             alt="ethnicimage"
           />
           <div className="travelWords">
             <h2>Travel Around The World</h2>
             <Link to="/ethnicfood">
-              <h3>Link: Choose your cuisine</h3>
+              <h3>Choose your cuisine</h3>
             </Link>
           </div>
         </div>
@@ -86,7 +87,9 @@ class Home extends Component {
 
         <div className="bldHome">
           <div className="bldWords">
-            <h2>Breakfast, Lunch, or Dinner?</h2>
+            <Link to="/meals">
+              <h2>Breakfast, Lunch, or Dinner?</h2>
+            </Link>
           </div>
           <img
             className="bldImg2"

@@ -13,7 +13,7 @@ const settings = {
   infinte: true,
   speed: 10,
   arrows: true,
-  slidesToScroll: 5,
+  slidesToScroll: 4.5,
   slidesToShow: 5,
   className: "slides",
 };
@@ -42,7 +42,7 @@ class Lunch extends Component {
       `https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=${
         this.state.foodType[this.randomIndex()]
         // this.state.foodType.join("%20")
-      }+lunch&to=15&app_id=${APP_ID}&app_key=${APP_KEY}`
+      }+lunch&to=50&app_id=${APP_ID}&app_key=${APP_KEY}`
     );
     this.setState({
       foods: res.data.hits,
@@ -75,7 +75,7 @@ class Lunch extends Component {
     return (
       <div className="section-sliders">
         <div>
-          <h1>Lunch</h1>
+          <h1 className="lunch">Lunch</h1>
         </div>
         <div>
           <Slider {...settings}> {this.displayAllFoods()} </Slider>

@@ -1,4 +1,5 @@
 @import "./breakpoints/breakpoints.scss";
+
 //desktop
 @include media(">phone") {
   @import "./styles/styles";
@@ -9,7 +10,9 @@
   @import "./styles/fooddetail";
   @import "./styles/search.scss";
   @import "./styles/foodOfDay";
+  @import "./styles/meals";
 }
+
 //phone
 @include media("<=phone") {
   @import "./styles/variables";
