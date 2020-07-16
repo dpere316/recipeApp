@@ -38,7 +38,7 @@ class Breakfast extends Component {
     let res = await axios.get(
       `https://api.edamam.com/search?q=${
         this.state.foodType[this.randomIndex()]
-      }+breakfast&to=15&app_id=${APP_ID}&app_key=${APP_KEY}`
+      }+breakfast&to=50&app_id=${APP_ID}&app_key=${APP_KEY}`
     );
     this.setState({
       foods: res.data.hits,
@@ -51,10 +51,7 @@ class Breakfast extends Component {
       return (
         <div className="container">
           <div className="child">
-            <img
-              src={eachFood.recipe.image}
-              alt={eachFood.recipe.label}
-            />
+            <img src={eachFood.recipe.image} alt={eachFood.recipe.label} />
             <Link to={`/foods/${eachFood.recipe.label}`}>
               <p>{eachFood.recipe.label}</p>
             </Link>
@@ -71,16 +68,14 @@ class Breakfast extends Component {
 
   render() {
     return (
-     
       <div className="section-sliders">
         <div>
-          <h1>Breakfast</h1>
+          <h1 className="breakfast">Breakfast</h1>
         </div>
         <div>
           <Slider {...settings}>{this.displayAllFoods()}</Slider>
         </div>
       </div>
-     
     );
   }
 }

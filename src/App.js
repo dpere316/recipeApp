@@ -11,6 +11,7 @@ import NavbarPhone from "./components/navbarPhone";
 import AboutUs from "./components/AboutUs";
 import CousineCategories from "./components/Sliders/CousineCategories";
 import DietCategories from "./components/Sliders/DietCategories";
+import Meals from "./components/Sliders/Meals";
 
 class App extends Component {
   state = {
@@ -91,6 +92,7 @@ class App extends Component {
               <HealthDietFood {...props} key={props.match.params.id} />
             )}
           />
+          <Route exact path="/meals" render={(props) => <Meals {...props} />} />
           <Route exact path="/about" render={() => <AboutUs />} />
         </Switch>
       </div>

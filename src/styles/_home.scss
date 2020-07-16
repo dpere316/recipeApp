@@ -13,24 +13,25 @@
   font-family: $primary_font_family;
   width: 100%;
   height: 50vh;
-  
+
   @include flexColumn();
 
   h2 {
     font-size: 50px;
     font-family: $primary_font_family;
+    color: black;
   }
 
 }
 
 .ethnicHome {
   @include flexColumn();
-  
+
 }
 
 .ethnicHomeImg {
   padding-top: 30px;
-  width: 75%;
+  width: 50%;
   height: 54vh;
 }
 
@@ -62,7 +63,7 @@
   font-family: $primary_font_family;
   text-align: center;
   position: relative;
-  left:50vh;
+  left: 50vh;
   bottom: 20vh;
   height: 150px;
   padding: 20px 80px;
@@ -74,19 +75,21 @@
 
   @include flexRow();
   padding-right: 25%;
-    .bldImg2{
-        width: 50vh;
-        height: 50vh;
-        padding: 10px;
-    }
 
-    .bldImg{
-        width: 60vh;
-        height: 75vh;
-        padding-bottom: 0%;
 
-    }
-    
+  .bldImg2 {
+    width: 50vh;
+    height: 50vh;
+    padding: 10px;
+  }
+
+  .bldImg {
+    width: 60vh;
+    height: 75vh;
+    padding-bottom: 0%;
+
+  }
+
 }
 
 .bldWords {
