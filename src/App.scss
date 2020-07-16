@@ -1,3 +1,6 @@
+@import "./breakpoints/breakpoints.scss";
+ //desktop
+@include media (">phone"){
 @import "./styles/styles";
 @import "./styles/variables";
 @import "./styles/home";
@@ -6,3 +9,12 @@
 @import "./styles/fooddetail";
 @import "./styles/search.scss";
 @import "./styles/foodOfDay";
+}
+//phone
+@include media ("<=phone"){
+    @import "./styles/variables";
+    @import "./phonestyle/phoneHome";
+    @import "./phonestyle/phoneNavbar";
+
+}
+
