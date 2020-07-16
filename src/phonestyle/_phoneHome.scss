@@ -5,7 +5,7 @@
 body{
   margin: 0px;
   padding: 0px;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
 .hometitle {
 
@@ -35,13 +35,24 @@ body{
 }
 
 .ethnicHomeImg {
-  width: 20vh;
-  height: 20vh;
+  padding-top: 5vh;
+  width: 100vmin;
+  height: 50vmin
 }
 
 .travelWords {
+  background-color: white;
+  font-size: 100%;
+  font-family: $primary_font_family;
+  text-align: center;
+  position: relative;
+  bottom: 5vh;
+  left: 7vh;
+  height: 23vh;
+  width: 50%;
   
 }
+
 
 .healthDietHome {
   @include flexColumn();
@@ -49,27 +60,34 @@ body{
 }
 
 .healthImg {
-  @include flexColumn();
-  width: 20vh;
-      height: 20vh;
+  width: 100vmin;
+  height: 50vmin
   
 }
 
 .healthWords {
-  
+  background-color: white;
+  font-size: 100%;
+  font-family: $primary_font_family;
+  text-align: center;
+  position: relative;
+  bottom: 5vh;
+  left: -20vw;
+  height: 13vh;
+  width: 50%;
 }
 
-.bldHome {
-
-  @include flexColumn();
+.bldHome {  
+  padding-bottom: 30px;
   
     .bldImg2{
+      padding-left: 15px;
       width: 20vh;
       height: 20vh;
     }
 
     .bldImg{
-        
+      padding-left: 20px;
       width: 20vh;
       height: 20vh;
     }
@@ -77,16 +95,26 @@ body{
 }
 
 .bldWords {
- 
+  background-color: white;
+  font-size: 100%;
+  font-family: $primary_font_family;
+  text-align: center;
+  position: relative;
+  bottom: 5vh;
+  left: 45vmin;
+  height: 14vh;
+  width: 50%;
 }
 
 .heading {
   background-color: $fourthColor;
-  width: 70%;
-  position: relative;
-  left: 15%;
+  width: 100vw;
+  text-align: center;
+  
   .row {
       @include flexRow();
+      align-items: flex-start;
+     
   }
 
   .column {
@@ -96,13 +124,16 @@ body{
   img {
       width: 20vh;
       height: 20vh;
+      padding: 3px;
   }
 }
 
 footer {
- 
+  i{
+    color: white;
+  }
   @include flexColumn();
-  background-color: rgb(20, 66, 20);
+  background-color:black;
   color: white;
 }
 
