@@ -48,13 +48,15 @@ class Home extends Component {
       <div>
         <div className="hometitle">
           <h2>Munchies</h2>
-
-          <h3>All the recipes for whatever you're craving!</h3>
           <Search
             getFoods={this.getFoods}
             foods={this.state.foods}
             {...this.props}
           />
+
+          <h3>
+            <i>All the recipes for whatever you're craving!</i>
+          </h3>
         </div>
 
         <RandomFood getCocktails={this.props.getCocktails} />
@@ -66,8 +68,8 @@ class Home extends Component {
             alt="ethnicimage"
           />
           <div className="travelWords">
-            <h2>Travel Around The World</h2>
             <Link to="/ethnicfood">
+              <h2>Travel Around The World</h2>
               <h3>Choose your cuisine</h3>
             </Link>
           </div>
