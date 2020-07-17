@@ -22,6 +22,7 @@
   font-size: 17px;
   border: solid 1px black;
   padding: 10px;
+  margin-bottom: 200px;
   @include flexColumn();
   //   background-color: $secondaryColor;
   .ingredient-title {
@@ -36,4 +37,9 @@
 }
 .calories-separation {
   padding: 0 10px;
+}
+.detail-img {
+  img {
+    width: 70vh;
+  }
 }

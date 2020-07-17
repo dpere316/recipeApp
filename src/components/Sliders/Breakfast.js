@@ -53,7 +53,7 @@ class Breakfast extends Component {
           <div className="child">
             <img src={eachFood.recipe.image} alt={eachFood.recipe.label} />
             <Link to={`/foods/${eachFood.recipe.label}`}>
-              <p>{eachFood.recipe.label}</p>
+              <p className="breakfast-p">{eachFood.recipe.label}</p>
             </Link>
           </div>
         </div>

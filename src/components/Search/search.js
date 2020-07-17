@@ -36,12 +36,15 @@ class search extends Component {
       <div>
         <form onSubmit={this.searchForFoods}>
           <input
+            className="search-bar"
             onChange={this.handleChange}
             name="search"
             placeholder="Search"
           ></input>
 
-          <button type="submit">Search</button>
+          <button className="search-btn" type="submit">
+            Search
+          </button>
         </form>
       </div>
     );
