@@ -59,6 +59,7 @@
   font-size: 17px;
   border: solid 1px black;
   padding: 10px;
+  margin-bottom: 200px;
   @include flexColumn();
   // width: 40vh; //   background-color: $secondaryColor;
   .ingredient-title {

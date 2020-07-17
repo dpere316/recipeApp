@@ -59,6 +59,9 @@ class navbarPhone extends Component {
             <Link className="menu-item" to="/healthdiet">
               Diet Restrictions
             </Link>
+            <Link className="menu-item" to="/meals">
+              Meals
+            </Link>
           </Menu>
         </div>
         {/* {this.displayAllFoods()} */}

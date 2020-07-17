@@ -7,6 +7,9 @@
   width: 100vmin;
   z-index: 1;
   top: 0;
+  h1 {
+    padding-left: 10px;
+  }
 }
 // navbar
 
@@ -17,7 +20,7 @@
 .bm-burger-button {
   position: fixed;
   width: 5vh;
-  height: 5vh;
+  height: 3vh;
   right: 5vh;
   top: 8vw;
 }
@@ -74,6 +77,7 @@
 .bm-item {
   display: inline-block;
   color: white;
+  padding: 20px 10px 20px 20px;
 }
 
 /* Styling of overlay */
