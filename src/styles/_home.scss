@@ -51,6 +51,7 @@
 
 .healthDietHome {
   @include flexColumn();
+  margin-top: 10vh;
 
 }
 
@@ -78,13 +79,14 @@
 .bldHome {
 
   @include flexRow();
-  padding-right: 25%;
+
   margin-bottom: 15vh;
+  margin-top: 10vh;
 
 
   .bldImg2 {
 
-    width: 30vw;
+    width: 25vw;
     height: 50vh;
     padding-right: 5vh;
   }
@@ -106,7 +108,8 @@
   position: relative;
   left: 26vw;
   bottom: 31vh;
-  padding: 20px 80px;
+  padding: 1vh 7vh;
+  padding-bottom: 5vh;
   height: 13vh;
   width: 200px;
   border: double;
