@@ -1,24 +1,28 @@
 @import "./styles/variables";
 @import "./breakpoints/breakpoints.scss";
+
 .img-cocktail {
   width: 60vh;
   height: 40vh;
 }
 
 .layout {
-  padding: 80px 0;
+  // padding: 80px 0;
   @include flexColumn();
+
   li {
-    padding: 15px 0;
-    font-size: 20px;
+    // padding: 15px 0;
+    font-size: 13px;
     // @include flexColumn();
   }
+
   img {
     width: 20vh;
     height: 20vh;
-    padding: 20px;
+    // padding: 20px;
   }
 }
+
 .list-border {
   font-size: 17px;
   //   border: solid 1px black;
