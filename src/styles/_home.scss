@@ -2,6 +2,7 @@
 @import "./styles/styles";
 @import "./breakpoints/breakpoints.scss";
 
+
 .hometitle {
 
   background-image: url(../images/munchiestitle.jpg);
@@ -32,7 +33,7 @@
 
 .ethnicHomeImg {
   padding-top: 30px;
-  width: 100vw;
+  width: 50vw;
   height: 60vh;
 }
 
@@ -56,7 +57,7 @@
 
 .healthImg {
   @include flexColumn();
-  width: 100%;
+  width: 50vw;
   height: 50vh;
 }
 
@@ -107,7 +108,7 @@
   left: 26vw;
   bottom: 31vh;
   padding: 20px 80px;
-  height: 13vh;
-  width: 200px;
+  height: 160px;
   border: double;
 }
+
