@@ -14,7 +14,17 @@ const settings = {
   arrows: true,
   slidesToScroll: 5,
   slidesToShow: 5,
-  className: "slides",
+  className: "slides bldSlides",
+  responsive:[
+    {
+    breakpoint: 420,
+    settings:
+    {
+      dots: false,
+      slidesToShow:2,
+      slidesToScroll:1
+    }
+  }]
 };
 class Breakfast extends Component {
   state = {
@@ -68,7 +78,7 @@ class Breakfast extends Component {
 
   render() {
     return (
-      <div className="section-sliders">
+      <div className="section-sliders bldHeader">
         <div>
           <h1 className="breakfast">Breakfast</h1>
         </div>
