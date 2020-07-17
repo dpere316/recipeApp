@@ -31,7 +31,7 @@ class FoodDetails extends Component {
   render() {
     return (
       <div className="single-layout">
-        <div>
+        <div className="detail-img">
           <br />
           <img src={this.state.foods[0]?.recipe.image} />
           <br />
@@ -40,24 +40,24 @@ class FoodDetails extends Component {
           </h1>
         </div>
         <div className="calories">
-          <span className="calories-seperation">
+          <span className="calories-separation">
             Calories: {parseInt(this.state.foods[0]?.recipe.calories)}
           </span>{" "}
-          |
+          <span className="line">|</span>
           <span className="calories-separation">
             Number of Ingredient:{" "}
             {this.state.foods[0]?.recipe.ingredientLines.length}
           </span>{" "}
-          |
-          <a
-            target="_blank"
-            href={this.state.foods[0]?.recipe.url}
-            classname="directions-link"
-          >
-            <span className="calories-separation">
+          <span className="line">|</span>{" "}
+          <span className="calories-separation">
+            <a
+              target="_blank"
+              href={this.state.foods[0]?.recipe.url}
+              classname="directions-link"
+            >
               Click for directions here!
-            </span>
-          </a>
+            </a>
+          </span>
         </div>
         <div className="ingredients">
           <span className="ingredient-title">Ingredients:</span>

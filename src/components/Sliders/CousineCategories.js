@@ -22,7 +22,7 @@ class CousineCategories extends Component {
     return (
       <div className="randomFood">
         <div>
-          <h1>What are you feeling today?</h1>
+          <h1 className="category-header">What are you feeling today?</h1>
         </div>
         <div className="slide-center">
           <Slider {...settings}>

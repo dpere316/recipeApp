@@ -1,0 +1,11 @@
+@import "./styles/variables";
+@import "./styles/styles";
+@import "./breakpoints/breakpoints.scss";
+.breakfast {
+  padding: 70px 0 0 0;
+  @include flexColumn();
+  max-width: 200px;
+}
+.child {
+  max-width: 50px;
+}

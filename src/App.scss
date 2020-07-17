@@ -11,12 +11,16 @@
   @import "./styles/search.scss";
   @import "./styles/foodOfDay";
   @import "./styles/meals";
+  @import "./styles/cocktailDetail";
 }
 
 //phone
 @include media("<=phone") {
   @import "./styles/variables";
   @import "./phonestyle/phoneHome";
-  @import "./styles/navbar";
-  @import "./styles/search.scss";
+  // @import "./styles/navbar";
+  // @import "./styles/search.scss";
+  @import "./phonestyle/phoneNavbar";
+  @import "./phonestyle/phoneFoodDetail";
+  @import "./phonestyle/phonemeals";
 }
