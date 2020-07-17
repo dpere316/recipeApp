@@ -1,0 +1,10 @@
+@import "./styles/variables";
+@import "./breakpoints/breakpoints.scss";
+.search-bar {
+  padding: 5px;
+}
+.search-btn {
+  padding: 5px;
+  background: transparent;
+  color: white;
+}
