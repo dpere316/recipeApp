@@ -8,19 +8,17 @@ class RandomCocktail extends Component {
   };
 
   async componentDidMount() {
-      let res = await axios.get(
-        `https://www.thecocktaildb.com/api/json/v1/1/random.php`
-      );
-      // console.log(res.data);
-  
-      this.setState({
-        cocktails: res.data.drinks,
-      });
-      this.props.getCocktails(res.data.drinks)
-      console.log(this.state.cocktails);
-    
-  }
+    let res = await axios.get(
+      `https://www.thecocktaildb.com/api/json/v1/1/random.php`
+    );
+    // console.log(res.data);
 
+    this.setState({
+      cocktails: res.data.drinks,
+    });
+    this.props.getCocktails(res.data.drinks);
+    console.log(this.state.cocktails);
+  }
 
   // async componentDidMount() {
   //   let res = await axios.get(

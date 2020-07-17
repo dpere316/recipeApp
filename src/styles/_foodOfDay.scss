@@ -20,6 +20,7 @@
     .column {
         @include flexColumn();
         text-align: center;
+        font-size: 15px;
 
     }
 
@@ -30,8 +31,6 @@
     }
 }
 
-.comboOfTheDay {
-    font-family: "Lobster-Regular";
-    font-size: xx-large;
-    font-weight: 900;
+.title h1 {
+    font-size: 200px;
 }

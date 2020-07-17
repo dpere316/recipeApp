@@ -11,6 +11,7 @@ const AllFoods = (props) => {
   }
   return (
     <div>
+    <h1 className="randomFood">Suggested Recipes</h1>
       <div className="row-search">
         {props.foods.map((item) => (
           <Link to={`/foods/${item.recipe.label}`}>

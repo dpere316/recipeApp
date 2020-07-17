@@ -7,6 +7,7 @@ body {
   padding: 0px;
   // overflow-x: hidden;
 }
+
 .hometitle {
   background-image: url(../images/munchiestitle.jpg);
   background-size: cover;
@@ -20,6 +21,7 @@ body {
 
   @include flexColumn();
 
+
   h3 {
     text-align: center;
     font-size: 100%;
@@ -29,6 +31,10 @@ body {
 
 .ethnicHome {
   @include flexColumn();
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5a24d4b75cffe4b3a7100bffa6f9bd01b75cd268
 }
 
 .ethnicHomeImg {
@@ -47,6 +53,10 @@ body {
   left: 7vh;
   height: 23vh;
   width: 50%;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5a24d4b75cffe4b3a7100bffa6f9bd01b75cd268
 }
 
 .healthDietHome {
@@ -55,7 +65,11 @@ body {
 
 .healthImg {
   width: 100vmin;
+<<<<<<< HEAD
   height: 50vmin;
+=======
+  height: 50vmin
+>>>>>>> 5a24d4b75cffe4b3a7100bffa6f9bd01b75cd268
 }
 
 .healthWords {
@@ -84,6 +98,10 @@ body {
     width: 20vh;
     height: 30vh;
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5a24d4b75cffe4b3a7100bffa6f9bd01b75cd268
 }
 
 .bldWords {
@@ -106,8 +124,13 @@ body {
 
   .row {
     @include flexRow();
+<<<<<<< HEAD
 
     align-items: flex-start;
+=======
+    align-items: flex-start;
+
+>>>>>>> 5a24d4b75cffe4b3a7100bffa6f9bd01b75cd268
   }
 
   .column {
@@ -125,7 +148,12 @@ footer {
   i {
     color: white;
   }
+
   @include flexColumn();
   background-color: black;
   color: white;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 5a24d4b75cffe4b3a7100bffa6f9bd01b75cd268
