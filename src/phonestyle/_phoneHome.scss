@@ -2,11 +2,12 @@
 @import "./styles/styles";
 @import "./breakpoints/breakpoints.scss";
 
-body{
+body {
   margin: 0px;
   padding: 0px;
   // overflow-x: hidden;
 }
+
 .hometitle {
 
   background-image: url(../images/munchiestitle.jpg);
@@ -18,20 +19,20 @@ body{
   font-family: $primary_font_family;
   width: 100vmin;
   height: 100vmin;
-  
+
   @include flexColumn();
+
 
   h3 {
     text-align: center;
     font-size: 100%;
     font-family: $primary_font_family;
   }
-
 }
 
 .ethnicHome {
   @include flexColumn();
-  
+
 }
 
 .ethnicHomeImg {
@@ -50,7 +51,7 @@ body{
   left: 7vh;
   height: 23vh;
   width: 50%;
-  
+
 }
 
 
@@ -62,7 +63,6 @@ body{
 .healthImg {
   width: 100vmin;
   height: 50vmin
-  
 }
 
 .healthWords {
@@ -77,21 +77,21 @@ body{
   width: 50%;
 }
 
-.bldHome {  
+.bldHome {
   padding-bottom: 50px;
-  
-    .bldImg2{
-      padding-left: 15px;
-      width: 20vh;
-      height: 20vh;
-    }
 
-    .bldImg{
-      padding-left: 20px;
-      width: 20vh;
-      height: 30vh;
-    }
-    
+  .bldImg2 {
+    padding-left: 15px;
+    width: 20vh;
+    height: 20vh;
+  }
+
+  .bldImg {
+    padding-left: 20px;
+    width: 20vh;
+    height: 30vh;
+  }
+
 }
 
 .bldWords {
@@ -111,31 +111,30 @@ body{
   background-color: $fourthColor;
   width: 100vw;
   text-align: center;
-  
+
   .row {
-      @include flexRow();
-      align-items: flex-start;
-     
+    @include flexRow();
+    align-items: flex-start;
+
   }
 
   .column {
-      @include flexColumn();
+    @include flexColumn();
   }
 
   img {
-      width: 20vh;
-      height: 20vh;
-      padding: 3px;
+    width: 20vh;
+    height: 20vh;
+    padding: 3px;
   }
 }
 
 footer {
-  i{
+  i {
     color: white;
   }
+
   @include flexColumn();
   background-color:black;
   color: white;
 }
-
-
