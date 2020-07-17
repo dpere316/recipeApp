@@ -20,7 +20,7 @@
     .column {
         @include flexColumn();
         text-align: center;
-        color: rgb(20, 66, 20);
+
     }
 
     img {
@@ -30,7 +30,8 @@
     }
 }
 
-.plus {
+.comboOfTheDay {
+    font-family: "Lobster-Regular";
     font-size: xx-large;
     font-weight: 900;
 }

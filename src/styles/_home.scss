@@ -43,7 +43,7 @@
   text-align: center;
   position: relative;
   bottom: 5vh;
-  left:25vmax;
+  left: 25vmax;
   height: 200px;
   padding: 50px 75px 0px;
   border: double;
@@ -78,7 +78,10 @@
 .bldHome {
 
   @include flexRow();
-  
+  padding-right: 25%;
+  margin-bottom: 15vh;
+
+
   .bldImg2 {
 
     width: 30vw;
@@ -90,7 +93,7 @@
     width: 30vw;
     height: 75vh;
     padding-right: 21vh;
-   
+
   }
 
 }
