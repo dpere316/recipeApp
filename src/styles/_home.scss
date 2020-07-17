@@ -11,7 +11,7 @@
   color: white;
   font-size: 20px;
   font-family: $primary_font_family;
-  width: 100%;
+  width: 100vw;
   height: 50vh;
 
   @include flexColumn();
@@ -31,8 +31,8 @@
 
 .ethnicHomeImg {
   padding-top: 30px;
-  width: 50%;
-  height: 54vh;
+  width: 100%;
+  height: 70vh;
 }
 
 .travelWords {
@@ -41,8 +41,8 @@
   font-family: $primary_font_family;
   text-align: center;
   position: relative;
-  bottom: 10vh;
-  left: 30vh;
+  bottom: 5vh;
+  left:25vmax;
   height: 200px;
   padding: 50px 75px 0px;
   border: double;
@@ -55,7 +55,7 @@
 
 .healthImg {
   @include flexColumn();
-  width: 100vh;
+  width: 100%;
 }
 
 .healthWords {
@@ -64,8 +64,8 @@
   font-family: $primary_font_family;
   text-align: center;
   position: relative;
-  left: 50vh;
-  bottom: 20vh;
+  left: 5vmax;
+  bottom: 5vh;
   height: 150px;
   padding: 20px 80px;
   padding-bottom: 50px;
@@ -76,20 +76,19 @@
 .bldHome {
 
   @include flexRow();
-  padding-right: 25%;
-
-
+  
   .bldImg2 {
-    width: 50vh;
+
+    width: 40vw;
     height: 50vh;
-    padding: 10px;
+    padding-right: 5vh;
   }
 
   .bldImg {
-    width: 60vh;
+    width: 50vw;
     height: 75vh;
-    padding-bottom: 0%;
-
+    padding-right: 21vh;
+   
   }
 
 }
@@ -100,10 +99,10 @@
   font-family: $primary_font_family;
   text-align: center;
   position: relative;
-  left: 20vw;
-  bottom: 27vh;
+  left: 26vw;
+  bottom: 31vh;
   padding: 20px 80px;
-  height: 15%;
+  height: 13vh;
   width: 200px;
   border: double;
 }
