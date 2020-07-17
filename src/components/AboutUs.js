@@ -8,33 +8,46 @@ class AboutUs extends Component {
         <div className="usinfo">
           <div className="roy">
             <h1>Roy Gutierrez</h1>
-            <li>From: Miami, FL</li>
+            <p>From: Miami, FL</p>
 
-            <li>Favorite Munchie: Ceviche</li>
+            <p>Favorite Munchie: Ceviche</p>
             <div className="githubLinkedIn">
-              <div>GitHub</div>
+              <a href="https://github.com/rmg2995" target="_blank">
+                GitHub
+              </a>
+
               <div>|</div>
-              <div>LinkedIn</div>
+              <a href="https://www.linkedin.com/in/rmg2995/" target="_blank">
+                LinkedIn
+              </a>
             </div>
           </div>
           <div className="valerie">
-            <h1>Valerie Lee</h1>
-            <li>From: Los Angeles, CA</li>
-            <li>Favorite Munchie: Pho</li>
+            <h1>Valerie Lee Kang</h1>
+            <p>From: Los Angeles, CA</p>
+            <p>Favorite Munchie: Korean BBQ</p>
             <div className="githubLinkedIn">
-              <div>GitHub</div>
+              <a href="https://github.com/vlee13" target="_blank">
+                GitHub
+              </a>
               <div>|</div>
-              <div>LinkedIn</div>
+              <a href="https://www.linkedin.com/in/vlee13/" target="_blank">
+                LinkedIn
+              </a>
             </div>
           </div>
           <div className="daniel">
             <h1>Daniel Perez</h1>
-            <li>From: Miami, FL</li>
-            <li>Favorite Munchie: Chicken Vesuvio</li>
+            <p>From: Miami, FL</p>
+            <p>Favorite Munchie: Chicken Vesuvio</p>
             <div className="githubLinkedIn">
-              <div>GitHub</div>
+              <a href="https://github.com/dpere316" target="_blank">
+                GitHub
+              </a>
               <div>|</div>
-              <div>LinkedIn</div>
+              <a href="https://www.linkedin.com/in/dperez316/" target="_blank">
+                LinkedIn
+              </a>
             </div>
           </div>
         </div>
