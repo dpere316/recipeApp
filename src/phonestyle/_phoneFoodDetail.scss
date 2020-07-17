@@ -1,11 +1,17 @@
 @import "./styles/variables";
 @import "./breakpoints/breakpoints.scss";
 
-.randomFood{
+.bldHeader{
   width: 100vw;
   padding-top: 8vh;
   text-align: center;
 }
+
+.bldHeading{
+  text-align: center;
+
+}
+
 .slide-center {
   @include flexColumn();
   justify-content: space-evenly;
@@ -27,6 +33,9 @@ width: 1vh;
   max-width: 320px;
   left: 41vw;
   
+}
+.bldSlides{
+  left: 7vw;
 }
 
 .slick-prev:before {
