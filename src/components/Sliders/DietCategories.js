@@ -12,6 +12,15 @@ const settings = {
   slidesToScroll: 2,
   slidesToShow: 5,
   className: "slides",
+  responsive:[
+    {
+    breakpoint: 420,
+    settings:
+    {
+      slidesToShow:2,
+      slidesToScroll:1
+    }
+  }]
 };
 
 class DietCategories extends Component {
