@@ -78,3 +78,37 @@
 .line {
   display: none;
 }
+
+.randomFood {
+  width: 100vw;
+  padding-top: 8vh;
+  text-align: center;
+}
+.slide-center {
+  @include flexColumn();
+  justify-content: space-evenly;
+  padding: 35px;
+}
+// .child {
+//   width: 1px;
+// }
+.slide-center {
+  width: 1vmin;
+}
+
+.child {
+  width: 1vh;
+}
+
+.slides {
+  // width: 75vmax;
+  max-width: 320px;
+  left: 41vw;
+}
+
+.slick-prev:before {
+  color: black;
+}
+.slick-next:before {
+  color: black;
+}

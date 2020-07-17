@@ -53,7 +53,10 @@ class Home extends Component {
             foods={this.state.foods}
             {...this.props}
           />
-          <h3>All the recipes for whatever you're craving!</h3>
+
+          <h3>
+            <i>All the recipes for whatever you're craving!</i>
+          </h3>
         </div>
 
         <RandomFood getCocktails={this.props.getCocktails} />
