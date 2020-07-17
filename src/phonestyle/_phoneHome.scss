@@ -78,7 +78,7 @@ body{
 }
 
 .bldHome {  
-  padding-bottom: 30px;
+  padding-bottom: 50px;
   
     .bldImg2{
       padding-left: 15px;
@@ -89,7 +89,7 @@ body{
     .bldImg{
       padding-left: 20px;
       width: 20vh;
-      height: 20vh;
+      height: 30vh;
     }
     
 }
@@ -100,9 +100,10 @@ body{
   font-family: $primary_font_family;
   text-align: center;
   position: relative;
-  bottom: 5vh;
-  left: 45vmin;
-  height: 14vh;
+  bottom: 1vh;
+  left: 9vh;
+  top: 4vh;
+  // height: 5vh;
   width: 50%;
 }
 

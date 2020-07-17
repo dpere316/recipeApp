@@ -5,8 +5,12 @@
 footer {
     height: 250px;
     @include flexColumn();
-    background-color: rgb(10, 83, 65);
+    background-color: #00804F;
     color: white;
+
+    i {
+        color: white;
+    }
 }
 
 .aboutus {

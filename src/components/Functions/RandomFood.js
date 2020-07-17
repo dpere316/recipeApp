@@ -5,10 +5,10 @@ import RandomCocktail from "./RandomCocktail";
 // const APP_ID = "1949bcdc";
 // const APP_KEY = "b99569c224fcfecca6f202946bed7bfe";
 
-// const APP_ID2 = "ffd7e1b9";
-// const APP_KEY2 = "e439b5df8590bafcf11efad43ca3a69b";
-const APP_ID = "027c69d3";
-const APP_KEY = "06c10b8536afafcb35d471d1e71b262e";
+const APP_ID = "ffd7e1b9";
+const APP_KEY = "e439b5df8590bafcf11efad43ca3a69b";
+// const APP_ID = "027c69d3";
+// const APP_KEY = "06c10b8536afafcb35d471d1e71b262e";
 
 class Home extends Component {
   state = {
@@ -93,12 +93,11 @@ class Home extends Component {
     return (
       <div>
         <div className="heading">
-          <div>
-            <h1 className="column">Combo of the Day:</h1>
+          <div className="column">
+            <h1 className="comboOfTheDay">Combo of the Day:</h1>
           </div>
           <div className="row">
             {this.showRandomFood()}
-            <div className="plus">+</div>
             <RandomCocktail getCocktails={this.props.getCocktails} />
           </div>
         </div>
