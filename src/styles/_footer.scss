@@ -5,7 +5,7 @@
 footer {
     height: 250px;
     @include flexColumn();
-    background-color:#00804f;
+    background-color: #00804f;
     color: white;
 
     i {
@@ -37,7 +37,7 @@ footer {
         border-radius: 20px;
         background-color: #f1f1f1;
         padding: 50px 70px;
-        box-shadow: 20px 20px black;
+        box-shadow: 1vw 2vh black;
         margin: 10vh 7vh;
 
         .githubLinkedIn {
